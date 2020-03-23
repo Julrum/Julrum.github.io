@@ -3,15 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/programming/c/basic-of-c/</loc>
+    <lastmod>2020-03-23T14:39:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/tags/c/</loc>
+    <lastmod>2020-03-23T14:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-03-23T14:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/essay/</loc>
+    <lastmod>2020-03-23T14:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/programming/</loc>
+    <lastmod>2020-03-23T14:39:29+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
+    <lastmod>2020-03-23T14:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-03-23T14:12:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post.test1/</loc>
+    <lastmod>2020-03-23T14:12:43+00:00</lastmod>
   </url>
   
 </urlset>
