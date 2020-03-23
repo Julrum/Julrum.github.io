@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2020-03-23T14:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/essay/</loc>
     <lastmod>2020-03-23T14:39:29+00:00</lastmod>
   </url>
@@ -33,12 +38,7 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-03-23T14:12:43+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post.test1/</loc>
+    <loc>/programming/posts/post.test1/</loc>
     <lastmod>2020-03-23T14:12:43+00:00</lastmod>
   </url>
   

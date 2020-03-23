@@ -6,7 +6,7 @@
     <description>Recent content on Develog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2020 14:12:43 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 14:39:29 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,10 +26,10 @@
     
     <item>
       <title>Post</title>
-      <link>/post.test1/</link>
+      <link>/programming/posts/post.test1/</link>
       <pubDate>Mon, 23 Mar 2020 14:12:43 +0000</pubDate>
       
-      <guid>/post.test1/</guid>
+      <guid>/programming/posts/post.test1/</guid>
       <description>Test 1 This is Test post. This is Test post.This is Test post. This is Test post.This is Test post.This is Test post.
 Test 2 This is Test post.This is Test post.
 Test 3 This is Test post.This is Test post.This is Test post.
