@@ -24,17 +24,5 @@
   2) C 언어의 기본 구조 #include int main() { 변수 선언; 명령들......; return 0; }(1) main() 함수 C언어로 작성된 프로그램은 main() 함수로 시작하고 끝나기 때문에 반드시 main() 함수를 가지고 있어야 하며, 반드시 { 로 시작해서 } 로 끝난다.</description>
     </item>
     
-    <item>
-      <title>Post</title>
-      <link>/programming/posts/post.test1/</link>
-      <pubDate>Mon, 23 Mar 2020 14:12:43 +0000</pubDate>
-      
-      <guid>/programming/posts/post.test1/</guid>
-      <description>Test 1 This is Test post. This is Test post.This is Test post. This is Test post.This is Test post.This is Test post.
-Test 2 This is Test post.This is Test post.
-Test 3 This is Test post.This is Test post.This is Test post.
-#include &amp;lt;stdio.h&amp;gt;int main() { printf(&amp;#34;hello world&amp;#34;); return 0; } </description>
-    </item>
-    
   </channel>
 </rss>
