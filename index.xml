@@ -7,7 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Julrum</copyright>
-    <lastBuildDate>Tue, 24 Mar 2020 13:11:14 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -32,6 +31,17 @@
   다양한 연산자를 제공한다.
   메모리 주소를 제어할 수 있는 기능을 가지고 있어 하드웨어를 제어하는 프로그램을 쉽게 작성할 수 있다.
   2) C 언어의 기본 구조 #include int main() { 변수 선언; 명령들......; return 0; }(1) main() 함수 C언어로 작성된 프로그램은 main() 함수로 시작하고 끝나기 때문에 반드시 main() 함수를 가지고 있어야 하며, 반드시 { 로 시작해서 } 로 끝난다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>About Me I&amp;rsquo;m Junwon Park(박준원), a junior software engineer located in Republic of Korea.
+I use julrum as my primary username in various sites.
+I love programming using C++, Python and React. I am currently a college student. I&amp;rsquo;m writing what I learned on this blog.</description>
     </item>
     
     <item>

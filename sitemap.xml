@@ -18,11 +18,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-03-24T13:19:09+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/essay/</loc>
     <lastmod>2020-03-24T13:19:09+00:00</lastmod>
   </url>
@@ -48,7 +43,18 @@
   </url>
   
   <url>
+    <loc>/about/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/archive/</loc>
+    <lastmod>2020-03-24T13:51:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-03-24T13:51:00+00:00</lastmod>
   </url>
   
 </urlset>
