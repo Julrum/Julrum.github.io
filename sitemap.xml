@@ -3,27 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tags/c/</loc>
+    <loc>/posts/tags/c/</loc>
     <lastmod>2020-03-24T13:11:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/c&#43;&#43;/</loc>
+    <loc>/posts/tags/c&#43;&#43;/</loc>
     <lastmod>2020-03-24T13:11:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-03-24T13:11:14+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-03-24T13:11:14+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/essay/</loc>
+    <loc>/posts/categories/</loc>
     <lastmod>2020-03-24T13:11:14+00:00</lastmod>
   </url>
   
@@ -33,17 +23,27 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/posts/categories/essay/</loc>
     <lastmod>2020-03-24T13:11:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/test2/</loc>
+    <loc>/posts/posts/</loc>
     <lastmod>2020-03-24T13:11:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/basic-of-c/</loc>
+    <loc>/posts/tags/</loc>
+    <lastmod>2020-03-24T13:11:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/posts/test2/</loc>
+    <lastmod>2020-03-24T13:11:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/posts/basic-of-c/</loc>
     <lastmod>2020-03-23T14:39:29+00:00</lastmod>
   </url>
   
