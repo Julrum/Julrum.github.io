@@ -22,10 +22,10 @@
     
     <item>
       <title>basic of C</title>
-      <link>/programming/c/basic-of-c/</link>
+      <link>/posts/basic-of-c/</link>
       <pubDate>Mon, 23 Mar 2020 14:39:29 +0000</pubDate>
       
-      <guid>/programming/c/basic-of-c/</guid>
+      <guid>/posts/basic-of-c/</guid>
       <description>C 언어의 기초 1) C 언어의 특징   서로 다른 기종간의 호환성이 뛰어나다.
   C 언어는 여러 개의 함수로 구성되어 있어 구조적 프로그래밍이 가능하다.
   다양한 연산자를 제공한다.
