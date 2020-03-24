@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>02. 자료형과 변수 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="1) 자료형의 크기 및 표현 범위    정수형 문자형 부동 소수점 형     short 변수명; char 변수명; float 변수명;   int 변수명;  double 변수명;   long 변수명;  long double 변수명;    unsigned short 변수명;      unsigned int 변수명;      unsigned long 변수명;         자료형 크기 수의 표현 범위     short 4 byte -32768 ~ 32767 (-2^15^ ~ 2^15^-1)   int 4 byte -2^31^ ~ 2^31^-1   long 4 byte -2^31^ ~ 2^31^-1   unsigned short 2 byte 0 ~ 65535   unsigned int 4 byte 0 ~ 2^32^-1   unsigned long 4 byte 0 ~ 2^32^-1   char 1 byte 0 ~ 255   float 4 byte 약 10^-38^ ~ 10^38^   double 8 byte 약 10^-308^ ~ 10^308^   long double 8 byte 약 10^-308^ ~ 10^308^    실습 2_01."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/02._data_types_and_variables/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="02. 자료형과 변수"/>
+<meta name="twitter:description" content="1) 자료형의 크기 및 표현 범위    정수형 문자형 부동 소수점 형     short 변수명; char 변수명; float 변수명;   int 변수명;  double 변수명;   long 변수명;  long double 변수명;    unsigned short 변수명;      unsigned int 변수명;      unsigned long 변수명;         자료형 크기 수의 표현 범위     short 4 byte -32768 ~ 32767 (-2^15^ ~ 2^15^-1)   int 4 byte -2^31^ ~ 2^31^-1   long 4 byte -2^31^ ~ 2^31^-1   unsigned short 2 byte 0 ~ 65535   unsigned int 4 byte 0 ~ 2^32^-1   unsigned long 4 byte 0 ~ 2^32^-1   char 1 byte 0 ~ 255   float 4 byte 약 10^-38^ ~ 10^38^   double 8 byte 약 10^-308^ ~ 10^308^   long double 8 byte 약 10^-308^ ~ 10^308^    실습 2_01."/>
+
+
+
+<meta property="og:title" content="02. 자료형과 변수" />
+<meta property="og:description" content="1) 자료형의 크기 및 표현 범위    정수형 문자형 부동 소수점 형     short 변수명; char 변수명; float 변수명;   int 변수명;  double 변수명;   long 변수명;  long double 변수명;    unsigned short 변수명;      unsigned int 변수명;      unsigned long 변수명;         자료형 크기 수의 표현 범위     short 4 byte -32768 ~ 32767 (-2^15^ ~ 2^15^-1)   int 4 byte -2^31^ ~ 2^31^-1   long 4 byte -2^31^ ~ 2^31^-1   unsigned short 2 byte 0 ~ 65535   unsigned int 4 byte 0 ~ 2^32^-1   unsigned long 4 byte 0 ~ 2^32^-1   char 1 byte 0 ~ 255   float 4 byte 약 10^-38^ ~ 10^38^   double 8 byte 약 10^-308^ ~ 10^308^   long double 8 byte 약 10^-308^ ~ 10^308^    실습 2_01." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/02._data_types_and_variables/" />
+<meta property="article:published_time" content="2020-03-24T14:42:15+00:00" />
+<meta property="article:modified_time" content="2020-03-24T14:42:15+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/02._data_types_and_variables/"><ol start="2">
+<li>자료형과 변수</li>
+</ol></a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-03-24
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/c/">c</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <h2 id="1-자료형의-크기-및-표현-범위">1) 자료형의 크기 및 표현 범위</h2>
+<table>
+<thead>
+<tr>
+<th>정수형</th>
+<th>문자형</th>
+<th>부동 소수점 형</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>short 변수명;</code></td>
+<td><code>char 변수명;</code></td>
+<td><code>float 변수명;</code></td>
+</tr>
+<tr>
+<td><code>int 변수명;</code></td>
+<td></td>
+<td><code>double 변수명;</code></td>
+</tr>
+<tr>
+<td><code>long 변수명;</code></td>
+<td></td>
+<td><code>long double 변수명;</code></td>
+</tr>
+<tr>
+<td><code> unsigned short 변수명;</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code> unsigned int 변수명;</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code> unsigned long 변수명;</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>자료형</th>
+<th>크기</th>
+<th>수의 표현 범위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>short</code></td>
+<td>4 byte</td>
+<td>-32768 ~ 32767 (-2^15^ ~ 2^15^-1)</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>4 byte</td>
+<td>-2^31^ ~ 2^31^-1</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>4 byte</td>
+<td>-2^31^ ~ 2^31^-1</td>
+</tr>
+<tr>
+<td><code>unsigned short</code></td>
+<td>2 byte</td>
+<td>0 ~ 65535</td>
+</tr>
+<tr>
+<td><code>unsigned int</code></td>
+<td>4 byte</td>
+<td>0 ~ 2^32^-1</td>
+</tr>
+<tr>
+<td><code>unsigned long</code></td>
+<td>4 byte</td>
+<td>0 ~ 2^32^-1</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>1 byte</td>
+<td>0 ~ 255</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>4 byte</td>
+<td>약 10^-38^ ~ 10^38^</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>8 byte</td>
+<td>약 10^-308^ ~ 10^308^</td>
+</tr>
+<tr>
+<td><code>long double</code></td>
+<td>8 byte</td>
+<td>약 10^-308^ ~ 10^308^</td>
+</tr>
+</tbody>
+</table>
+<h4 id="실습-2_01cpp">실습 2_01.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">float</span> x, y;
+	x<span style="color:#f92672">=</span><span style="color:#ae81ff">1.0</span>;
+	y<span style="color:#f92672">=</span><span style="color:#ae81ff">2.0</span>;
+	printf(<span style="color:#e6db74">&#34;x와 ,y의 합은 %f이다.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, x<span style="color:#f92672">+</span>y);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-2_02cpp">실습 2_02.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">char</span> ch <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>;
+	printf(<span style="color:#e6db74">&#34;%c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,ch);
+	ch <span style="color:#f92672">=</span> <span style="color:#ae81ff">65</span>;
+	printf(<span style="color:#e6db74">&#34;%c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,ch);
+	ch <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\x41&#39;</span>;
+	printf(<span style="color:#e6db74">&#34;%c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,ch);
+	ch <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\101&#39;</span>;
+	printf(<span style="color:#e6db74">&#34;%c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,ch);	
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-2_03cpp">실습 2_03.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">char</span> ch <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span>;
+	printf(<span style="color:#e6db74">&#34;ch : %c char형의 크기 : %d byte</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ch, <span style="color:#66d9ef">sizeof</span>(ch));
+	printf(<span style="color:#e6db74">&#34;ch : %d %c %c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ch, ch, ch<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-2_04cpp">실습 2_04.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">short</span>));
+	printf(<span style="color:#e6db74">&#34;%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>));
+	printf(<span style="color:#e6db74">&#34;%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">long</span>));
+	printf(<span style="color:#e6db74">&#34;%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">short</span>));
+	printf(<span style="color:#e6db74">&#34;%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span>));
+	printf(<span style="color:#e6db74">&#34;%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span>));
+	printf(<span style="color:#e6db74">&#34;%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">char</span>));
+	printf(<span style="color:#e6db74">&#34;%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">float</span>));
+	printf(<span style="color:#e6db74">&#34;%d &#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">double</span>));
+	printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">double</span>));
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-2_05cpp">실습 2_05.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> cm,m,km; <span style="color:#75715e">/* 변수형을 정수형으로 계산 */</span>
+	km<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+	m<span style="color:#f92672">=</span> km <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>;
+	cm<span style="color:#f92672">=</span>m <span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>;
+	printf(<span style="color:#e6db74">&#34;km를 m와 cm로 환산</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;  %d km&#34;</span>, km);
+	printf(<span style="color:#e6db74">&#34;  %d m&#34;</span>, m);
+	printf(<span style="color:#e6db74">&#34;  %d cm</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, cm);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-2_06cpp">실습 2_06.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a<span style="color:#f92672">=</span><span style="color:#ae81ff">32767</span>;
+	<span style="color:#66d9ef">long</span> b<span style="color:#f92672">=</span><span style="color:#ae81ff">32767</span>;
+	<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> c<span style="color:#f92672">=</span><span style="color:#ae81ff">32767</span>;
+	printf(<span style="color:#e6db74">&#34;int형의 수의 표현 : %d %d 크기 : %d byte</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, a<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">sizeof</span>(a));
+	printf(<span style="color:#e6db74">&#34;long형의 수의 표현 : %d %d 크기 : %d byte</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, b, b<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">sizeof</span>(b));
+	printf(<span style="color:#e6db74">&#34;unsigned int형의 수의 표현 : %d %d 크기 : %d byte</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, c, c<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">sizeof</span>(c));
+<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-2_07cpp">실습 2_07.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"># include &lt;conio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">float</span> a<span style="color:#f92672">=</span><span style="color:#ae81ff">35.27</span>;
+	<span style="color:#66d9ef">double</span> b<span style="color:#f92672">=</span><span style="color:#ae81ff">123.4567</span>;
+	printf(<span style="color:#e6db74">&#34;a : %f float형의 크기 : %d byte</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, <span style="color:#66d9ef">sizeof</span>(a));
+	printf(<span style="color:#e6db74">&#34;b : %f double형의 크기 : %d byte</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, b, <span style="color:#66d9ef">sizeof</span>(b));
+<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h2 id="1변수란">1)변수란?</h2>
+<p>정의 : 어떤 연산을 처리하기 위하여 필요한 값을 넣어두기 위한 방의 이름</p>
+<p>A라는 변수가 있다고 가정하면, A라는 변수는 어떤 값을 넣어 두기 위한 방이다.</p>
+<h2 id="2-변수-사용-과정">2) 변수 사용 과정</h2>
+<ol>
+<li>
+<p>사용할 변수명을 지정한다.</p>
+</li>
+<li>
+<p>해당 변수를 사용한다는 것을 선언한다. 이때 변수에 저장될 데이터의 형(자료형)을 알려 주어야 한다.</p>
+</li>
+<li>
+<p>변수에 값(자료)을 넣는다(대입).</p>
+</li>
+</ol>
+<h2 id="3-변수명의-지정">3) 변수명의 지정</h2>
+<h3 id="1-변수명">(1) 변수명</h3>
+<ul>
+<li>
+<p>첫 번째 문자는 반드시 알파벳이나 밑줄 문자(_)이어야 한다.</p>
+</li>
+<li>
+<p>하나의 명칭 안에 공백을 사용할 수 없다.</p>
+</li>
+<li>
+<p>대문자와 소문자는 서로 다른 문자로 처리한다.</p>
+</li>
+<li>
+<p>예약어들은 명칭으로 사용할 수 없다.</p>
+</li>
+<li>
+<p>사용 가능한 문자 :</p>
+<ul>
+<li>
+<p>영문자 : A-Z, a-z</p>
+</li>
+<li>
+<p>숫 자 : 0-9</p>
+</li>
+<li>
+<p>밑줄(Under Line) : _</p>
+</li>
+</ul>
+</li>
+<li>
+<p>길이에 제한이 없으나 첫 32자가 같으면 동일한 이름으로 간주</p>
+</li>
+</ul>
+<h3 id="2-예약어">(2) 예약어</h3>
+<ul>
+<li>
+<p>C 언어에서 특별한 의미가 이미 정의 되어 있는 이름</p>
+</li>
+<li>
+<p>소문자로 되어 있으며 재정의 할 수 없고 명칭에 사용하는 등 다른 목적으로 사용할 수 없다.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>int</code></th>
+<th><code>extern</code></th>
+<th><code>if</code></th>
+<th><code>case</code></th>
+<th><code>sizeof</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char</code></td>
+<td><code>register</code></td>
+<td><code>else</code></td>
+<td><code>break</code></td>
+<td><code>union</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>typedef</code></td>
+<td><code>for</code></td>
+<td><code>continue</code></td>
+<td><code>long</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>static</code></td>
+<td><code>do</code></td>
+<td><code>default</code></td>
+<td><code>short</code></td>
+</tr>
+<tr>
+<td><code>struct</code></td>
+<td><code>goto</code></td>
+<td><code>while</code></td>
+<td><code>entry</code></td>
+<td><code>unsigned</code></td>
+</tr>
+<tr>
+<td><code>auto</code></td>
+<td><code>return</code></td>
+<td><code>switch</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="실습-2_08cpp">실습 2_08.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"># include &lt;conio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> <span style="color:#960050;background-color:#1e0010">$</span>pay;
+	<span style="color:#66d9ef">char</span> <span style="color:#ae81ff">1</span>abc;
+	<span style="color:#66d9ef">float</span> <span style="color:#f92672">-</span>plus;
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h2 id="4-기호-상수">4) 기호 상수</h2>
+<p>자주 사용되는 복잡한 수치 값이나 긴 문자열을 간단히 단어로 선언한 후 해당 언어를 사용하면 선언된 자료가 대입되도록 한 것</p>
+<p>상수명은 일반적으로 구분하기 쉽도록 대문자를 사용하고, 문장의 끝에 세자열인 경우에는 인용부호(&quot;)로 묶어 주어야 한다.</p>
+<h4 id="실습-2_09cpp">실습 2_09.cpp</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"># define PI 3.141592
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	printf(<span style="color:#e6db74">&#34;%f&#34;</span>,PI);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div>
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+            
+              <span class="button next">
+                <a href="/posts/test2/">
+                  <span class="button__text">Test2</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "disqus_hVUe51GbL4" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>
