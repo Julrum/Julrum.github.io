@@ -2,30 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Develog</title>
-    <link>https://julrum.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Develog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Julrum</copyright>
     <lastBuildDate>Tue, 24 Mar 2020 13:11:14 +0000</lastBuildDate>
     
-	<atom:link href="https://julrum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>c</title>
-      <link>https://julrum.github.io/tags/c/</link>
+      <link>/tags/c/</link>
       <pubDate>Tue, 24 Mar 2020 13:11:14 +0000</pubDate>
       
-      <guid>https://julrum.github.io/tags/c/</guid>
+      <guid>/tags/c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c&#43;&#43;</title>
-      <link>https://julrum.github.io/tags/c&#43;&#43;/</link>
+      <link>/tags/c&#43;&#43;/</link>
       <pubDate>Tue, 24 Mar 2020 13:11:14 +0000</pubDate>
       
-      <guid>https://julrum.github.io/tags/c&#43;&#43;/</guid>
+      <guid>/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
