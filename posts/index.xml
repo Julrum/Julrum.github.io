@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
-    <lastBuildDate>Wed, 25 Mar 2020 13:59:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2020 14:44:34 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>06</title>
+      <link>/posts/06._array/</link>
+      <pubDate>Wed, 25 Mar 2020 14:44:34 +0000</pubDate>
+      
+      <guid>/posts/06._array/</guid>
+      <description>같은 형식의 여러 데이터를 연속된 메모리 공간에 저장하여 사용하는 자료들의 집합
+ 종류 : 1차원 배열, 2차원 배열 등  01 1차원 배열 첨자가 하나인 직선형의 배열
+형식 데이터형 배열명[첨자];
+구조    배열명 첨자 배열     a 0 a[0]    1 a[1]    2 a[2]    3 a[3]    4 a[4]    5 a[5]    6 a[6]    7 a[7]    8 a[8]    배열 선언 예  int a[5]; int b[] = [10.</description>
+    </item>
     
     <item>
       <title>05</title>

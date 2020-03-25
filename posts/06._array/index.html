@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>06 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="같은 형식의 여러 데이터를 연속된 메모리 공간에 저장하여 사용하는 자료들의 집합
+ 종류 : 1차원 배열, 2차원 배열 등  01 1차원 배열 첨자가 하나인 직선형의 배열
+형식 데이터형 배열명[첨자];
+구조    배열명 첨자 배열     a 0 a[0]    1 a[1]    2 a[2]    3 a[3]    4 a[4]    5 a[5]    6 a[6]    7 a[7]    8 a[8]    배열 선언 예  int a[5]; int b[] = [10."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/06._array/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="06"/>
+<meta name="twitter:description" content="같은 형식의 여러 데이터를 연속된 메모리 공간에 저장하여 사용하는 자료들의 집합
+ 종류 : 1차원 배열, 2차원 배열 등  01 1차원 배열 첨자가 하나인 직선형의 배열
+형식 데이터형 배열명[첨자];
+구조    배열명 첨자 배열     a 0 a[0]    1 a[1]    2 a[2]    3 a[3]    4 a[4]    5 a[5]    6 a[6]    7 a[7]    8 a[8]    배열 선언 예  int a[5]; int b[] = [10."/>
+
+
+
+<meta property="og:title" content="06" />
+<meta property="og:description" content="같은 형식의 여러 데이터를 연속된 메모리 공간에 저장하여 사용하는 자료들의 집합
+ 종류 : 1차원 배열, 2차원 배열 등  01 1차원 배열 첨자가 하나인 직선형의 배열
+형식 데이터형 배열명[첨자];
+구조    배열명 첨자 배열     a 0 a[0]    1 a[1]    2 a[2]    3 a[3]    4 a[4]    5 a[5]    6 a[6]    7 a[7]    8 a[8]    배열 선언 예  int a[5]; int b[] = [10." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/06._array/" />
+<meta property="article:published_time" content="2020-03-25T14:44:34+00:00" />
+<meta property="article:modified_time" content="2020-03-25T14:44:34+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/06._array/">06</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-03-25
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/c/">c</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>같은 형식의 여러 데이터를 연속된 메모리 공간에 저장하여 사용하는 자료들의 집합</p>
+<ul>
+<li>종류 : 1차원 배열, 2차원 배열 등</li>
+</ul>
+<h2 id="01-1차원-배열">01 1차원 배열</h2>
+<p>첨자가 하나인 직선형의 배열</p>
+<h4 id="형식">형식</h4>
+<p><code>데이터형 배열명[첨자];</code></p>
+<h4 id="구조">구조</h4>
+<table>
+<thead>
+<tr>
+<th align="center">배열명</th>
+<th align="center">첨자</th>
+<th align="center">배열</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">a</td>
+<td align="center">0</td>
+<td align="center">a[0]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">a[1]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">2</td>
+<td align="center">a[2]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">3</td>
+<td align="center">a[3]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">4</td>
+<td align="center">a[4]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">5</td>
+<td align="center">a[5]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">6</td>
+<td align="center">a[6]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">7</td>
+<td align="center">a[7]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">8</td>
+<td align="center">a[8]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="배열-선언-예">배열 선언 예</h4>
+<ol>
+<li><code>int a[5];</code></li>
+<li><code>int b[] = [10. 20, 30, 40, 50];</code></li>
+</ol>
+<h4 id="배열의-초기화">배열의 초기화</h4>
+<p>배열 선언 후 초기값을 할당하는 방법과 배열 선언과 동시에 초기값을 할당하는 방법이 있다.</p>
+<ol>
+<li>배열을 선언한 후 초기값을 할당하는 방법
+<code>int a[5];</code>
+<code>a[0] = 10; a[1] = 20; a[2] = 30; a[3] = 40; a[4] = 50;</code></li>
+<li>배열 선언과 동시에 초기값을 할당하는 방법
+<code>int b[5] = {10, 20, 30, 40, 50};</code>
+<code>int b[5] = {10, 20, 30, }; // b[4], b[5]는 0으로 초기화</code>
+<code>int b[5] = {10, 20, 30, 40, 50, 60, 70}; // 에러 발생</code></li>
+</ol>
+<h4 id="예제-6_01">예제 6_01</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, a[<span style="color:#ae81ff">5</span>];
+	a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+	a[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
+	a[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+	a[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	a[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+	printf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, a[<span style="color:#ae81ff">2</span>], a[<span style="color:#ae81ff">4</span>]);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="예제-6_02">예제 6_02</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, a[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">12</span>};
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a[i]);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-6_01">실습 6_01</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, a[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">9</span>}, s <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+		printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, a[i]);
+		s <span style="color:#f92672">+=</span> a[i];
+	}
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, a[<span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> i]);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> 합 : %d&#34;</span>, s);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-6_02">실습 6_02</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, max <span style="color:#f92672">=-</span> <span style="color:#ae81ff">2147483647</span>, a;
+	printf(<span style="color:#e6db74">&#34;데이터 : &#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>) {
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a);
+		<span style="color:#66d9ef">if</span>(max <span style="color:#f92672">&lt;</span> a) max <span style="color:#f92672">=</span> a;
+	}
+	printf(<span style="color:#e6db74">&#34;최대값 : %d&#34;</span>, max);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-6_03">실습 6_03</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, n[<span style="color:#ae81ff">3</span>], k[<span style="color:#ae81ff">3</span>], e[<span style="color:#ae81ff">3</span>], m[<span style="color:#ae81ff">3</span>], t[<span style="color:#ae81ff">3</span>];
+	<span style="color:#66d9ef">double</span> ave[<span style="color:#ae81ff">3</span>];
+	printf(<span style="color:#e6db74">&#34;학번, 국어, 영어, 수학 점수 입력(3명)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>) {
+		scanf(<span style="color:#e6db74">&#34;%d %d %d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n[i], <span style="color:#f92672">&amp;</span>k[i], <span style="color:#f92672">&amp;</span>e[i], <span style="color:#f92672">&amp;</span>m[i]);
+		t[i] <span style="color:#f92672">=</span> k[i] <span style="color:#f92672">+</span> e[i] <span style="color:#f92672">+</span> m[i];
+	}
+	printf(<span style="color:#e6db74">&#34;%10s %10s %10s %10s %10s %10s</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;번호&#34;</span>, <span style="color:#e6db74">&#34;국어&#34;</span>, <span style="color:#e6db74">&#34;영어&#34;</span>, <span style="color:#e6db74">&#34;수학&#34;</span>, <span style="color:#e6db74">&#34;총점&#34;</span>, <span style="color:#e6db74">&#34;평균&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>) {
+		ave[i] <span style="color:#f92672">=</span> t[i]<span style="color:#f92672">/</span><span style="color:#ae81ff">3.0</span>;
+		printf(<span style="color:#e6db74">&#34;%10d %10d %10d %10d %10d %10.2f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, n[i], k[i], e[i], m[i], t[i], ave[i]);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-6_04">실습 6_04</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"># include &lt;stdlib.h&gt;
+</span><span style="color:#75715e"># include &lt;time.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, j, r, a[<span style="color:#ae81ff">10</span>], b[<span style="color:#ae81ff">10</span>], c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	srand((<span style="color:#66d9ef">unsigned</span>)time(NULL));
+	printf(<span style="color:#e6db74">&#34;입력 : &#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; i<span style="color:#f92672">++</span>) scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a[i]);
+	printf(<span style="color:#e6db74">&#34;출력 : &#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; i<span style="color:#f92672">++</span>) {
+		r <span style="color:#f92672">=</span> rand()<span style="color:#f92672">%</span><span style="color:#ae81ff">45</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+		printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, r);
+		<span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; j<span style="color:#f92672">++</span>) {
+			<span style="color:#66d9ef">if</span>(a[j] <span style="color:#f92672">==</span> r) b[c<span style="color:#f92672">++</span>] <span style="color:#f92672">=</span> r;
+		}
+	}
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">일치 : &#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> c; i<span style="color:#f92672">++</span>) printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, b[i]);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h2 id="02-2차원-배열">02 2차원 배열</h2>
+<p>첨자가 두개인 행령형의 배열</p>
+<h4 id="형식-1">형식</h4>
+<p><code>데이터형 배열명[첨자1, 첨자2];</code></p>
+<h4 id="구조-1">구조</h4>
+<table>
+<thead>
+<tr>
+<th align="center">배열명</th>
+<th align="center">첨자</th>
+<th align="center">배열</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">a</td>
+<td align="center"></td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">0</td>
+<td align="center">a[0][0]</td>
+<td align="center">a[1][0]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">a[0][1]</td>
+<td align="center">a[1][1]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">2</td>
+<td align="center">a[0][2]</td>
+<td align="center">a[1][2]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">3</td>
+<td align="center">a[0][3]</td>
+<td align="center">a[1][3]</td>
+</tr>
+</tbody>
+</table>
+<p>2차원 배열을 처리하기 위해서는 보통 이중 for 문을 사용한다.</p>
+<h4 id="2차원-배열의-선언과-초기화">2차원 배열의 선언과 초기화</h4>
+<ol>
+<li><code>int a[2,3];</code></li>
+<li><code>int b[][3] = {{1, 2, 3}, {4, 5, 6}};</code></li>
+</ol>
+<h4 id="실습-6_05">실습 6_05</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, j;
+	<span style="color:#66d9ef">int</span> a[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=</span>{{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>}, {<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>}, {<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>}};
+	<span style="color:#66d9ef">int</span> b[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=</span>{{<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>}, {<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>}, {<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>}};
+	printf(<span style="color:#e6db74">&#34;두 배열의 합 c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>; j<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a[i][j] <span style="color:#f92672">+</span> b[i][j]);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-6_06">실습 6_06</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, j, c<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, a[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>], b[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>];
+	printf(<span style="color:#e6db74">&#34;배열 a</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>; j<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, <span style="color:#f92672">++</span>c);
+			a[i][j] <span style="color:#f92672">=</span> c;
+			b[<span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>i][<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span>j] <span style="color:#f92672">=</span> c;
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	printf(<span style="color:#e6db74">&#34;배열 b</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>; j<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, b[i][j]);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h2 id="03-문자배열">03 문자배열</h2>
+<h3 id="1-문자배열">1) 문자배열</h3>
+<p>문자열을 저장하기 위한 배열로 배열을 선언할 때는 char 형으로 지정하는 것을 제외하고는 숫자 배열과 같은 방법으로 선언하고 사용한다.</p>
+<p>문자배열 출력시 제어문자는 <code>%s</code>를 사용하며, NULL문자(<code>\0</code>)를 만나면 문자열의 끝으로 생각한다. 그래서 문자 배열을 선언할 때는 문자열 + 1 만큼의 기억장소를 확보해야 한다.</p>
+<h4 id="가-문자-배열의-초기화-방법">가) 문자 배열의 초기화 방법</h4>
+<ol>
+<li><code>char a[7] = {p, r, o, g, r, a, m};</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">p</th>
+<th align="center">r</th>
+<th align="center">o</th>
+<th align="center">g</th>
+<th align="center">r</th>
+<th align="center">a</th>
+<th align="center">m</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">a[0]</td>
+<td align="center">a[1]</td>
+<td align="center">a[2]</td>
+<td align="center">a[3]</td>
+<td align="center">a[4]</td>
+<td align="center">a[5]</td>
+<td align="center">a[6]</td>
+</tr>
+</tbody>
+</table>
+<p>위와 같이 선언하고 <code>printf(&quot;%s&quot;, a};</code> 라고 출력해보자.</p>
+<ol start="2">
+<li><code>char b[] = &quot;program&quot;;</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">p</th>
+<th align="center">r</th>
+<th align="center">o</th>
+<th align="center">g</th>
+<th align="center">r</th>
+<th align="center">a</th>
+<th align="center">m</th>
+<th align="center">\0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">b[0]</td>
+<td align="center">b[1]</td>
+<td align="center">b[2]</td>
+<td align="center">b[3]</td>
+<td align="center">b[4]</td>
+<td align="center">b[5]</td>
+<td align="center">b[6]</td>
+<td align="center">b[7]</td>
+</tr>
+</tbody>
+</table>
+<p>문자열 처리에서 가장 많이 사용하는 방법이다. 배열의 크기를 지정하지 않고 문자열을 지정한 경우로 맨 마지막에 NULL문자(<code>\0</code>)가 자동으로 추가된다. 그래서 배열의 크기는 8이다.</p>
+<ol start="3">
+<li><code>char c[3][4] = {&quot;abc&quot;, &quot;1234&quot;, &quot;xy&quot;};</code></li>
+</ol>
+<p>여러 개의 문자열을 하나의 문자 배열에 기억시키고자 한때 2차원 배열을 선언해야 한다.</p>
+<h4 id="실습-6_07">실습 6_07</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, j;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">16</span>] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34; 김나영 &#34;</span>, <span style="color:#e6db74">&#34; 김선희 &#34;</span>, <span style="color:#e6db74">&#34; 이미영 &#34;</span>};
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>) {
+		printf(<span style="color:#e6db74">&#34;%15s&#34;</span>, name[i]);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-6_08">실습 6_08</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i;
+	<span style="color:#66d9ef">char</span> irum[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">20</span>];
+	printf(<span style="color:#e6db74">&#34;5명의 이름을 입력하세요</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+		scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#f92672">&amp;</span>irum[i]);
+	}
+	printf(<span style="color:#e6db74">&#34;당신이 입력한 5명의 이름 = &#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+		printf(<span style="color:#e6db74">&#34;%7s&#34;</span>, <span style="color:#f92672">&amp;</span>irum[i]);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-6_09">실습 6_09</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, j;
+	<span style="color:#66d9ef">int</span> prime[<span style="color:#ae81ff">105</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, };
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">if</span>(prime[i] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+			j <span style="color:#f92672">=</span> i;
+			<span style="color:#66d9ef">while</span>(j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">101</span>) {
+				prime[j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+				j <span style="color:#f92672">+=</span> i;
+			}
+			printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, i);
+		}
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-6_10">실습 6_10</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"># include &lt;string.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">char</span> c_in[<span style="color:#ae81ff">30</span>];
+    <span style="color:#66d9ef">int</span> k, i;
+    printf(<span style="color:#e6db74">&#34;문자열 : &#34;</span>);
+    scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, c_in); 
+    k<span style="color:#f92672">=</span>strlen(c_in);
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> k; i<span style="color:#f92672">++</span>) {
+             <span style="color:#66d9ef">if</span>(c_in[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">90</span>)
+			 	c_in <span style="color:#f92672">-=</span> <span style="color:#ae81ff">32</span>;
+             <span style="color:#66d9ef">else</span>
+			 	c_in <span style="color:#f92672">+=</span> <span style="color:#ae81ff">32</span>;
+    }
+    printf(<span style="color:#e6db74">&#34;출  력 : %s&#34;</span>, c_in);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-6_11">실습 6_11</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"># include &lt;string.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">char</span> str[<span style="color:#ae81ff">30</span>];
+    <span style="color:#66d9ef">int</span> l, i;
+    printf(<span style="color:#e6db74">&#34;문자열 : &#34;</span>); 
+    scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, str);
+    l <span style="color:#f92672">=</span> strlen(str);
+    printf(<span style="color:#e6db74">&#34;길이 : %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">출력 : &#34;</span>, l); 
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> l; i<span style="color:#f92672">++</span>) printf(<span style="color:#e6db74">&#34;%c&#34;</span>, str[l <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> i]);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-6_12">실습 6_12</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> f[<span style="color:#ae81ff">100</span>];
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">fib</span>(<span style="color:#66d9ef">int</span> a) {
+    <span style="color:#66d9ef">if</span>(a <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(f[a] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) f[a] <span style="color:#f92672">=</span> fib(a <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> fib(a <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>);
+    <span style="color:#66d9ef">return</span> f[a];
+} 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> i;
+    f[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; f[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    fib(<span style="color:#ae81ff">15</span>);
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">15</span>; i<span style="color:#f92672">++</span>) printf(<span style="color:#e6db74">&#34;%4d&#34;</span>, f[i]);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="심화-6_01">심화 6_01</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> answer[<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>};
+    <span style="color:#66d9ef">int</span> ans_sco[<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>};
+    <span style="color:#66d9ef">int</span> stu[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {{<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }};
+    <span style="color:#66d9ef">char</span> corr[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">11</span>];
+    <span style="color:#66d9ef">int</span> score[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, };
+    <span style="color:#66d9ef">int</span> rank[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">int</span> soowoo[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">int</span> name[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">20</span>];
+    <span style="color:#66d9ef">int</span> i, j, k;
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+	    k <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, name[i]);
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) {
+	        scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stu[i][j]);
+            <span style="color:#66d9ef">if</span>(stu[i][j] <span style="color:#f92672">!=</span> answer[j]) corr[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>;
+            <span style="color:#66d9ef">else</span> {
+	            corr[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;O&#39;</span>;
+                score[i] <span style="color:#f92672">+=</span> ans_sco[j];
+            }
+        }
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> i; j<span style="color:#f92672">++</span>) {
+	        <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> score[j]) rank[j]<span style="color:#f92672">++</span>;
+            <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&lt;</span> score[j]) <span style="color:#66d9ef">continue</span>;
+            k<span style="color:#f92672">--</span>;
+        }
+        <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">89</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">79</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">69</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">59</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+        <span style="color:#66d9ef">else</span> soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; 
+        rank[i] <span style="color:#f92672">=</span> k;
+    }
+    printf(<span style="color:#e6db74">&#34;채점표</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;----------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;   이름  1 2 3 4 5 6 7 8 9 10   점수</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;----------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+        printf(<span style="color:#e6db74">&#34;%7s&#34;</span>, name[i]);
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) printf(<span style="color:#e6db74">&#34; %c&#34;</span>, corr[i][j]);
+        printf(<span style="color:#e6db74">&#34;%8d </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, score[i]);
+    }
+    printf(<span style="color:#e6db74">&#34;----------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="심화-6_02">심화 6_02</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> answer[<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>};
+    <span style="color:#66d9ef">int</span> ans_sco[<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>};
+    <span style="color:#66d9ef">int</span> stu[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {{<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }};
+    <span style="color:#66d9ef">char</span> corr[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">11</span>];
+    <span style="color:#66d9ef">int</span> score[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, };
+    <span style="color:#66d9ef">int</span> rank[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">int</span> soowoo[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">char</span> swmyg[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;수&#34;</span> ,<span style="color:#e6db74">&#34;우&#34;</span>, <span style="color:#e6db74">&#34;미&#34;</span>, <span style="color:#e6db74">&#34;양&#34;</span>, <span style="color:#e6db74">&#34;가&#34;</span>};
+    <span style="color:#66d9ef">int</span> name[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">20</span>];
+    <span style="color:#66d9ef">int</span> i, j, k;
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+	    k <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, name[i]);
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) {
+	        scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stu[i][j]);
+            <span style="color:#66d9ef">if</span>(stu[i][j] <span style="color:#f92672">!=</span> answer[j]) corr[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>;
+            <span style="color:#66d9ef">else</span> {
+	            corr[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;O&#39;</span>;
+                score[i] <span style="color:#f92672">+=</span> ans_sco[j];
+            }
+        }
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> i; j<span style="color:#f92672">++</span>) {
+	        <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> score[j]) rank[j]<span style="color:#f92672">++</span>;
+            <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&lt;</span> score[j]) <span style="color:#66d9ef">continue</span>;
+            k<span style="color:#f92672">--</span>;
+        }
+        <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">89</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">79</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+         <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">69</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">59</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+        <span style="color:#66d9ef">else</span> soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; 
+        rank[i] <span style="color:#f92672">=</span> k;
+    }
+    printf(<span style="color:#e6db74">&#34;채점표</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;----------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;   이름  1 2 3 4 5 6 7 8 9 10   점수   판정  </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;----------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+        printf(<span style="color:#e6db74">&#34;%7s&#34;</span>, name[i]);
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) printf(<span style="color:#e6db74">&#34; %c&#34;</span>, corr[i][j]);
+        printf(<span style="color:#e6db74">&#34;%8d %5s </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, score[i], swmyg[soowoo[i]]);
+    }
+    printf(<span style="color:#e6db74">&#34;----------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="심화-6_03">심화 6_03</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> answer[<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>};
+    <span style="color:#66d9ef">int</span> ans_sco[<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>};
+    <span style="color:#66d9ef">int</span> stu[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {{<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }};
+    <span style="color:#66d9ef">char</span> corr[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">11</span>];
+    <span style="color:#66d9ef">int</span> score[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, };
+    <span style="color:#66d9ef">int</span> rank[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">int</span> soowoo[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">char</span> swmyg[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;수&#34;</span> ,<span style="color:#e6db74">&#34;우&#34;</span>, <span style="color:#e6db74">&#34;미&#34;</span>, <span style="color:#e6db74">&#34;양&#34;</span>, <span style="color:#e6db74">&#34;가&#34;</span>};
+    <span style="color:#66d9ef">int</span> name[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">20</span>];
+    <span style="color:#66d9ef">int</span> i, j, k;
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+        k <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, name[i]);
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) {
+	        scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stu[i][j]);
+            <span style="color:#66d9ef">if</span>(stu[i][j] <span style="color:#f92672">!=</span> answer[j]) corr[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>;
+            <span style="color:#66d9ef">else</span>{
+	            corr[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;O&#39;</span>;
+                score[i] <span style="color:#f92672">+=</span> ans_sco[j];
+            }
+        }
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> i; j<span style="color:#f92672">++</span>) {
+	        <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> score[j]) rank[j]<span style="color:#f92672">++</span>;
+            <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&lt;</span> score[j]) <span style="color:#66d9ef">continue</span>;
+            k<span style="color:#f92672">--</span>;
+        }
+        <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">89</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">79</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        lse <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">69</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">59</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+        <span style="color:#66d9ef">else</span> soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; 
+        rank[i] <span style="color:#f92672">=</span> k;
+    }
+    printf(<span style="color:#e6db74">&#34;채점표</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;-----------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;   이름  1 2 3 4 5 6 7 8 9 10   점수   판정   석차 </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;-----------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+        printf(<span style="color:#e6db74">&#34;%7s&#34;</span>, name[i]);
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) printf(<span style="color:#e6db74">&#34; %c&#34;</span>, corr[i][j]);
+        printf(<span style="color:#e6db74">&#34;%8d %5s %5d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, score[i], swmyg[soowoo[i]], rank[i]);
+    }
+    printf(<span style="color:#e6db74">&#34;-----------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="심화-6_05">심화 6_05</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+    <span style="color:#66d9ef">int</span> answer[<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>};
+    <span style="color:#66d9ef">int</span> ans_sco[<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">9</span>};
+    <span style="color:#66d9ef">int</span> stu[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">11</span>] <span style="color:#f92672">=</span> {{<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }, {<span style="color:#ae81ff">0</span>, }};
+    <span style="color:#66d9ef">char</span> corr[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">11</span>];
+    <span style="color:#66d9ef">int</span> score[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, };
+    <span style="color:#66d9ef">int</span> rank[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">int</span> soowoo[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">char</span> swmyg[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;수&#34;</span> ,<span style="color:#e6db74">&#34;우&#34;</span>, <span style="color:#e6db74">&#34;미&#34;</span>, <span style="color:#e6db74">&#34;양&#34;</span>, <span style="color:#e6db74">&#34;가&#34;</span>};
+    <span style="color:#66d9ef">int</span> name[<span style="color:#ae81ff">5</span>][<span style="color:#ae81ff">20</span>];
+    <span style="color:#66d9ef">int</span> i, j, k;
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+        k <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, name[i]);
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) {
+	        scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stu[i][j]);
+            <span style="color:#66d9ef">if</span>(stu[i][j] <span style="color:#f92672">!=</span> answer[j]) corr[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>;
+            <span style="color:#66d9ef">else</span> {
+	            corr[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;O&#39;</span>;
+                score[i] <span style="color:#f92672">+=</span> ans_sco[j];
+            }
+        }
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> i; j<span style="color:#f92672">++</span>) {
+	        <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> score[j]) rank[j]<span style="color:#f92672">++</span>;
+            <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&lt;</span> score[j]) <span style="color:#66d9ef">continue</span>;
+            k<span style="color:#f92672">--</span>;
+        }
+        <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">89</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">79</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">69</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(score[i] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">59</span>) soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+        <span style="color:#66d9ef">else</span> soowoo[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; 
+        rank[i] <span style="color:#f92672">=</span> k;
+    }
+    printf(<span style="color:#e6db74">&#34;채점표</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;-----------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;   이름  1 2 3 4 5 6 7 8 9 10   점수   판정   석차 </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    printf(<span style="color:#e6db74">&#34;-----------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+        printf(<span style="color:#e6db74">&#34;%7s&#34;</span>, name[i]);
+        <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) printf(<span style="color:#e6db74">&#34; %c&#34;</span>, corr[i][j]);
+        printf(<span style="color:#e6db74">&#34;%8d %5s %5d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, score[i], swmyg[soowoo[i]], rank[i]);
+    }
+    printf(<span style="color:#e6db74">&#34;-----------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div>
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+            
+              <span class="button next">
+                <a href="/posts/05._control_statement_2/">
+                  <span class="button__text">05</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "develoging" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>
