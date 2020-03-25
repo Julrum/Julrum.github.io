@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>4. 연산자와 수식 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="01 산술연산자    연산자 기능 사용     &#43; 좌우의 값을 더한다. a=b&#43;c   - 왼쪽의 값에서 오른쪽의 값을 뺀다. a=b-c   * 좌우의 값을 곱한다. a=b*c   / 왼쪽의 값을 오른쪽의 값으로 나눈다. a=b/c   % 왼쪽의 값을 오른쪽의 값으로 나눈 나머지를 구한다. a=b%c    실습 4_01 # include &amp;lt;stdio.h&amp;gt; int main() { int a, b, add, sub, mul, div, mod; printf(&amp;#34;두 수 입력 : &amp;#34;); scanf(&amp;#34;%d %d&amp;#34;, &amp;amp;a, &amp;amp;b); add = a &#43; b; sub = a - b; mul = a * b; div = a / b; mod = a % b; printf(&amp;#34;덧셈 = %d 뺄셈 = %d 곱셈 = %d 나눗셈 %d = %d 나머지 = %d&amp;#34;, add, sub, mul, div, mod); return 0; } 실습 4_02 # include &amp;lt;stdio."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/04._operators_and_formulas/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="4. 연산자와 수식"/>
+<meta name="twitter:description" content="01 산술연산자    연산자 기능 사용     &#43; 좌우의 값을 더한다. a=b&#43;c   - 왼쪽의 값에서 오른쪽의 값을 뺀다. a=b-c   * 좌우의 값을 곱한다. a=b*c   / 왼쪽의 값을 오른쪽의 값으로 나눈다. a=b/c   % 왼쪽의 값을 오른쪽의 값으로 나눈 나머지를 구한다. a=b%c    실습 4_01 # include &lt;stdio.h&gt; int main() { int a, b, add, sub, mul, div, mod; printf(&#34;두 수 입력 : &#34;); scanf(&#34;%d %d&#34;, &amp;a, &amp;b); add = a &#43; b; sub = a - b; mul = a * b; div = a / b; mod = a % b; printf(&#34;덧셈 = %d 뺄셈 = %d 곱셈 = %d 나눗셈 %d = %d 나머지 = %d&#34;, add, sub, mul, div, mod); return 0; } 실습 4_02 # include &lt;stdio."/>
+
+
+
+<meta property="og:title" content="4. 연산자와 수식" />
+<meta property="og:description" content="01 산술연산자    연산자 기능 사용     &#43; 좌우의 값을 더한다. a=b&#43;c   - 왼쪽의 값에서 오른쪽의 값을 뺀다. a=b-c   * 좌우의 값을 곱한다. a=b*c   / 왼쪽의 값을 오른쪽의 값으로 나눈다. a=b/c   % 왼쪽의 값을 오른쪽의 값으로 나눈 나머지를 구한다. a=b%c    실습 4_01 # include &lt;stdio.h&gt; int main() { int a, b, add, sub, mul, div, mod; printf(&#34;두 수 입력 : &#34;); scanf(&#34;%d %d&#34;, &amp;a, &amp;b); add = a &#43; b; sub = a - b; mul = a * b; div = a / b; mod = a % b; printf(&#34;덧셈 = %d 뺄셈 = %d 곱셈 = %d 나눗셈 %d = %d 나머지 = %d&#34;, add, sub, mul, div, mod); return 0; } 실습 4_02 # include &lt;stdio." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/04._operators_and_formulas/" />
+<meta property="article:published_time" content="2020-03-25T11:41:00+00:00" />
+<meta property="article:modified_time" content="2020-03-25T11:41:00+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/04._operators_and_formulas/"><ol start="4">
+<li>연산자와 수식</li>
+</ol></a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-03-25
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/c/">c</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <h2 id="01-산술연산자">01 산술연산자</h2>
+<table>
+<thead>
+<tr>
+<th align="center">연산자</th>
+<th align="center">기능</th>
+<th align="center">사용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>+</code></td>
+<td align="center">좌우의 값을 더한다.</td>
+<td align="center"><code>a=b+c</code></td>
+</tr>
+<tr>
+<td align="center"><code>-</code></td>
+<td align="center">왼쪽의 값에서 오른쪽의 값을 뺀다.</td>
+<td align="center"><code>a=b-c</code></td>
+</tr>
+<tr>
+<td align="center"><code>*</code></td>
+<td align="center">좌우의 값을 곱한다.</td>
+<td align="center"><code>a=b*c</code></td>
+</tr>
+<tr>
+<td align="center"><code>/</code></td>
+<td align="center">왼쪽의 값을 오른쪽의 값으로 나눈다.</td>
+<td align="center"><code>a=b/c</code></td>
+</tr>
+<tr>
+<td align="center"><code>%</code></td>
+<td align="center">왼쪽의 값을 오른쪽의 값으로 나눈 나머지를 구한다.</td>
+<td align="center"><code>a=b%c</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="실습-4_01">실습 4_01</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, add, sub, mul, div, mod;
+	printf(<span style="color:#e6db74">&#34;두 수 입력 : &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>a, <span style="color:#f92672">&amp;</span>b);
+	add <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b;
+	sub <span style="color:#f92672">=</span> a <span style="color:#f92672">-</span> b;
+	mul <span style="color:#f92672">=</span> a <span style="color:#f92672">*</span> b;
+	div <span style="color:#f92672">=</span> a <span style="color:#f92672">/</span> b;
+	mod <span style="color:#f92672">=</span> a <span style="color:#f92672">%</span> b;
+	printf(<span style="color:#e6db74">&#34;덧셈 = %d 뺄셈 = %d 곱셈 = %d 나눗셈 %d = %d 나머지 = %d&#34;</span>, add, sub, mul, div, mod);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-4_02">실습 4_02</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() { 
+<span style="color:#66d9ef">int</span> a, mul;
+    printf(<span style="color:#e6db74">&#34;도형 : &#34;</span>);
+    scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a);
+    printf(<span style="color:#e6db74">&#34;내각 : %d&#34;</span>, (a<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">180</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-4_03">실습 4_03</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> a, b;
+    printf(<span style="color:#e6db74">&#34;피제수 : &#34;</span>);
+    scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a);
+    printf(<span style="color:#e6db74">&#34;제수 : &#34;</span>);
+    scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>b);
+    printf(<span style="color:#e6db74">&#34;나머지 : %d&#34;</span>, a<span style="color:#f92672">-</span>(a<span style="color:#f92672">/</span>b)<span style="color:#f92672">*</span>b);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h2 id="02-비교연산자">02 비교연산자</h2>
+<table>
+<thead>
+<tr>
+<th align="center">연산자</th>
+<th align="center">의미</th>
+<th align="center">기능</th>
+<th align="center">사용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>==</code></td>
+<td align="center">같다.</td>
+<td align="center">두 값이 동일하면 참</td>
+<td align="center"><code>a==</code>b</td>
+</tr>
+<tr>
+<td align="center"><code>!=</code></td>
+<td align="center">같지 않다.</td>
+<td align="center">두 값이 다르면 참</td>
+<td align="center"><code>a!=b</code></td>
+</tr>
+<tr>
+<td align="center"><code>&lt;</code></td>
+<td align="center">보다 작다.</td>
+<td align="center">왼쪽이 작으면 참</td>
+<td align="center"><code>a&lt;b</code></td>
+</tr>
+<tr>
+<td align="center"><code>&lt;=</code></td>
+<td align="center">작거나 같다.</td>
+<td align="center">왼쪽이 작거나 같으면 참</td>
+<td align="center"><code>a&lt;=b</code></td>
+</tr>
+<tr>
+<td align="center"><code>&gt;</code></td>
+<td align="center">보다 크다.</td>
+<td align="center">왼쪽이 크면 참</td>
+<td align="center"><code>a&gt;b</code></td>
+</tr>
+<tr>
+<td align="center"><code>&gt;=</code></td>
+<td align="center">크거나 같다.</td>
+<td align="center">왼쪽이 크거나 같으면 참</td>
+<td align="center"><code>a&gt;=b</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="실습-4_04">실습 4_04</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b;
+	printf(<span style="color:#e6db74">&#34;두 수 입력 : &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>a, <span style="color:#f92672">&amp;</span>b);
+	printf(<span style="color:#e6db74">&#34;%d == %d = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, a <span style="color:#f92672">==</span> b);
+	printf(<span style="color:#e6db74">&#34;%d != %d = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, a <span style="color:#f92672">!=</span> b);
+	printf(<span style="color:#e6db74">&#34;%d &lt; %d = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, a <span style="color:#f92672">&lt;</span> b);
+	printf(<span style="color:#e6db74">&#34;%d &gt; %d = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, a <span style="color:#f92672">&gt;</span> b);
+	printf(<span style="color:#e6db74">&#34;%d &lt;= %d = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, a <span style="color:#f92672">&lt;=</span> b);
+	printf(<span style="color:#e6db74">&#34;%d &gt;= %d = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, a <span style="color:#f92672">&gt;=</span> b);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+}
+</code></pre></div><h4 id="실습-4_05">실습 4_05</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">char</span> in;
+	printf(<span style="color:#e6db74">&#34;영문자 입력 : &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%c&#34;</span>, <span style="color:#f92672">&amp;</span>in);
+	(in<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">96</span>) <span style="color:#f92672">?</span> printf(<span style="color:#e6db74">&#34;0&#34;</span>,in) <span style="color:#f92672">:</span> printf(<span style="color:#e6db74">&#34;1&#34;</span>,in);
+	
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-4_06">실습 4_06</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span> () {
+	<span style="color:#66d9ef">int</span> a, b, c;
+	printf(<span style="color:#e6db74">&#34;반지름 : &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a);
+	printf(<span style="color:#e6db74">&#34;x, y축 : &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>b, <span style="color:#f92672">&amp;</span>c);
+	(b <span style="color:#f92672">*</span> b <span style="color:#f92672">+</span> c <span style="color:#f92672">*</span> c <span style="color:#f92672">&lt;=</span> a <span style="color:#f92672">*</span> a) <span style="color:#f92672">?</span> printf(<span style="color:#e6db74">&#34;1&#34;</span>) <span style="color:#f92672">:</span> printf(<span style="color:#e6db74">&#34;0&#34;</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h2 id="03-논리연산자">03 논리연산자</h2>
+<table>
+<thead>
+<tr>
+<th align="center">연산자</th>
+<th align="center">기능</th>
+<th align="center">사용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>&amp;&amp;</code></td>
+<td align="center">두 값(조건)이 모두 참이면 참을 반환한다.</td>
+<td align="center"><code>a&amp;&amp;b</code></td>
+</tr>
+<tr>
+<td align="center"><code>||</code></td>
+<td align="center">두 값(조건)중의 하나라도 참이면 참을 반환한다.</td>
+<td align="center"><code>a||b</code></td>
+</tr>
+<tr>
+<td align="center"><code>!</code></td>
+<td align="center">오른쪽의 값(조건)이 참이면 거짓을, 거짓이면 참을 변환한다.</td>
+<td align="center"><code>!a</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="실습-4_07">실습 4_07</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	printf(<span style="color:#e6db74">&#34;1 AND 1 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">1</span>);
+	printf(<span style="color:#e6db74">&#34;1 AND 0 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">0</span>);
+	printf(<span style="color:#e6db74">&#34;0 AND 1 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">1</span>);
+	printf(<span style="color:#e6db74">&#34;0 AND 0 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">0</span>);
+	printf(<span style="color:#e6db74">&#34;1 OR 1 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">1</span>);
+	printf(<span style="color:#e6db74">&#34;1 OR 1 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>);
+	printf(<span style="color:#e6db74">&#34;1 OR 1 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">1</span>);
+	printf(<span style="color:#e6db74">&#34;1 OR 1 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>);
+	printf(<span style="color:#e6db74">&#34;NOT 1 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">!</span><span style="color:#ae81ff">1</span>);
+	printf(<span style="color:#e6db74">&#34;NOT 0 = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">!</span><span style="color:#ae81ff">0</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-4_08">실습 4_08</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, c;
+	printf(<span style="color:#e6db74">&#34; 두 수 입력 : &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>a, <span style="color:#f92672">&amp;</span>b);
+	printf(<span style="color:#e6db74">&#34;검사할 수 입력 : &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>c); 
+	(a <span style="color:#f92672">&lt;</span> c)<span style="color:#f92672">&amp;&amp;</span>(c <span style="color:#f92672">&lt;</span> b)<span style="color:#f92672">?</span> printf(<span style="color:#e6db74">&#34;1&#34;</span>) <span style="color:#f92672">:</span> printf(<span style="color:#e6db74">&#34;0&#34;</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h2 id="04-증감연산자">04 증감연산자</h2>
+<table>
+<thead>
+<tr>
+<th align="center">연산자</th>
+<th align="center">기능</th>
+<th align="center">사용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>++</code></td>
+<td align="center">값을 1 증가시킨다.</td>
+<td align="center"><code>a++</code>, <code>++a</code></td>
+</tr>
+<tr>
+<td align="center"><code>--</code></td>
+<td align="center">값을 1 감소시킨다.</td>
+<td align="center"><code>a--</code>, <code>--a</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="실습-4_09">실습 4_09</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i;
+	i <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+	printf(<span style="color:#e6db74">&#34;전위형으로 썼을 때 : %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">++</span>i);
+	i <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+	printf(<span style="color:#e6db74">&#34;후위형으로 썼을 때 : %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i<span style="color:#f92672">++</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-4_10">실습 4_10</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, c;
+	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a); <span style="color:#75715e">// 변수 a에 숫자 입력
+</span><span style="color:#75715e"></span>	b <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>a; c <span style="color:#f92672">=</span> a<span style="color:#f92672">--</span>;
+	printf(<span style="color:#e6db74">&#34;a = %d</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">b = %d</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">c = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, c);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+}
+</code></pre></div><h4 id="실습-4_11">실습 4_11</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, c;
+	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a);
+	b <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>a <span style="color:#f92672">+</span> <span style="color:#f92672">++</span>a;
+	c <span style="color:#f92672">=</span> a<span style="color:#f92672">++</span> <span style="color:#f92672">+</span> a<span style="color:#f92672">++</span>;
+	printf(<span style="color:#e6db74">&#34;a = %d</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">b = %d</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">c = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, c);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h2 id="05-비교연산자">05 비교연산자</h2>
+<table>
+<thead>
+<tr>
+<th align="center">연산자</th>
+<th align="center">기능</th>
+<th align="center">사용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>=</code></td>
+<td align="center">오른쪽의 값을 왼쪽의 변수에 대입한다.</td>
+<td align="center"><code>a=b</code></td>
+</tr>
+<tr>
+<td align="center"><code>+=</code></td>
+<td align="center">왼쪽의 변수에 들어있는 값과 오른쪽 값을 더하여 왼쪽 변수에 대입한다.</td>
+<td align="center"><code>a+=b</code></td>
+</tr>
+<tr>
+<td align="center"><code>-=</code></td>
+<td align="center">왼쪽의 변수에 들어있는 값과 오른쪽 값을 뺀 후 왼쪽 변수에 대입한다.</td>
+<td align="center"><code>a-=b</code></td>
+</tr>
+<tr>
+<td align="center"><code>*=</code></td>
+<td align="center">왼쪽의 변수에 들어있는 값과 오른쪽 값을 곱하여 왼쪽 변수에 대입한다.</td>
+<td align="center"><code>a*=b</code></td>
+</tr>
+<tr>
+<td align="center"><code>/=</code></td>
+<td align="center">왼쪽의 변수에 들어있는 값과 오른쪽 값을 나눈 왼쪽 변수에 대입한다.</td>
+<td align="center"><code>a/=b</code></td>
+</tr>
+<tr>
+<td align="center"><code>%=</code></td>
+<td align="center">왼쪽의 변수에 들어있는 값과 오른쪽 값을 나눈 나머지를 왼쪽 변수에 대입한다.</td>
+<td align="center"><code>a%=b</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="실습-4_12">실습 4_12</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, c <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+	a <span style="color:#f92672">-=</span> b; b <span style="color:#f92672">*=</span> a <span style="color:#f92672">+</span> c; c <span style="color:#f92672">+=</span> b <span style="color:#f92672">+=</span> a;
+	printf(<span style="color:#e6db74">&#34;a=%2d b=%2d c=%2d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, c);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-4_13">실습 4_13</h4>
+<pre><code>1. a+=b;
+2. b-=c;
+3. c/=d;
+4. d*=e;
+5. e=2;
+</code></pre><h2 id="06-조건연산자">06 조건연산자</h2>
+<h4 id="실습-4_14">실습 4_14</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, j;
+	scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>i, <span style="color:#f92672">&amp;</span>j); <span style="color:#75715e">// 두 수 입력
+</span><span style="color:#75715e"></span>	(i<span style="color:#f92672">&gt;</span>j) <span style="color:#f92672">?</span> printf(<span style="color:#e6db74">&#34;%d가 %d보다 크다.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, j) <span style="color:#f92672">:</span> printf(<span style="color:#e6db74">&#34;%d가 %d보다 크지 않다.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, j);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-4_15">실습 4_15</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, c, max;
+	printf(<span style="color:#e6db74">&#34;첫째 수 입력 : &#34;</span>); scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a);
+	printf(<span style="color:#e6db74">&#34;둘째 수 입력 : &#34;</span>); scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>b);
+	printf(<span style="color:#e6db74">&#34;셋째 수 입력 : &#34;</span>); scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>c);
+	max <span style="color:#f92672">=</span> (a <span style="color:#f92672">&gt;</span> b) <span style="color:#f92672">?</span> a : b;
+	max <span style="color:#f92672">=</span> (max <span style="color:#f92672">&gt;</span> c) <span style="color:#f92672">?</span> max : c;
+	printf(<span style="color:#e6db74">&#34;가장 큰 수는 : %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, max);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h2 id="07-연산자와-우선순위">07 연산자와 우선순위</h2>
+<ol>
+<li>괄호 안의 내용이 우선 처리된다.</li>
+<li>왼쪽에서 오른쪽으로 계산된다.</li>
+<li>단향 연산자가 이항 연산자보다 우선 계산된다.</li>
+<li>조건 연산자는 산술 연산자보다 나중에 계산된다.</li>
+</ol>
+<p>그러나 위의 순서와 달리 우선적으로 처리되어야 하는 연산자가 있다. 이러한 연산자들의 우선순위는 다음 표와 같다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">우선순위</th>
+<th align="center">연산자의 종류</th>
+<th align="center"></th>
+<th align="center">연산자</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">높다</td>
+<td align="center">단항연산자</td>
+<td align="center"></td>
+<td align="center"><code>!</code>, <code>~</code>, <code>++</code>, <code>--</code>, <code>-</code>, <code>*</code>, <code>&amp;</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">이항 연산자</td>
+<td align="center">승제산</td>
+<td align="center"><code>*</code>, <code>/</code>, <code>%</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">가감산</td>
+<td align="center"><code>+</code>, <code>-</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">이동</td>
+<td align="center"><code>&gt;&gt;</code>, <code>&lt;&lt;</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">비교</td>
+<td align="center"><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">비트연산</td>
+<td align="center"><code>&amp;</code>, <code>^</code>, <code>|</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">논리</td>
+<td align="center"><code>&amp;&amp;</code>, <code>||</code></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">조건 연산자</td>
+<td align="center"></td>
+<td align="center"><code>?</code>, <code>:</code></td>
+</tr>
+<tr>
+<td align="center">낮다</td>
+<td align="center">대입 연산자</td>
+<td align="center"></td>
+<td align="center"><code>=</code>, <code>=+</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code>, <code>&amp;=</code>, <code>^=</code>, <code>|=</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="실습-4_16">실습 4_16</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, temp;
+	scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>a, <span style="color:#f92672">&amp;</span>b);
+	printf(<span style="color:#e6db74">&#34;원본 : %d %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,a,b);
+	temp<span style="color:#f92672">=</span> a;
+	a<span style="color:#f92672">=</span>b;
+	b<span style="color:#f92672">=</span>temp;
+	printf(<span style="color:#e6db74">&#34;교환 : %d %d&#34;</span>,a,b);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-4_17">실습 4_17</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b;
+	scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>a, <span style="color:#f92672">&amp;</span>b);
+	printf(<span style="color:#e6db74">&#34;원본 : %d %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b);
+	a<span style="color:#f92672">-=</span>b;
+	b<span style="color:#f92672">+=</span>a;
+	a<span style="color:#f92672">-=</span>b;
+	a<span style="color:#f92672">=-</span>a;
+	printf(<span style="color:#e6db74">&#34;교환 : %d %d&#34;</span>, a, b);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div>
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+            
+              <span class="button next">
+                <a href="/posts/03._standard_input_output/">
+                  <span class="button__text">3. 표준 입출력 함수</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "develoging" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>
