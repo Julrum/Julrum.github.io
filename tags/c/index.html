@@ -35,7 +35,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/tags/c/" />
-<meta property="og:updated_time" content="2020-03-25T11:41:00+00:00" /><meta property="og:site_name" content="Develog" />
+<meta property="og:updated_time" content="2020-03-25T13:59:19+00:00" /><meta property="og:site_name" content="Develog" />
 
 
 
@@ -114,6 +114,95 @@
   <div class="posts">
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/05._control_statement_2/">05</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-25
+          </span>
+
+          
+            
+
+
+
+          
+        
+        
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/c/">c</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            02 반복문 프로그램 수행 중 특정 문장을 반복 수행하고자 할 때 사용하는 명령문</p>
+<ol>
+<li>for 문 변수가 초기값을 가지고 증감식에 의해 증감하면서 조건식이 만족하는 동안 반복하는 명령
+문법 for(초기값; 조건식; 증감식) { 반복할 명령문; } 실습 5_15_a) # include &lt;stdio.h&gt; int main() { int i; for(i = 1; i&lt;=10; i++) printf(&quot;%5d&quot;, i); return 0; } 실습 5_15_b) # include &lt;stdio.h&gt; int main() { int a; for(a = 1; a &lt;= 10; a += 2) printf(&quot;%5d&quot;, a); return 0; } 실습 5_15_c) # include &lt;stdio.</li>
+</ol>
+          
+        
+      </div>
+      
+        <div><a class="read-more button" href="/posts/05._control_statement_2/">Read more →</a></div>
+      
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/05._control_statement_1/">05</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-25
+          </span>
+
+          
+            
+
+
+
+          
+        
+        
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/c/">c</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            순차적인 프로그램 실행 순서를 변경하거나반복 수행하고자 할 때 사용하는 명령문
+종류  분기문 : if 문, switch~case문 반복문 : for 문, while 문 보조제어문 : continue 문, break 문  제어문에 따른 실행 문장이 한 문장이면 블록을 생략해도 좋다.
+01 분기문 1) if 문 조건이 참이면 명령문1을 실행함
+문법 if(조건문) { 명령문1; } 실습 5_01 # include &lt;stdio.h&gt; int main() { int jumsu; printf(&quot;점수 = ? &quot;); scanf(&quot;%d&quot;, &amp;jumsu); if(jumsu &gt;= 80) printf(&quot;합격&quot;); return 0; } 실습 5_02 # include &lt;stdio.
+          
+        
+      </div>
+      
+        <div><a class="read-more button" href="/posts/05._control_statement_1/">Read more →</a></div>
+      
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/posts/04._operators_and_formulas/"><ol start="4">
 <li>연산자와 수식</li>
 </ol></a></h1>
@@ -169,6 +258,12 @@
           
             
 
+
+  
+    <span class="post-moddate">
+      (Modified: 2020-03-25)
+    </span>
+  
 
 
           
@@ -253,60 +348,16 @@ printf(&quot;서식 문자열&quot;, 인수1[, 인수2, &hellip;]);
       
     </div>
     
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/posts/01._basic_of_c/"><ol>
-<li>C 언어의 기초</li>
-</ol></a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-03-23
-          </span>
-
-          
-            
-
-
-  
-    <span class="post-moddate">
-      (Modified: 2020-03-25)
-    </span>
-  
-
-
-          
-        
-        
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="/tags/c/">c</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            <ol>
-<li>C 언어의 특징  서로 다른 기종간의 호환성이 뛰어나다. C 언어는 여러 개의 함수로 구성되어 있어 구조적 프로그래밍이 가능하다. 다양한 연산자를 제공한다. 메모리 주소를 제어할 수 있는 기능을 가지고 있어 하드웨어를 제어하는 프로그램을 쉽게 작성할 수 있다.  2) C 언어의 기본 구조 # include &lt;stdio.h&gt; int main() { 변수 선언; 명령들&hellip;&hellip;; return 0; } (1) main() 함수 C언어로 작성된 프로그램은 main() 함수로 시작하고 끝나기 때문에 반드시 main() 함수를 가지고 있어야 하며, 반드시 { 로 시작해서 } 로 끝난다.</li>
-</ol>
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/posts/01._basic_of_c/">Read more →</a></div>
-      
-    </div>
-    
     <div class="pagination">
   <div class="pagination__buttons">
     
+    
+      <span class="button next">
+        <a href="/tags/c/page/2/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
     
   </div>
 </div>

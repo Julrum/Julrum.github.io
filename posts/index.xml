@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
-    <lastBuildDate>Wed, 25 Mar 2020 11:41:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2020 13:59:19 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>05</title>
+      <link>/posts/05._control_statement_2/</link>
+      <pubDate>Wed, 25 Mar 2020 13:59:19 +0000</pubDate>
+      
+      <guid>/posts/05._control_statement_2/</guid>
+      <description>02 반복문 프로그램 수행 중 특정 문장을 반복 수행하고자 할 때 사용하는 명령문
+1) for 문 변수가 초기값을 가지고 증감식에 의해 증감하면서 조건식이 만족하는 동안 반복하는 명령
+문법 for(초기값; 조건식; 증감식) { 반복할 명령문; } 실습 5_15_a) # include &amp;lt;stdio.h&amp;gt; int main() { int i; for(i = 1; i&amp;lt;=10; i++) printf(&amp;#34;%5d&amp;#34;, i); return 0; } 실습 5_15_b) # include &amp;lt;stdio.h&amp;gt; int main() { int a; for(a = 1; a &amp;lt;= 10; a += 2) printf(&amp;#34;%5d&amp;#34;, a); return 0; } 실습 5_15_c) # include &amp;lt;stdio.</description>
+    </item>
+    
+    <item>
+      <title>05</title>
+      <link>/posts/05._control_statement_1/</link>
+      <pubDate>Wed, 25 Mar 2020 13:20:09 +0000</pubDate>
+      
+      <guid>/posts/05._control_statement_1/</guid>
+      <description>순차적인 프로그램 실행 순서를 변경하거나반복 수행하고자 할 때 사용하는 명령문
+종류  분기문 : if 문, switch~case문 반복문 : for 문, while 문 보조제어문 : continue 문, break 문  제어문에 따른 실행 문장이 한 문장이면 블록을 생략해도 좋다.
+01 분기문 1) if 문 조건이 참이면 명령문1을 실행함
+문법 if(조건문) { 명령문1; } 실습 5_01 # include &amp;lt;stdio.h&amp;gt; int main() { int jumsu; printf(&amp;#34;점수 = ? &amp;#34;); scanf(&amp;#34;%d&amp;#34;, &amp;amp;jumsu); if(jumsu &amp;gt;= 80) printf(&amp;#34;합격&amp;#34;); return 0; } 실습 5_02 # include &amp;lt;stdio.</description>
+    </item>
     
     <item>
       <title>4. 연산자와 수식</title>

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>05 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="02 반복문 프로그램 수행 중 특정 문장을 반복 수행하고자 할 때 사용하는 명령문
+1) for 문 변수가 초기값을 가지고 증감식에 의해 증감하면서 조건식이 만족하는 동안 반복하는 명령
+문법 for(초기값; 조건식; 증감식) { 반복할 명령문; } 실습 5_15_a) # include &amp;lt;stdio.h&amp;gt; int main() { int i; for(i = 1; i&amp;lt;=10; i&#43;&#43;) printf(&amp;#34;%5d&amp;#34;, i); return 0; } 실습 5_15_b) # include &amp;lt;stdio.h&amp;gt; int main() { int a; for(a = 1; a &amp;lt;= 10; a &#43;= 2) printf(&amp;#34;%5d&amp;#34;, a); return 0; } 실습 5_15_c) # include &amp;lt;stdio."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/05._control_statement_2/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="05"/>
+<meta name="twitter:description" content="02 반복문 프로그램 수행 중 특정 문장을 반복 수행하고자 할 때 사용하는 명령문
+1) for 문 변수가 초기값을 가지고 증감식에 의해 증감하면서 조건식이 만족하는 동안 반복하는 명령
+문법 for(초기값; 조건식; 증감식) { 반복할 명령문; } 실습 5_15_a) # include &lt;stdio.h&gt; int main() { int i; for(i = 1; i&lt;=10; i&#43;&#43;) printf(&#34;%5d&#34;, i); return 0; } 실습 5_15_b) # include &lt;stdio.h&gt; int main() { int a; for(a = 1; a &lt;= 10; a &#43;= 2) printf(&#34;%5d&#34;, a); return 0; } 실습 5_15_c) # include &lt;stdio."/>
+
+
+
+<meta property="og:title" content="05" />
+<meta property="og:description" content="02 반복문 프로그램 수행 중 특정 문장을 반복 수행하고자 할 때 사용하는 명령문
+1) for 문 변수가 초기값을 가지고 증감식에 의해 증감하면서 조건식이 만족하는 동안 반복하는 명령
+문법 for(초기값; 조건식; 증감식) { 반복할 명령문; } 실습 5_15_a) # include &lt;stdio.h&gt; int main() { int i; for(i = 1; i&lt;=10; i&#43;&#43;) printf(&#34;%5d&#34;, i); return 0; } 실습 5_15_b) # include &lt;stdio.h&gt; int main() { int a; for(a = 1; a &lt;= 10; a &#43;= 2) printf(&#34;%5d&#34;, a); return 0; } 실습 5_15_c) # include &lt;stdio." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/05._control_statement_2/" />
+<meta property="article:published_time" content="2020-03-25T13:59:19+00:00" />
+<meta property="article:modified_time" content="2020-03-25T13:59:19+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/05._control_statement_2/">05</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-03-25
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/c/">c</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <h2 id="02-반복문">02 반복문</h2>
+<p>프로그램 수행 중 특정 문장을 반복 수행하고자 할 때 사용하는 명령문</p>
+<h3 id="1-for-문">1) for 문</h3>
+<p>변수가 초기값을 가지고 증감식에 의해 증감하면서 조건식이 만족하는 동안 반복하는 명령</p>
+<h4 id="문법">문법</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">for</span>(<span style="color:#960050;background-color:#1e0010">초기값</span>; <span style="color:#960050;background-color:#1e0010">조건식</span>; <span style="color:#960050;background-color:#1e0010">증감식</span>) {
+	<span style="color:#960050;background-color:#1e0010">반복할</span> <span style="color:#960050;background-color:#1e0010">명령문</span>;
+}
+</code></pre></div><h4 id="실습-5_15_a">실습 5_15_a)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i;
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-5_15_b">실습 5_15_b)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>; a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_15_c">실습 5_15_c)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>; a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_15_d">실습 5_15_d)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; a <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>; a<span style="color:#f92672">--</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_15_e">실습 5_15_e)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; a <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>; a <span style="color:#f92672">-=</span> <span style="color:#ae81ff">2</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_15_f">실습 5_15_f)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>; a <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>; a <span style="color:#f92672">-=</span> <span style="color:#ae81ff">2</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_15_g">실습 5_15_g)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">30</span>; a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">5</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_15_h">실습 5_15_h)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>; a <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">10</span>; a <span style="color:#f92672">-=</span> <span style="color:#ae81ff">5</span>)
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_15_i">실습 5_15_i)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">65</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">78</span>; a<span style="color:#f92672">++</span>)
+		printf(<span style="color:#e6db74">&#34;%c&#34;</span>, a);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_16_a">실습 5_16_a)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, sum;
+	sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">if</span>(a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>)
+			printf(<span style="color:#e6db74">&#34;%d+&#34;</span>, a);
+		<span style="color:#66d9ef">else</span>
+			printf(<span style="color:#e6db74">&#34;%d=&#34;</span>, a);
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> a;
+	}
+	printf(<span style="color:#e6db74">&#34;%d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_16_b">실습 5_16_b)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, sum;
+	sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">9</span>; a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>) {
+		<span style="color:#66d9ef">if</span>(a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>)
+			printf(<span style="color:#e6db74">&#34;%d+&#34;</span>, a);
+		<span style="color:#66d9ef">else</span>
+			printf(<span style="color:#e6db74">&#34;%d=&#34;</span>, a);
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> a;
+	}
+	printf(<span style="color:#e6db74">&#34;%d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_16_c">실습 5_16_c)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, sum;
+	sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>; a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>) {
+		<span style="color:#66d9ef">if</span>(a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>)
+			printf(<span style="color:#e6db74">&#34;%d+&#34;</span>, a);
+		<span style="color:#66d9ef">else</span>
+			printf(<span style="color:#e6db74">&#34;%d=&#34;</span>, a);
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> a;
+	}
+	printf(<span style="color:#e6db74">&#34;%d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="2-다중-for-문">2) 다중 for 문</h3>
+<h4 id="문법-1">문법</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">for</span> (<span style="color:#960050;background-color:#1e0010">초기값</span><span style="color:#ae81ff">1</span>; <span style="color:#960050;background-color:#1e0010">조건식</span><span style="color:#ae81ff">1</span>; <span style="color:#960050;background-color:#1e0010">증감식</span><span style="color:#ae81ff">1</span>) {
+	<span style="color:#960050;background-color:#1e0010">명령문</span><span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">for</span> (<span style="color:#960050;background-color:#1e0010">초기값</span><span style="color:#ae81ff">2</span>; <span style="color:#960050;background-color:#1e0010">조건식</span><span style="color:#ae81ff">2</span>; <span style="color:#960050;background-color:#1e0010">증감식</span><span style="color:#ae81ff">2</span>) {
+		<span style="color:#960050;background-color:#1e0010">명령문</span><span style="color:#ae81ff">2</span>;
+	}
+}
+</code></pre></div><h4 id="실습-5_17_a">실습 5_17_a)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, b;
+	<span style="color:#66d9ef">for</span>(a; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; b <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; b<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, b);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_17_b">실습 5_17_b)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; b <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; b<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span> b <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_17_c">실습 5_17_c)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; b <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; b<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, a <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">*</span>b <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_17_d">실습 5_17_d)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">char</span> a <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;A&#39;</span>, b;
+	<span style="color:#66d9ef">for</span>(a; a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;E&#39;</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>; b <span style="color:#f92672">&lt;=</span> a; b<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%5c&#34;</span>, b);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_17_e">실습 5_17_e)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">char</span> a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>, b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;E&#39;</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;A&#39;</span>; b <span style="color:#f92672">&lt;=</span> a; b<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%5c&#34;</span>, b);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="3-while-문">3) while 문</h3>
+<p>조건식이 만족하는 동안 반복 수행할 문장을 반복 수행하는 명령</p>
+<h4 id="문법-2">문법</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">while</span>(<span style="color:#960050;background-color:#1e0010">조건문</span>) {
+	<span style="color:#960050;background-color:#1e0010">명령문</span>;
+	<span style="color:#960050;background-color:#1e0010">증감식</span>;
+}
+</code></pre></div><h4 id="실습-5_18_a">실습 5_18_a&rsquo;)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>) {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i<span style="color:#f92672">++</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_18_a-1">실습 5_18_a)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>) {
+		i<span style="color:#f92672">++</span>;
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_18_b">실습 5_18_b)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>) {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_18_c">실습 5_18_c)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>) {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i<span style="color:#f92672">--</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_18_d">실습 5_18_d)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">2</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_18_e">실습 5_18_e)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">10</span>) {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">5</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_18_f">실습 5_18_f)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">char</span> i <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>;
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;N&#39;</span>) {
+		printf(<span style="color:#e6db74">&#34;%c&#34;</span>, i);
+		i<span style="color:#f92672">++</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_18_h">실습 5_18_h)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=-</span> <span style="color:#ae81ff">1</span>, sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>) {
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">7</span>) {
+			i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+			printf(<span style="color:#e6db74">&#34;%d + &#34;</span>, i);
+		}
+		<span style="color:#66d9ef">else</span> {
+			i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+			printf(<span style="color:#e6db74">&#34;%d = &#34;</span>, i);
+		}
+	sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> i;
+	}
+	printf(<span style="color:#e6db74">&#34;%d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="4-do--while-문">4) do ~ while 문</h3>
+<p>조건식이 만족하는 동안 반복 수행할 문장을 반복 수행하는 명령</p>
+<h4 id="문법-3">문법</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">do</span> {
+	<span style="color:#960050;background-color:#1e0010">명령문</span>;
+	<span style="color:#960050;background-color:#1e0010">증감식</span>;
+} <span style="color:#66d9ef">while</span>(<span style="color:#960050;background-color:#1e0010">조건문</span>);
+</code></pre></div><h4 id="실습-5_19_a">실습 5_19_a&rsquo;)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">do</span> {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i<span style="color:#f92672">++</span>;
+	}
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_19_a-1">실습 5_19_a)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">do</span> {
+		i<span style="color:#f92672">++</span>;
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+	}
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_19_b">실습 5_19_b)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">do</span> {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+	}
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_19_c">실습 5_19_c)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+	<span style="color:#66d9ef">do</span> {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>;
+	}
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_19_d">실습 5_19_d)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+	<span style="color:#66d9ef">do</span> {
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+		i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">2</span>;
+	}
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_19_e">실습 5_19_e)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">char</span> i <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>;
+	<span style="color:#66d9ef">do</span> {
+		printf(<span style="color:#e6db74">&#34;%c&#34;</span>, i);
+		i<span style="color:#f92672">++</span>;
+	}
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;N&#39;</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_19_f">실습 5_19_f)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">do</span> {
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>) {
+			i<span style="color:#f92672">++</span>;
+			printf(<span style="color:#e6db74">&#34;%d + &#34;</span>, i);
+		}
+		<span style="color:#66d9ef">else</span>{
+			i<span style="color:#f92672">++</span>;
+			printf(<span style="color:#e6db74">&#34;%d = &#34;</span>, i);
+		}
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> i;
+	}
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">9</span>);
+	printf(<span style="color:#e6db74">&#34;%d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_19_g">실습 5_19_g)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">do</span> {
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>) {
+			i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+			printf(<span style="color:#e6db74">&#34;%d + &#34;</span>, i);
+		}
+		<span style="color:#66d9ef">else</span> {
+			i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+			printf(<span style="color:#e6db74">&#34;%d = &#34;</span>, i);
+		}
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> i;
+	}
+	<span style="color:#66d9ef">while</span>(i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">8</span>);
+	printf(<span style="color:#e6db74">&#34;%d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_20">실습 5_20</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	printf(<span style="color:#e6db74">&#34;점수?</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">do</span> {
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>i);
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> i;
+	} <span style="color:#66d9ef">while</span>(i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">999</span>);
+	printf(<span style="color:#e6db74">&#34;합 = %d&#34;</span>, sum<span style="color:#f92672">-</span><span style="color:#ae81ff">999</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="예제-5_01-a">예제 5_01 a)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
+			<span style="color:#66d9ef">continue</span>;
+		printf(<span style="color:#e6db74">&#34;%2d&#34;</span>, i);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="예제-5_01-b">예제 5_01 b)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
+			<span style="color:#66d9ef">break</span>;
+		printf(<span style="color:#e6db74">&#34;%2d&#34;</span>, i);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="5-continue-문">5) continue 문</h3>
+<p>continue 문 뒷 부분은 무시하고 반복문의 조건으로 제어가 옮겨진다.</p>
+<h4 id="실습-5_21">실습 5_21</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">if</span>(i<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+		<span style="color:#66d9ef">continue</span>;
+		printf(<span style="color:#e6db74">&#34;%5d&#34;</span>, i);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="6-break-문">6) break 문</h3>
+<p>반복문을 빠져나온다. 만약 다중 반복문인 경우 가장 가까운 반복문 하나만 빠져나온다.</p>
+<h4 id="실습-5_22">실습 5_22</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i;
+	<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+		printf(<span style="color:#e6db74">&#34;id = &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>i);
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+		<span style="color:#66d9ef">break</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-5_23">실습 5_23</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>i);
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">999</span>)
+		<span style="color:#66d9ef">break</span>;
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> i;
+	}
+	printf(<span style="color:#e6db74">&#34;합 = %d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-5_24">실습 5_24</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+		i<span style="color:#f92672">++</span>;
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> i;
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">==</span> <span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">break</span>;
+	}
+	printf(<span style="color:#e6db74">&#34;%d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_25">실습 5_25</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+		i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+		printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, i); 
+		sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> i;
+		<span style="color:#66d9ef">if</span>(i <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">break</span>;
+	}
+	printf(<span style="color:#e6db74">&#34;%3d&#34;</span>, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_26">실습 5_26</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+		b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+		<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+			b<span style="color:#f92672">++</span>;
+			printf(<span style="color:#e6db74">&#34;%4d&#34;</span>, <span style="color:#ae81ff">10</span><span style="color:#f92672">*</span>a <span style="color:#f92672">+</span> b);
+			<span style="color:#66d9ef">if</span>(b <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">break</span>;
+		}
+		a<span style="color:#f92672">++</span>;
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+		<span style="color:#66d9ef">if</span>(a <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>) <span style="color:#66d9ef">break</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_27_a">실습 5_27_a)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+		b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+		<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+			b<span style="color:#f92672">++</span>;
+			printf(<span style="color:#e6db74">&#34;* &#34;</span>);
+			<span style="color:#66d9ef">if</span>(b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">break</span>;
+		}
+		a<span style="color:#f92672">++</span>;
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+		<span style="color:#66d9ef">if</span>(a <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>) <span style="color:#66d9ef">break</span>;
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-5_27_b">실습 5_27_b)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+	<span style="color:#66d9ef">int</span> a, b, c, d;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">4</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; b <span style="color:#f92672">&lt;=</span> a; b<span style="color:#f92672">++</span>) {		
+			printf(<span style="color:#e6db74">&#34;* &#34;</span>);
+		}	
+		<span style="color:#66d9ef">for</span>(c <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>; c <span style="color:#f92672">&gt;=</span> a; c<span style="color:#f92672">--</span>) {
+			printf(<span style="color:#e6db74">&#34;  &#34;</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_27_c">실습 5_27_c)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a,b,c,d;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>; b <span style="color:#f92672">&gt;=</span> a; b<span style="color:#f92672">--</span>) {		
+			printf(<span style="color:#e6db74">&#34;* &#34;</span>);
+		}	
+		<span style="color:#66d9ef">for</span>(c <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; c <span style="color:#f92672">&lt;=</span> a; c<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;  &#34;</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_27_d">실습 5_27_d)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, c, d;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">4</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; b <span style="color:#f92672">&lt;</span> a; b<span style="color:#f92672">++</span>) {		
+			printf(<span style="color:#e6db74">&#34;  &#34;</span>);
+		}	
+		<span style="color:#66d9ef">for</span>(c <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; c <span style="color:#f92672">&gt;=</span> a; c<span style="color:#f92672">--</span>) {
+			printf(<span style="color:#e6db74">&#34;* &#34;</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_27_e">실습 5_27_e)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, c, d;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; b <span style="color:#f92672">&gt;=</span> a; b<span style="color:#f92672">--</span>) {	
+			printf(<span style="color:#e6db74">&#34;  &#34;</span>);
+		}	
+		<span style="color:#66d9ef">for</span>(c <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; c <span style="color:#f92672">&lt;=</span> a; c<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;* &#34;</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_27_f">실습 5_27_f)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, b, c, d;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; a <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; a<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(b <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>; b <span style="color:#f92672">&gt;</span> a; b<span style="color:#f92672">--</span>){	
+			printf(<span style="color:#e6db74">&#34;  &#34;</span>);
+		}
+		<span style="color:#66d9ef">for</span>(c <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; c <span style="color:#f92672">&lt;=</span> a; c<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;* &#34;</span>);
+		}		
+		<span style="color:#66d9ef">for</span>(d <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; d <span style="color:#f92672">&lt;</span> a; d<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;* &#34;</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_28">실습 5_28</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span>(sum <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2000</span>) {
+		sum <span style="color:#f92672">+=</span> i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+	}
+	printf(<span style="color:#e6db74">&#34;n = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">sum = %d&#34;</span>, i, sum);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_29">실습 5_29</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> a, i;
+	printf(<span style="color:#e6db74">&#34;몇단?&#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>a);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>) {
+		printf(<span style="color:#e6db74">&#34;%d * %d = %3d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, i, a<span style="color:#f92672">*</span>i);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h4 id="실습-5_30">실습 5_30</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i, j;
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(j<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>; j<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>; j<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%d * %d = %3d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, j, i<span style="color:#f92672">*</span>j);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-5_31">실습 5_31</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e"># include &lt;stdio.h&gt;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+	<span style="color:#66d9ef">int</span> i, j;
+	printf(<span style="color:#e6db74">&#34;1)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; j<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%3d &#34;</span>, i<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span> j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">2)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; j<span style="color:#f92672">++</span>) {
+			<span style="color:#66d9ef">if</span>(i<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) printf(<span style="color:#e6db74">&#34;%3d &#34;</span>, i<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span> j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+			<span style="color:#66d9ef">else</span> printf(<span style="color:#e6db74">&#34;%3d &#34;</span>, i<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">-</span> j);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">3)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; j<span style="color:#f92672">++</span>) {
+			printf(<span style="color:#e6db74">&#34;%3d &#34;</span>, i <span style="color:#f92672">+</span> j<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+		}
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	}
+}
+</code></pre></div>
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+            
+              <span class="button next">
+                <a href="/posts/05._control_statement_1/">
+                  <span class="button__text">05</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "develoging" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>
