@@ -70,6 +70,10 @@
           <li><a href="/about">About</a></li>
         
       
+        
+          <li><a href="/tag">Tag</a></li>
+        
+      
       
     
   </ul>
@@ -78,6 +82,10 @@
     
       
         <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tag">Tag</a></li>
       
     
   </ul>
@@ -117,7 +125,7 @@
   <div class="posts">
     
     <div class="post on-list">
-      <h1 class="post-title"><a href="/posts/07._function_1/">7-1. 함수</a></h1>
+      <h1 class="post-title"><a href="/posts/08._pointer/">08</a></h1>
       <div class="post-meta">
         
           <span class="post-date">
@@ -146,9 +154,95 @@
       
 
       
+
+      <div class="post-content">
         
-          <img src="/adfas" class="post-cover" />
+          
+            01 포인터 및 포인터 변수 포인터(pointer)란? 포인터란 데이터가 기억되어 있는 기억 장소의 전지를 나타내는 주소 값을 의미한다. 우리가 변수를 선언하면 컴퓨터는 변수의 데이터형에 맞는 메모리 크기를 잡게 된다. 이때 할당된 메모리의 위치는 주소값을 갖게 되는 데 이 주소값을 포인터라 한다.
+포인터 사용의 특징  C 언어이 가장 큰 특징의 하나로 메모리의 데이터를 쉽게 접근하여 이용할 수 있다. 잘못 사용 시 난해한 프로그램이 된다. 배열을 포인터를 이용하여 효율적으로 사용할 수 있다.  포인터 변수 주소를 값으로 갖는 변수를 의미한다.
+          
         
+      </div>
+      
+        <div><a class="read-more button" href="/posts/08._pointer/">Read more →</a></div>
+      
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/07._function_2/">7-2. 함수</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-26
+          </span>
+
+          
+            
+
+
+
+          
+        
+        
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/c/">c</a>&nbsp;
+          
+            #<a href="/tags/language/">language</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            04 재귀적 함수 재귀적 (recursive) 함수는 함수 실행 중간에 자기 자신 (실행되고 있는 함수) 을 또 호출하는 함수를 말한다.
+재귀적 함수는 어떠한 조건이 만족될 때까지 반복하여 자신을 호출하게 되므로, 재귀적 호출을 중단하게 하는 조건이 반드시 있어야 한다.
+함수의 호출시 프로그램 상태 (state) 를 보존하고, 자료의 일부를 피 호출함수에 전달하고, 피 호출함수의 종료와 더불어 호출 함수로 되돌아오는 과정을 반복하기 때문에 제귀적 함수를 처리하기 위하여 스택을 이용한다.
+대표적인 예로는 팩토리얼 (factorial) 을 들 수 있다.
+          
+        
+      </div>
+      
+        <div><a class="read-more button" href="/posts/07._function_2/">Read more →</a></div>
+      
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/07._function_1/">7-1. 함수</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-26
+          </span>
+
+          
+            
+
+
+
+          
+        
+        
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/c/">c</a>&nbsp;
+          
+            #<a href="/tags/language/">language</a>&nbsp;
+          
+        </span>
+      
+
       
 
       <div class="post-content">
@@ -267,109 +361,6 @@
       </div>
       
         <div><a class="read-more button" href="/posts/05._control_statement_2/">Read more →</a></div>
-      
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/posts/05._control_statement_1/">5-1. 제어문(반복문)</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-03-25
-          </span>
-
-          
-            
-
-
-  
-    <span class="post-moddate">
-      (Modified: 2020-03-26)
-    </span>
-  
-
-
-          
-        
-        
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="/tags/c/">c</a>&nbsp;
-          
-            #<a href="/tags/language/">language</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            순차적인 프로그램 실행 순서를 변경하거나반복 수행하고자 할 때 사용하는 명령문
-종류  분기문 : if 문, switch~case문 반복문 : for 문, while 문 보조제어문 : continue 문, break 문  제어문에 따른 실행 문장이 한 문장이면 블록을 생략해도 좋다.
-01 분기문 1) if 문 조건이 참이면 명령문1을 실행함
-문법 if(조건문) { 명령문1; } 실습 5_01 #include &lt;stdio.h&gt;int main() { int jumsu; printf(&quot;점수 = ? &quot;); scanf(&quot;%d&quot;, &amp;jumsu); if(jumsu &gt;= 80) printf(&quot;합격&quot;); return 0; } 실습 5_02 #include &lt;stdio.
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/posts/05._control_statement_1/">Read more →</a></div>
-      
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/posts/04._operators_and_formulas/"><ol start="4">
-<li>연산자와 수식</li>
-</ol></a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-03-25
-          </span>
-
-          
-            
-
-
-  
-    <span class="post-moddate">
-      (Modified: 2020-03-26)
-    </span>
-  
-
-
-          
-        
-        
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="/tags/c/">c</a>&nbsp;
-          
-            #<a href="/tags/language/">language</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            01 산술연산자    연산자 기능 사용     + 좌우의 값을 더한다. a=b+c   - 왼쪽의 값에서 오른쪽의 값을 뺀다. a=b-c   * 좌우의 값을 곱한다. a=b*c   / 왼쪽의 값을 오른쪽의 값으로 나눈다. a=b/c   % 왼쪽의 값을 오른쪽의 값으로 나눈 나머지를 구한다. a=b%c    실습 4_01 #include &lt;stdio.h&gt;int main() { int a, b, add, sub, mul, div, mod; printf(&quot;두 수 입력 : &quot;); scanf(&quot;%d %d&quot;, &amp;a, &amp;b); add = a + b; sub = a - b; mul = a * b; div = a / b; mod = a % b; printf(&quot;덧셈 = %d 뺄셈 = %d 곱셈 = %d 나눗셈 %d = %d 나머지 = %d&quot;, add, sub, mul, div, mod); return 0; } 실습 4_02 #include &lt;stdio.
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/posts/04._operators_and_formulas/">Read more →</a></div>
       
     </div>
     
