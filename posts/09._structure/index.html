@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>09 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="구조체란? 책 대여점에서 책 재고관리를 하기 위한 프로그램을 작성한다고 생각해보자, 각각의 책에 대하여 분류번호, 책 제목, 저자, 구입가격, 출판일자, 대여 횟수 등 수많은 정보가 필요하게 된다. 그러나 각각의 데이터들은 데이터형이 같지 않아 서로 다른 데이터형으로 정의하고 따로따로 배열로 저장할 수 밖에 없다. 하지만 하나의 배열을 사용하여 배열의 각 원소가 하나의 책에 대한 모든 정보를 갖게 되면 재고관리가 쉬어질 것이다.
+구조체는 서로 다른 데이터형의 자료들을 묶음으로 처리하고자 할 때 사용하는 자료 형태이며, 구조체에서 사용되는 각각의 구성원을 구조체 구성원이라 한다."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/09._structure/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="09"/>
+<meta name="twitter:description" content="구조체란? 책 대여점에서 책 재고관리를 하기 위한 프로그램을 작성한다고 생각해보자, 각각의 책에 대하여 분류번호, 책 제목, 저자, 구입가격, 출판일자, 대여 횟수 등 수많은 정보가 필요하게 된다. 그러나 각각의 데이터들은 데이터형이 같지 않아 서로 다른 데이터형으로 정의하고 따로따로 배열로 저장할 수 밖에 없다. 하지만 하나의 배열을 사용하여 배열의 각 원소가 하나의 책에 대한 모든 정보를 갖게 되면 재고관리가 쉬어질 것이다.
+구조체는 서로 다른 데이터형의 자료들을 묶음으로 처리하고자 할 때 사용하는 자료 형태이며, 구조체에서 사용되는 각각의 구성원을 구조체 구성원이라 한다."/>
+
+
+
+<meta property="og:title" content="09" />
+<meta property="og:description" content="구조체란? 책 대여점에서 책 재고관리를 하기 위한 프로그램을 작성한다고 생각해보자, 각각의 책에 대하여 분류번호, 책 제목, 저자, 구입가격, 출판일자, 대여 횟수 등 수많은 정보가 필요하게 된다. 그러나 각각의 데이터들은 데이터형이 같지 않아 서로 다른 데이터형으로 정의하고 따로따로 배열로 저장할 수 밖에 없다. 하지만 하나의 배열을 사용하여 배열의 각 원소가 하나의 책에 대한 모든 정보를 갖게 되면 재고관리가 쉬어질 것이다.
+구조체는 서로 다른 데이터형의 자료들을 묶음으로 처리하고자 할 때 사용하는 자료 형태이며, 구조체에서 사용되는 각각의 구성원을 구조체 구성원이라 한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/09._structure/" />
+<meta property="article:published_time" content="2020-03-26T14:48:48+00:00" />
+<meta property="article:modified_time" content="2020-03-27T14:50:48+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tag">Tag</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tag">Tag</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/09._structure/">09</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-03-26
+        </span>
+
+        
+          
+            
+
+
+  
+    <span class="post-moddate">
+      (Modified: 2020-03-27)
+    </span>
+  
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/c/">c</a>&nbsp;
+        
+          #<a href="/tags/language/">language</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <h4 id="구조체란">구조체란?</h4>
+<p>책 대여점에서 책 재고관리를 하기 위한 프로그램을 작성한다고 생각해보자, 각각의 책에 대하여 분류번호, 책 제목, 저자, 구입가격, 출판일자, 대여 횟수 등 수많은 정보가 필요하게 된다. 그러나 각각의 데이터들은 데이터형이 같지 않아 서로 다른 데이터형으로 정의하고 따로따로 배열로 저장할 수 밖에 없다. 하지만 하나의 배열을 사용하여 배열의 각 원소가 하나의 책에 대한 모든 정보를 갖게 되면 재고관리가 쉬어질 것이다.</p>
+<p>구조체는 서로 다른 데이터형의 자료들을 묶음으로 처리하고자 할 때 사용하는 자료 형태이며, 구조체에서 사용되는 각각의 구성원을 구조체 구성원이라 한다.</p>
+<p>일반적인 데이터 구조와 C언어에서의 데이터 구조를 살펴보면 일반적인 데이터 구조의 레코드에 해당되는 것이 구조체이며, 필드에 해당되는 것이 구조체의 구성원이다.</p>
+<p>구조체를 사용하기 위해서는 첫째, 구조체의형식을 정의하고, 둘째, 구조체의 변수를 선언해야 하며, 셋째, 구조체 변수의 참조과정을 거처야 한다.</p>
+<h2 id="01-구조체와-구조체-변수">01 구조체와 구조체 변수</h2>
+<h3 id="구조체의-형식정의">구조체의 형식정의</h3>
+<p>구조체는 다음과 같은 형식으로 선언한다,</p>
+<h4 id="일반형식">일반형식</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> <span style="color:#960050;background-color:#1e0010">구조체</span>_태그 {
+	<span style="color:#960050;background-color:#1e0010">구조체</span>_구성원1;
+	<span style="color:#960050;background-color:#1e0010">구조체</span>_구성원2;
+	...
+	<span style="color:#960050;background-color:#1e0010">구조체</span>_구성원n;
+};
+</code></pre></div><h4 id="보기-1">보기 1</h4>
+<table>
+<thead>
+<tr>
+<th align="center">분류번호</th>
+<th align="center">책 제목</th>
+<th align="center">저자</th>
+<th align="center">구입가격</th>
+<th align="center">출판일자</th>
+<th align="center">대여횟수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">정수형</td>
+<td align="center">문자(25)</td>
+<td align="center">문자(25)</td>
+<td align="center">정수형</td>
+<td align="center">정수형</td>
+<td align="center">실수형</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> book {
+	<span style="color:#66d9ef">int</span> number;
+	<span style="color:#66d9ef">char</span> title[<span style="color:#ae81ff">25</span>];
+	<span style="color:#66d9ef">char</span> writer[<span style="color:#ae81ff">25</span>];
+	<span style="color:#66d9ef">int</span> price;
+	<span style="color:#66d9ef">int</span> date;
+	<span style="color:#66d9ef">float</span> lendnum;
+};
+</code></pre></div><p>여기서, 구조체 태그는 구조체의 이름을 말하며, 변수명을 만드는 규칙에 따라 만든다.</p>
+<h3 id="구조체-변수의-선언">구조체 변수의 선언</h3>
+<p>형식이 정의된 구조체를 사용하기 위해 변수를 선언하는 과정으로 일반형식은 다음과 같다.</p>
+<h4 id="일반형식-1">일반형식</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> <span style="color:#960050;background-color:#1e0010">구조체</span>_태그 <span style="color:#960050;background-color:#1e0010">변수</span><span style="color:#ae81ff">1</span>[<span style="color:#960050;background-color:#1e0010">변수</span><span style="color:#ae81ff">2</span>, ... <span style="color:#960050;background-color:#1e0010">변수</span>n];
+</code></pre></div><h4 id="보기-2">보기 2</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> book man1;
+</code></pre></div><p>여기서, 구조체_태그는 앞에서 설정한 구조체의 이름을 말하며, 변수는 구조체를 사용할 변수의 이름을 말한다.</p>
+<ol>
+<li>구조체 변수선언은 구조체 형식 정의와 동시에 선언해 주어도 된다.</li>
+</ol>
+<h4 id="보기-3">보기 3</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> book {
+	<span style="color:#66d9ef">int</span> number;
+	<span style="color:#66d9ef">char</span> title[<span style="color:#ae81ff">25</span>];
+	<span style="color:#66d9ef">char</span> write[<span style="color:#ae81ff">25</span>];
+	<span style="color:#66d9ef">int</span> price;
+	<span style="color:#66d9ef">int</span> date;
+	<span style="color:#66d9ef">float</span> lendnum;
+} man1;
+</code></pre></div><ol start="2">
+<li>구조체 변수선언을 한 후 변수의 초기값을 선언 할 수도 있으며 초기값 선언은 배열의 초기 값 선언과 같은 방법으로 선언한다.</li>
+</ol>
+<h4 id="보기-4">보기 4</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> book {
+	<span style="color:#66d9ef">int</span> number;
+	<span style="color:#66d9ef">char</span> title[<span style="color:#ae81ff">25</span>];
+	<span style="color:#66d9ef">char</span> writer[<span style="color:#ae81ff">25</span>];
+	<span style="color:#66d9ef">int</span> price;
+	<span style="color:#66d9ef">int</span> date;
+	<span style="color:#66d9ef">float</span> lendnum;
+} man1 <span style="color:#f92672">=</span> { <span style="color:#ae81ff">2509</span>, <span style="color:#e6db74">&#34;황소와 도깨비&#34;</span>, <span style="color:#e6db74">&#34;이상&#34;</span>, <span style="color:#ae81ff">6000</span>, <span style="color:#ae81ff">19971130</span>, <span style="color:#ae81ff">57</span>};
+</code></pre></div><h3 id="구조체-변수의-참조">구조체 변수의 참조</h3>
+<p>구조체 형식 정의와 구조체 변수 선언이 끝난 후 구조체 변수에 들어있는 각각의 구성원을 참조한다.</p>
+<h4 id="일반형식-2">일반형식</h4>
+<p><code>구조체변수명.구조체구성원명</code></p>
+<h4 id="보기5">보기5</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">man1.number <span style="color:#f92672">=</span> <span style="color:#ae81ff">2509</span>;
+</code></pre></div><h4 id="실습-9_01">실습 9_01</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> Car {
+	<span style="color:#66d9ef">int</span> num;
+	<span style="color:#66d9ef">double</span> gas;
+};
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> Car car1;
+	car1.num <span style="color:#f92672">=</span> <span style="color:#ae81ff">1234</span>;
+	car1.gas <span style="color:#f92672">=</span> <span style="color:#ae81ff">25.5</span>;
+	printf(<span style="color:#e6db74">&#34;자동차 번호는 %d : 연료량은 %f임니다.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, car1.num, car1.gas);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-9_02">실습 9_02</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> Person {
+	<span style="color:#66d9ef">int</span> age;
+	<span style="color:#66d9ef">char</span> gender;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>];
+};
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> Person JB <span style="color:#f92672">=</span> { <span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#39;M&#39;</span>, <span style="color:#e6db74">&#34;장동건&#34;</span>};
+	printf(<span style="color:#e6db74">&#34;나이: %d세  성별: %c 이름: %s&#34;</span>, JB.age, JB.gender, JB.name);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+}
+</code></pre></div><h4 id="실습-9_03">실습 9_03</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> Person {
+	<span style="color:#66d9ef">int</span> age;
+	<span style="color:#66d9ef">char</span> gender;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>];
+} JB <span style="color:#f92672">=</span> { <span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#39;M&#39;</span>, <span style="color:#e6db74">&#34;장동건&#34;</span>};
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+	printf(<span style="color:#e6db74">&#34;나이: %d세 성별: %c 이름: %s&#34;</span>, JB.age, JB.gender, JB.name);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-9_04">실습 9_04</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> Person {
+	<span style="color:#66d9ef">int</span> number;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>];
+	<span style="color:#66d9ef">int</span> age;
+	<span style="color:#66d9ef">char</span> phone[<span style="color:#ae81ff">15</span>];
+};
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> Person km <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#34;kim minsu&#34;</span>, <span style="color:#ae81ff">15</span>, <span style="color:#e6db74">&#34;02-9090-0001&#34;</span>};
+	printf(<span style="color:#e6db74">&#34;순서  이 름      나이   전화번호  </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;  %d  %s    %d   %s      &#34;</span>, km.number, km.name, km.age, km.phone);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-9_05">실습 9_05</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> student {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>];
+	<span style="color:#66d9ef">int</span> kuk;
+	<span style="color:#66d9ef">int</span> eng;
+	<span style="color:#66d9ef">int</span> tot;
+	<span style="color:#66d9ef">float</span> avg;
+};
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> student stu1;
+	printf(<span style="color:#e6db74">&#34;학생 자료를 입력하세요</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;학생번호: &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stu1.bunho);
+	printf(<span style="color:#e6db74">&#34;학생이름: &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#f92672">&amp;</span>stu1.name);
+	printf(<span style="color:#e6db74">&#34;국어점수: &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stu1.kuk);
+	printf(<span style="color:#e6db74">&#34;영어점수: &#34;</span>);
+	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stu1.eng);
+	stu1.tot <span style="color:#f92672">=</span> stu1.kuk <span style="color:#f92672">+</span> stu1.eng;
+	stu1.avg <span style="color:#f92672">=</span> stu1.tot<span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>;
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> ** 입력된 학생 자료입니다. **</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;%d %s %d %d %d %.2f&#34;</span>, stu1.bunho, stu1.name, stu1.kuk, stu1.eng, stu1.tot, stu1.avg);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h2 id="02-구조체-배열">02 구조체 배열</h2>
+<p>친구들의 주소록을 만들 때 친구가 많아 구조체를 이용하더라도 프로그램이 복잡한 경우가 있다. 이와 같이 복잡한 경우 단순한 구조체가 아닌 구조체 배열을 활용하면 동일한 구조를 가진 대량의 레코드를 처리하는데 효과적이다. 구조체 배열은 구조체를 정의 한 후 구조체 변수에 배열을 사용하는 것을 의미한다.</p>
+<h4 id="구조체-배열의-선언">구조체 배열의 선언</h4>
+<p>구조체 형식이 정의된 후 구조체 변수를 선언할 때 배열 형태로 선언한다.</p>
+<h4 id="일반형식-3">일반형식</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> <span style="color:#960050;background-color:#1e0010">구조체</span>_태그 <span style="color:#960050;background-color:#1e0010">배열명</span>[<span style="color:#960050;background-color:#1e0010">원소의</span>_개수];
+</code></pre></div><h4 id="보기-6">보기 6</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">string sinsang student1[<span style="color:#ae81ff">5</span>];
+</code></pre></div><h4 id="보기-7">보기 7</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> sinsang {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> inum[<span style="color:#ae81ff">10</span>];
+	<span style="color:#66d9ef">int</span> nai;
+	<span style="color:#66d9ef">char</span> telephone[<span style="color:#ae81ff">15</span>];
+} student1[<span style="color:#ae81ff">5</span>];
+</code></pre></div><h4 id="구조체-배열의-참조">구조체 배열의 참조</h4>
+<p>구조체 형식 정의와 구조체 배열 선언이 끝난 후 구조체 배열에 들어있는 각각의 구성원을 참조한다.</p>
+<h4 id="일반형식-4">일반형식</h4>
+<p><code>구조체_배열명[원소번호].구조체_구성원명;</code></p>
+<h4 id="보기-8">보기 8</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">student1[<span style="color:#ae81ff">0</span>].bunho <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</code></pre></div><h4 id="실습-9_06">실습 9_06</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> sinsang {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>];
+	<span style="color:#66d9ef">int</span> nai;
+	<span style="color:#66d9ef">char</span> telephone[<span style="color:#ae81ff">15</span>];
+}; 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> sinsang stud[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> {
+		{<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#34;박수민&#34;</span>,<span style="color:#ae81ff">17</span>,<span style="color:#e6db74">&#34;02-123-4567&#34;</span>},
+		{<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#34;이주현&#34;</span>,<span style="color:#ae81ff">16</span>,<span style="color:#e6db74">&#34;02-345-6789&#34;</span>},
+		{<span style="color:#ae81ff">3</span>,<span style="color:#e6db74">&#34;정찬호&#34;</span>,<span style="color:#ae81ff">17</span>,<span style="color:#e6db74">&#34;02-678-1234&#34;</span>}
+	};
+	<span style="color:#66d9ef">int</span> a;
+	printf(<span style="color:#e6db74">&#34;순서 이 름  나이 전화번호</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;--------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; a<span style="color:#f92672">++</span>)
+		printf(<span style="color:#e6db74">&#34;  %2d   %-10s %3d  %-15s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, stud[a].bunho,stud[a].name, stud[a].nai, stud[a].telephone);
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+	
+}
+</code></pre></div><h4 id="실습-9_07">실습 9_07</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> sinsang {
+	<span style="color:#66d9ef">int</span> num;
+	<span style="color:#66d9ef">char</span> gender;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">20</span>];
+}; 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> sinsang stud[<span style="color:#ae81ff">20</span>];
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">int</span> b;
+	<span style="color:#66d9ef">int</span> count<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> ; ; a<span style="color:#f92672">++</span>) {
+		printf(<span style="color:#e6db74">&#34;학번: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stud[a].num); 
+		printf(<span style="color:#e6db74">&#34;이름: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, stud[a].name);
+		printf(<span style="color:#e6db74">&#34;성별(M/F): &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%c&#34;</span>, <span style="color:#f92672">&amp;</span>stud[a].gender);
+		printf(<span style="color:#e6db74">&#34;계속 입력하시려면 1, 아니면 2를 누르세요 : &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>b);
+		count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+		<span style="color:#66d9ef">if</span>(b <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
+			<span style="color:#66d9ef">break</span>;	 
+	} 
+	printf(<span style="color:#e6db74">&#34;학번  성별   이름</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;--------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;</span> count; a<span style="color:#f92672">++</span>)
+		printf(<span style="color:#e6db74">&#34; %d  %c  %-10s </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, stud[a].num, stud[a].gender, stud[a].name);
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+} 
+</code></pre></div><h2 id="03-구조체-포인터">03 구조체 포인터</h2>
+<p>배열과 포인터가 서로 밀접하게 쓰인 것처럼 구조체에서도 구조적 배열과 구조체 포인터는 상호 밀접하게 쓰이고 있다.</p>
+<h4 id="구조체-포인터-변수의-선언">구조체 포인터 변수의 선언</h4>
+<p>구조체 변수를 선언할 때 포인터 형태로 선언한다. 구조체 포인터변수는 초기값을 배정하지 못하므로 초기화시 구조체 변수 또는 구조체 배열로 초기화한 후 사용한다.</p>
+<h4 id="일반형식-5">일반형식</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> <span style="color:#960050;background-color:#1e0010">구조체</span>_태그_포인터;
+</code></pre></div><h4 id="보기-9">보기 9</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> sinsang <span style="color:#f92672">*</span>sw;
+</code></pre></div><h4 id="보기-10">보기 10</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> sinsang {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> irum[<span style="color:#ae81ff">20</span>];
+	<span style="color:#66d9ef">int</span> nai;
+	<span style="color:#66d9ef">char</span> telephone[<span style="color:#ae81ff">15</span>];
+};
+<span style="color:#66d9ef">struct</span> sinsang sawon1[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> {
+	{<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;홍길동&#34;</span>, <span style="color:#ae81ff">19</span>, <span style="color:#e6db74">&#34;02-123-4567&#34;</span>},
+	{<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#34;김갑돌&#34;</span>, <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#34;02-234-5678&#34;</span>},
+	{<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;이미자&#34;</span>, <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#34;02-345-6789&#39;}</span>
+};
+<span style="color:#66d9ef">struct</span> sinsang <span style="color:#f92672">*</span>sw;
+sw <span style="color:#f92672">=</span> sawon1;
+</code></pre></div><h4 id="구조체-포인터의-참조">구조체 포인터의 참조</h4>
+<p>구조체 포인터에 들어있는 구성원을 참조한다.</p>
+<h4 id="일반형식-6">일반형식</h4>
+<p><code>구조체_포인터-&gt;구조체_구성원명;</code></p>
+<h4 id="보기-11">보기 11</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">(sw <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">-&gt;</span> bunho <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</code></pre></div><h4 id="실습-9_08">실습 9_08</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> sinsang {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">10</span>];
+	<span style="color:#66d9ef">int</span> nai;
+	<span style="color:#66d9ef">char</span> telephone[<span style="color:#ae81ff">15</span>];
+}; 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> sinsang <span style="color:#f92672">*</span>sa;
+	<span style="color:#66d9ef">struct</span> sinsang sawon1[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> {
+		{<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#34;홍길동&#34;</span>,<span style="color:#ae81ff">19</span>,<span style="color:#e6db74">&#34;02-123-4567&#34;</span>},
+		{<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#34;김갑돌&#34;</span>,<span style="color:#ae81ff">25</span>,<span style="color:#e6db74">&#34;02-234-5678&#34;</span>},
+		{<span style="color:#ae81ff">3</span>,<span style="color:#e6db74">&#34;이미자&#34;</span>,<span style="color:#ae81ff">30</span>,<span style="color:#e6db74">&#34;02-345-6789&#34;</span>}
+	};
+	<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	sa <span style="color:#f92672">=</span> sawon1; 
+	printf(<span style="color:#e6db74">&#34;번호  이 름  나이 전화번호</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;--------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>, <span style="color:#f92672">++</span>sa)
+		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d   %-10s %3d  %-15s&#34;</span>, sa<span style="color:#f92672">-&gt;</span>bunho ,sa<span style="color:#f92672">-&gt;</span>name, sa<span style="color:#f92672">-&gt;</span>nai, sa<span style="color:#f92672">-&gt;</span>telephone);
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+	
+}
+</code></pre></div><h2 id="04-구조체와-함수">04 구조체와 함수</h2>
+<p>구조체를 일반 변수와 같이 함수에 값 또는 번지로서 전달할 수 있다.</p>
+<h4 id="구조체-구성원의-값-전달">구조체 구성원의 값 전달</h4>
+<p>구조체 구성원의 값을 함수에 전달하는 것이다. 이때, 구조체의 내용 변경은 호출된 함수 내에서만 이루어지고 호출한 함수 환경에 있는 구조체에는 영향을 주지 않는다.</p>
+<h4 id="일반형식-7">일반형식</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">type <span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">가인수</span>);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">구조체변수명</span>.<span style="color:#960050;background-color:#1e0010">구조체구성원</span>)
+	<span style="color:#f92672">:</span>
+}
+type <span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">가인수</span>) {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수의</span> <span style="color:#960050;background-color:#1e0010">본체</span>
+	<span style="color:#f92672">:</span>
+	<span style="color:#66d9ef">return</span>(<span style="color:#960050;background-color:#1e0010">되돌리는</span> <span style="color:#960050;background-color:#1e0010">값</span>);
+}
+</code></pre></div><h4 id="보기-12">보기 12</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fun</span>(<span style="color:#66d9ef">int</span> a);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#f92672">:</span>
+	fun(sawon1.number)
+	<span style="color:#f92672">:</span>
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fun</span>(<span style="color:#66d9ef">int</span> a) {
+	<span style="color:#960050;background-color:#1e0010">함수의</span> <span style="color:#960050;background-color:#1e0010">본체</span>
+}
+</code></pre></div><h4 id="실습-9_09">실습 9_09</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;conio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> sinsang {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">10</span>];
+	<span style="color:#66d9ef">int</span> nai;
+	<span style="color:#66d9ef">char</span> telephone[<span style="color:#ae81ff">15</span>];
+};
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">int</span> kk, <span style="color:#66d9ef">char</span> nn[], <span style="color:#66d9ef">int</span> ss, <span style="color:#66d9ef">char</span> pp[]);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">struct</span> sinsang sawon1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#34;홍길동&#34;</span>,<span style="color:#ae81ff">19</span>,<span style="color:#e6db74">&#34;02-123-4567&#34;</span>};
+	func1(sawon1.bunho, sawon1.name, sawon1.nai, sawon1.telephone);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&lt;&lt;main 함수 에서 출력&gt;&gt;&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">번호 이름   나이  전화번호&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">--------------------------&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d  %-10s %3d %-15s&#34;</span>, sawon1.bunho, sawon1.name, sawon1.nai, sawon1.telephone);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">int</span> kk,<span style="color:#66d9ef">char</span> nn[], <span style="color:#66d9ef">int</span> ss, <span style="color:#66d9ef">char</span> pp[]){
+	kk <span style="color:#f92672">=</span> kk <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+	ss <span style="color:#f92672">=</span> ss <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&lt;&lt;func1 함수에서의 출력&gt;&gt;&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">번호  이름   나이  전화번호&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">------------------------------&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d  %-10s %3d %-15s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, kk, nn, ss, pp); 
+}
+</code></pre></div><h4 id="구조체-구성원의-번지-전달">구조체 구성원의 번지 전달</h4>
+<p>구조체 구성원이 기억되어 있는 번지로 전달하는 것으로 구조체 구성원의 이름 앞에 <code>&amp;</code>연산자를 붙인다. 이때 호출된 함수 내에서 변경된 구조체 구성원의 값은 호출함수 환경에 있는 구조체에도 영향을 준다.</p>
+<h4 id="일반형식-8">일반형식</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">type <span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">가인수</span>)
+<span style="color:#66d9ef">int</span> main() {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#f92672">&amp;</span><span style="color:#960050;background-color:#1e0010">구조체변수명</span>.<span style="color:#960050;background-color:#1e0010">구조체구성원</span>)
+	<span style="color:#f92672">:</span>
+}
+type <span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">가인수</span>) {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수의</span> <span style="color:#960050;background-color:#1e0010">본체</span>
+	<span style="color:#f92672">:</span>
+	<span style="color:#66d9ef">return</span>(<span style="color:#960050;background-color:#1e0010">되돌리는</span> <span style="color:#960050;background-color:#1e0010">값</span>);
+}
+</code></pre></div><h4 id="보기-13">보기 13</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#f92672">:</span>
+	func(<span style="color:#f92672">&amp;</span>sawon1.number)
+	<span style="color:#f92672">:</span>
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a) { <span style="color:#960050;background-color:#1e0010">함수의</span> <span style="color:#960050;background-color:#1e0010">본체</span> }
+</code></pre></div><ul>
+<li>여기서 가인수는 <code>main</code>함수에서 넘겨준 주소값을 받을 수 있는 변수 형태이어야 한다.</li>
+</ul>
+<h4 id="실습-9_10">실습 9_10</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;conio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> sinsang {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">10</span>];
+	<span style="color:#66d9ef">int</span> nai;
+	<span style="color:#66d9ef">char</span> telephone[<span style="color:#ae81ff">15</span>];
+};
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>kk,<span style="color:#66d9ef">char</span> nn[], <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>ss, <span style="color:#66d9ef">char</span> pp[]);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">struct</span> sinsang sawon1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;홍길동&#34;</span>, <span style="color:#ae81ff">19</span>, <span style="color:#e6db74">&#34;02-123-4567&#34;</span>};
+	func1(<span style="color:#f92672">&amp;</span>sawon1.bunho, sawon1.name, <span style="color:#f92672">&amp;</span>sawon1.nai, sawon1.telephone);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&lt;&lt;main 함수 에서 출력&gt;&gt;&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">번호 이름   나이  전화번호&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">--------------------------&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d  %-10s %3d %-15s&#34;</span>,sawon1.bunho, sawon1.name, sawon1.nai, sawon1.telephone);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>kk,<span style="color:#66d9ef">char</span> nn[], <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>ss, <span style="color:#66d9ef">char</span> pp[]) {
+	(<span style="color:#f92672">*</span>kk)<span style="color:#f92672">++</span>;
+	(<span style="color:#f92672">*</span>ss)<span style="color:#f92672">++</span>;
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&lt;&lt;func1 함수에서의 출력&gt;&gt;&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">번호  이름   나이  전화번호&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">------------------------------&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d  %-10s %3d %-15s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, kk, nn, ss, pp); 
+}
+</code></pre></div><h4 id="구조체-전달">구조체 전달</h4>
+<p>구조체 전체를 함수에 전달하는 것으로 구조체 변수의 값 또는 주소를 전달 인수로 사용한다. 주의해야 할 것은 실 매개 변수와 형식 매개 변수의 형은 반드시 일치시켜야 한다.</p>
+<h3 id="1--구조체-변수-값-전달">1.  구조체 변수 값 전달</h3>
+<h4 id="일반형식-9">일반형식</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">type <span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">가인수</span>);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">구조체변수명</span>)
+	<span style="color:#f92672">:</span>
+}
+type <span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">가인수</span>) {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수의</span> <span style="color:#960050;background-color:#1e0010">본체</span>
+	<span style="color:#f92672">:</span>
+	<span style="color:#66d9ef">return</span>(<span style="color:#960050;background-color:#1e0010">되돌리는</span> <span style="color:#960050;background-color:#1e0010">값</span>);
+}
+</code></pre></div><h4 id="보기-14">보기 14</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">struct</span> sinsang sw1);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#f92672">:</span>
+	func(sawon1)
+	<span style="color:#f92672">:</span>
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">struct</span> sinsang sw1) {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수의</span> <span style="color:#960050;background-color:#1e0010">본체</span>
+}
+</code></pre></div><ul>
+<li>호출한 함수의 데이터는 호출된 함수에 의해 영향을 받지 않는다.</li>
+</ul>
+<h3 id="2-구조체-변수의-주소-값-전달">2. 구조체 변수의 주소 값 전달</h3>
+<h4 id="일반형식-10">일반형식</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">type <span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">가인수</span>);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#f92672">&amp;</span><span style="color:#960050;background-color:#1e0010">구조체변수명</span>)
+	<span style="color:#f92672">:</span>
+}
+type <span style="color:#960050;background-color:#1e0010">함수명</span>(<span style="color:#960050;background-color:#1e0010">가인수</span>) {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수의</span> <span style="color:#960050;background-color:#1e0010">본체</span>
+	<span style="color:#f92672">:</span>
+	<span style="color:#66d9ef">return</span>(<span style="color:#960050;background-color:#1e0010">되돌리는</span> <span style="color:#960050;background-color:#1e0010">값</span>);
+}
+</code></pre></div><h4 id="보기-15">보기 15</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">struct</span> sinsang <span style="color:#f92672">*</span>pp);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#f92672">:</span>
+	func(<span style="color:#f92672">&amp;</span>sawon1)
+	<span style="color:#f92672">:</span>
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">struct</span> sinsang <span style="color:#f92672">*</span>pp) {
+	<span style="color:#f92672">:</span>
+	<span style="color:#960050;background-color:#1e0010">함수의</span> <span style="color:#960050;background-color:#1e0010">본체</span>
+}
+</code></pre></div><ul>
+<li>여기서 가인수는 메인 함수에서 넘겨준 주소값을 받을 수 있는 변수 형태이어야 하며, 호출한 함수의 데이터는 호출된 함수에 의해 영향을 받는다.</li>
+</ul>
+<h4 id="실습-9_11">실습 9_11</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;conio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> sinsang {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">10</span>];
+	<span style="color:#66d9ef">int</span> nai;
+	<span style="color:#66d9ef">char</span> telephone[<span style="color:#ae81ff">15</span>];
+};
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">struct</span> sinsang sw1);
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func2</span>(<span style="color:#66d9ef">struct</span> sinsang <span style="color:#f92672">*</span>pp);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">struct</span> sinsang sawon1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#34;홍길동&#34;</span>,<span style="color:#ae81ff">19</span>,<span style="color:#e6db74">&#34;02-123-4567&#34;</span>};
+	func1(sawon1);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&lt;&lt;출력결과(1)&gt;&gt;&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">번호 이름   나이  전화번호&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">--------------------------&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d  %-10s %3d %-15s&#34;</span>, sawon1.bunho, sawon1.name, sawon1.nai, sawon1.telephone);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	func2(<span style="color:#f92672">&amp;</span>sawon1);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&lt;&lt;출력결과(2)&gt;&gt;&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">번호 이름   나이  전화번호&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">--------------------------&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d  %-10s %3d %-15s&#34;</span>, sawon1.bunho, sawon1.name, sawon1.nai, sawon1.telephone);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">struct</span> sinsang sw1) {
+	sw1.bunho <span style="color:#f92672">+=</span> <span style="color:#ae81ff">5</span>;
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&lt;&lt;func1 함수에서의 출력&gt;&gt;&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">번호  이름   나이  전화번호&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">------------------------------&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d  %-10s %3d %-15s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, sw1.bunho, sw1.name, sw1.nai, sw1.telephone); 
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func2</span>(<span style="color:#66d9ef">struct</span> sinsang <span style="color:#f92672">*</span>pp) {
+	pp<span style="color:#f92672">-&gt;</span>bunho <span style="color:#f92672">+=</span> <span style="color:#ae81ff">10</span>;
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&lt;&lt;func2 함수에서의 출력&gt;&gt;&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">번호  이름   나이  전화번호&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">------------------------------&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%2d  %-10s %3d %-15s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pp<span style="color:#f92672">-&gt;</span>bunho, pp<span style="color:#f92672">-&gt;</span>name, pp<span style="color:#f92672">-&gt;</span>nai, pp<span style="color:#f92672">-&gt;</span>telephone); 
+}
+</code></pre></div><h4 id="실습-9_12">실습 9_12</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> data {
+	<span style="color:#66d9ef">int</span> year;
+	<span style="color:#66d9ef">int</span> month;
+	<span style="color:#66d9ef">int</span> day;
+}; 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> data a <span style="color:#f92672">=</span> {<span style="color:#ae81ff">2008</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">23</span>};
+	printf(<span style="color:#e6db74">&#34;오늘은 %d년 %d월 %d일 입니다.&#34;</span>, a.year, a.month, a.day);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-9_13">실습 9_13</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> student {
+	<span style="color:#66d9ef">int</span> bunho;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>];
+	<span style="color:#66d9ef">int</span> kuk;
+	<span style="color:#66d9ef">int</span> eng;
+	<span style="color:#66d9ef">int</span> mat; 
+	<span style="color:#66d9ef">int</span> tot;
+	<span style="color:#66d9ef">float</span> avg;
+};
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> student stud[<span style="color:#ae81ff">20</span>];
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">int</span> b;
+	<span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; ; a<span style="color:#f92672">++</span>) {
+		printf(<span style="color:#e6db74">&#34;학번: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stud[a].bunho);
+		printf(<span style="color:#e6db74">&#34;이름: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#f92672">&amp;</span>stud[a].name);
+		printf(<span style="color:#e6db74">&#34;국어점수: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stud[a].kuk);
+		printf(<span style="color:#e6db74">&#34;영어점수: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stud[a].eng);
+		printf(<span style="color:#e6db74">&#34;수학점수: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>stud[a].mat); 
+		printf(<span style="color:#e6db74">&#34;계속 입력하시려면 1, 아니면 2를 누르세요 : &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>b);
+		stud[a].tot <span style="color:#f92672">=</span> stud[a].kuk <span style="color:#f92672">+</span> stud[a].eng <span style="color:#f92672">+</span> stud[a].mat;
+		stud[a].avg <span style="color:#f92672">=</span> stud[a].tot<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>;
+		count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+		<span style="color:#66d9ef">if</span>(b <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
+			<span style="color:#66d9ef">break</span>;	
+	}
+	printf(<span style="color:#e6db74">&#34;학번  이 름     국어  영어  수학  총점  평균</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;---------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;</span> count; a<span style="color:#f92672">++</span>)
+		printf(<span style="color:#e6db74">&#34;  %d   %-10s %d   %d   %d   %d   %.f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, stud[a].bunho, stud[a].name, stud[a].kuk, stud[a].eng, stud[a].mat, stud[a].tot, stud[a].avg);
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+	
+}
+</code></pre></div><h4 id="실습-9_14">실습 9_14</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> statement {
+	<span style="color:#66d9ef">int</span> bunho; <span style="color:#75715e">//구분 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">char</span> telephone[<span style="color:#ae81ff">15</span>]; <span style="color:#75715e">//전화번호 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>]; <span style="color:#75715e">//이름 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">int</span> fee; <span style="color:#75715e">//통화료 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> tax; <span style="color:#75715e">//세금 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> tot; <span style="color:#75715e">//합 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> basic; <span style="color:#75715e">//기본요금 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> amount; <span style="color:#75715e">//사용량 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> alltot; <span style="color:#75715e">//총합계 
+</span><span style="color:#75715e"></span>}; 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">struct</span> statement person[<span style="color:#ae81ff">100</span>];
+	<span style="color:#66d9ef">int</span> a;
+	<span style="color:#66d9ef">int</span> b;
+	<span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; ; a<span style="color:#f92672">++</span>) {
+		printf(<span style="color:#e6db74">&#34;구분: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>person[a].bunho);
+		printf(<span style="color:#e6db74">&#34;전화번호: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#f92672">&amp;</span>person[a].telephone);
+		printf(<span style="color:#e6db74">&#34;이름: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#f92672">&amp;</span>person[a].name);
+		printf(<span style="color:#e6db74">&#34;사용량: &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>person[a].amount);
+		printf(<span style="color:#e6db74">&#34;계속 입력하시려면 1, 아니면 2를 누르세요 : &#34;</span>);
+		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>b); 
+		<span style="color:#66d9ef">if</span>(person[a].bunho <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+			person[a].basic <span style="color:#f92672">=</span> <span style="color:#ae81ff">6000</span>;
+		}
+		<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(person[a].bunho <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>) {
+			person[a].basic <span style="color:#f92672">=</span> <span style="color:#ae81ff">4800</span>;
+		}
+		<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(person[a].bunho <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>) {
+			person[a].basic <span style="color:#f92672">=</span> <span style="color:#ae81ff">3000</span>;
+		}
+		<span style="color:#66d9ef">else</span>{
+			printf(<span style="color:#e6db74">&#34;ERROR&#34;</span>);
+		}
+		person[a].fee <span style="color:#f92672">=</span> person[a].amount<span style="color:#f92672">*</span><span style="color:#ae81ff">12</span>; <span style="color:#75715e">//통화료는 1통화에 대하여 12원씩이다. 
+</span><span style="color:#75715e"></span>		person[a].tot <span style="color:#f92672">=</span> person[a].basic <span style="color:#f92672">+</span> person[a].fee; <span style="color:#75715e">//합은 기본요금과 통화료의 합 
+</span><span style="color:#75715e"></span>		person[a].tax <span style="color:#f92672">=</span> person[a].tot<span style="color:#f92672">*</span><span style="color:#ae81ff">0.1</span>; <span style="color:#75715e">//세금은 기본요금과 통화료를 합한 금액의 10%를 부과한다. 
+</span><span style="color:#75715e"></span>		person[a].alltot <span style="color:#f92672">=</span> person[a].tax <span style="color:#f92672">+</span> person[a].tot; <span style="color:#75715e">//총합은 세금과 합의 합 
+</span><span style="color:#75715e"></span>			count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+			<span style="color:#66d9ef">if</span>(b <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
+				<span style="color:#66d9ef">break</span>;		
+	}		
+	printf(<span style="color:#e6db74">&#34;&lt;&lt;전화 요금 명세서&gt;&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;--------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;구분  전화번호  이름  기본요금  통화료  세금 합계 </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;--------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span>(a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a <span style="color:#f92672">&lt;</span> count; a<span style="color:#f92672">++</span>) {
+	printf(<span style="color:#e6db74">&#34;  %d    %s   %-10s %d    %d   %d   %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, person[a].bunho, person[a].telephone, person[a].name, person[a].basic, person[a].fee, person[a].tax, person[a].alltot);}
+	printf(<span style="color:#e6db74">&#34;--------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-9_15">실습 9_15</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> Student {
+	<span style="color:#66d9ef">int</span> num;
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>];
+	<span style="color:#66d9ef">int</span> korean;
+	<span style="color:#66d9ef">int</span> english;
+	<span style="color:#66d9ef">int</span> math;
+} students[] <span style="color:#f92672">=</span> {
+	{<span style="color:#ae81ff">1101</span>, <span style="color:#e6db74">&#34;김수진&#34;</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">95</span>, <span style="color:#ae81ff">88</span>},
+	{<span style="color:#ae81ff">1102</span>, <span style="color:#e6db74">&#34;이숙희&#34;</span>, <span style="color:#ae81ff">87</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">93</span>},
+	{<span style="color:#ae81ff">1103</span>, <span style="color:#e6db74">&#34;최가람&#34;</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">89</span>, <span style="color:#ae81ff">87</span>}
+};
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">int</span> i;
+	printf(<span style="color:#e6db74">&#34;학번 이 름 국어 영어 수학 총점 평균 </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;------------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">struct</span> Student <span style="color:#f92672">*</span>cur <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>students[i];
+		<span style="color:#66d9ef">int</span> tot <span style="color:#f92672">=</span> cur<span style="color:#f92672">-&gt;</span>korean <span style="color:#f92672">+</span> cur<span style="color:#f92672">-&gt;</span>english <span style="color:#f92672">+</span> cur<span style="color:#f92672">-&gt;</span>math;
+		printf(<span style="color:#e6db74">&#34;%4d %6s %3d %3d %3d %4d %3g </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, cur<span style="color:#f92672">-&gt;</span>num, cur<span style="color:#f92672">-&gt;</span>name, cur<span style="color:#f92672">-&gt;</span>korean, cur<span style="color:#f92672">-&gt;</span>english, cur<span style="color:#f92672">-&gt;</span>math, tot, tot<span style="color:#f92672">/</span><span style="color:#ae81ff">3.</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-9_16">실습 9_16</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt; </span><span style="color:#75715e">
+</span><span style="color:#75715e">#define STDLEN 5 
+</span><span style="color:#75715e">#define SUBJ 4 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> Student { 
+	<span style="color:#66d9ef">int</span> num; 
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">15</span>]; 
+	<span style="color:#66d9ef">int</span> korean; 
+	<span style="color:#66d9ef">int</span> english; 
+	<span style="color:#66d9ef">int</span> math; 
+	<span style="color:#66d9ef">int</span> computer; 
+	<span style="color:#66d9ef">int</span> total; 
+} students[] <span style="color:#f92672">=</span> {
+	{<span style="color:#ae81ff">1101</span>, <span style="color:#e6db74">&#34;홍길동&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">96</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">0</span>}, 
+	{<span style="color:#ae81ff">1102</span>, <span style="color:#e6db74">&#34;임꺽정&#34;</span>, <span style="color:#ae81ff">98</span>, <span style="color:#ae81ff">98</span>, <span style="color:#ae81ff">93</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">0</span>}, 
+	{<span style="color:#ae81ff">1103</span>, <span style="color:#e6db74">&#34;일지매&#34;</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">86</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">0</span>}, 
+	{<span style="color:#ae81ff">1104</span>, <span style="color:#e6db74">&#34;장보고&#34;</span>, <span style="color:#ae81ff">76</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">77</span>, <span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">0</span>}, 
+	{<span style="color:#ae81ff">1105</span>, <span style="color:#e6db74">&#34;김삿갓&#34;</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">88</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">0</span>} 
+}; 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getrank</span>(<span style="color:#66d9ef">struct</span> Student list[], <span style="color:#66d9ef">int</span> len, <span style="color:#66d9ef">int</span> idx); 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() { 
+	<span style="color:#66d9ef">int</span> i; 
+	<span style="color:#66d9ef">int</span> kortot <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, engtot <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, mathtot <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, comptot <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; 
+	<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> STDLEN; i<span style="color:#f92672">++</span>) { 
+		<span style="color:#66d9ef">struct</span> Student <span style="color:#f92672">*</span>cur <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>students[i]; 
+		cur<span style="color:#f92672">-&gt;</span>total <span style="color:#f92672">=</span> cur<span style="color:#f92672">-&gt;</span>korean <span style="color:#f92672">+</span> cur<span style="color:#f92672">-&gt;</span>english <span style="color:#f92672">+</span> cur<span style="color:#f92672">-&gt;</span>math <span style="color:#f92672">+</span> cur<span style="color:#f92672">-&gt;</span>computer; 
+		kortot <span style="color:#f92672">+=</span> cur<span style="color:#f92672">-&gt;</span>korean; 
+		engtot <span style="color:#f92672">+=</span> cur<span style="color:#f92672">-&gt;</span>english; 
+		mathtot <span style="color:#f92672">+=</span> cur<span style="color:#f92672">-&gt;</span>math; 
+		comptot <span style="color:#f92672">+=</span> cur<span style="color:#f92672">-&gt;</span>computer; 
+	}
+
+	printf(<span style="color:#e6db74">&#34;----------------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	printf(<span style="color:#e6db74">&#34;학번 이 름 국어 영어 수학 전산 총점 평균 석차 </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	printf(<span style="color:#e6db74">&#34;----------------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> STDLEN; i<span style="color:#f92672">++</span>) { 
+		<span style="color:#66d9ef">struct</span> Student <span style="color:#f92672">*</span>cur <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>students[i]; 
+		printf(<span style="color:#e6db74">&#34;%4d %6s %3d %3d %3d %3d %4d %4.1lf %3d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, cur<span style="color:#f92672">-&gt;</span>num, cur<span style="color:#f92672">-&gt;</span>name, cur<span style="color:#f92672">-&gt;</span>korean, cur<span style="color:#f92672">-&gt;</span>english, cur<span style="color:#f92672">-&gt;</span>math, cur<span style="color:#f92672">-&gt;</span>computer, cur<span style="color:#f92672">-&gt;</span>total, (<span style="color:#66d9ef">double</span>)cur<span style="color:#f92672">-&gt;</span>total<span style="color:#f92672">/</span>SUBJ, getrank(students, STDLEN, i)); 
+	} 
+	printf(<span style="color:#e6db74">&#34;----------------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	printf(<span style="color:#e6db74">&#34; 총 점 %3d %3d %3d %3d %4d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, kortot, engtot, mathtot, comptot, cortot<span style="color:#f92672">+</span>engtot<span style="color:#f92672">+</span>mathtot<span style="color:#f92672">+</span>comptot); 
+	printf(<span style="color:#e6db74">&#34; 평 균 %3d %3d %3d %3d %4.1lf</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, kortot<span style="color:#f92672">/</span>STDLEN, engtot<span style="color:#f92672">/</span>STDLEN, mathtot<span style="color:#f92672">/</span>STDLEN, comptot<span style="color:#f92672">/</span>STDLEN, (kortot <span style="color:#f92672">+</span> engtot <span style="color:#f92672">+</span> mathtot <span style="color:#f92672">+</span> comptot)<span style="color:#f92672">/</span>((<span style="color:#66d9ef">double</span>)STDLEN<span style="color:#f92672">*</span>SUBJ)); 
+	printf(<span style="color:#e6db74">&#34;----------------------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+}
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getrank</span>(<span style="color:#66d9ef">struct</span> Student list[], <span style="color:#66d9ef">int</span> len, <span style="color:#66d9ef">int</span> idx) { 
+	<span style="color:#66d9ef">int</span> rank <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; 
+	<span style="color:#66d9ef">int</span> i; 
+	<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>) { 
+		<span style="color:#66d9ef">if</span> (i <span style="color:#f92672">==</span> idx) <span style="color:#66d9ef">continue</span>; 
+		<span style="color:#66d9ef">if</span> (list[i].total <span style="color:#f92672">&gt;</span> list[idx].total) rank<span style="color:#f92672">++</span>; 
+	}
+	<span style="color:#66d9ef">return</span> rank; 
+} 
+</code></pre></div><h4 id="실습-9_17">실습 9_17</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt; </span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt; </span><span style="color:#75715e">
+</span><span style="color:#75715e">#define DATA_LEN 4 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> human { 
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">20</span>]; 
+	<span style="color:#66d9ef">int</span> age; 
+	<span style="color:#66d9ef">char</span> gender; 
+	<span style="color:#66d9ef">char</span> fruit[<span style="color:#ae81ff">20</span>]; 
+}; 
+<span style="color:#66d9ef">struct</span> human data[] <span style="color:#f92672">=</span> { 
+	{<span style="color:#e6db74">&#34;김성수&#34;</span>, <span style="color:#ae81ff">15</span>, <span style="color:#e6db74">&#39;M&#39;</span>, <span style="color:#e6db74">&#34;딸기&#34;</span>}, 
+	{<span style="color:#e6db74">&#34;박성애&#34;</span>, <span style="color:#ae81ff">14</span>, <span style="color:#e6db74">&#39;F&#39;</span>, <span style="color:#e6db74">&#34;복숭아&#34;</span>}, 
+	{<span style="color:#e6db74">&#34;이찬수&#34;</span>, <span style="color:#ae81ff">16</span>, <span style="color:#e6db74">&#39;M&#39;</span>, <span style="color:#e6db74">&#34;포도&#34;</span>}, 
+	{<span style="color:#e6db74">&#34;한경수&#34;</span>, <span style="color:#ae81ff">16</span>, <span style="color:#e6db74">&#39;M&#39;</span>, <span style="color:#e6db74">&#34;바나나&#34;</span>} 
+}; 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() { 
+	<span style="color:#66d9ef">char</span> finding[<span style="color:#ae81ff">20</span>]; 
+	<span style="color:#66d9ef">int</span> i; 
+	<span style="color:#66d9ef">do</span> { 
+		printf(<span style="color:#e6db74">&#34;찾고자 하는 학생 이름은(끝낼때는 q)? &#34;</span>); 
+		scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, finding); 
+		<span style="color:#66d9ef">if</span> (strcmp(finding, <span style="color:#e6db74">&#34;q&#34;</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">break</span>; 
+		<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> DATA_LEN; i<span style="color:#f92672">++</span>) { 
+			<span style="color:#66d9ef">if</span> (strcmp(data[i].name, finding) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) { 
+				<span style="color:#66d9ef">break</span>; 
+			} 
+		}
+		<span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> DATA_LEN) printf(<span style="color:#e6db74">&#34;%s %d %s %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, data[i].name, data[i].age, data[i].gender <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;M&#39;</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;남&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;여&#34;</span>, data[i].fruit); 
+		<span style="color:#66d9ef">else</span> printf(<span style="color:#e6db74">&#34;찾아내지 못함</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	} <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>); 
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h4 id="실습-9_18">실습 9_18</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt; </span><span style="color:#75715e">
+</span><span style="color:#75715e">#define LISTMAX 100 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> student { 
+	<span style="color:#66d9ef">int</span> number; 
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">20</span>]; 
+	<span style="color:#66d9ef">int</span> age; 
+} list[LISTMAX]; 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() { 
+	<span style="color:#66d9ef">int</span> i; 
+	<span style="color:#66d9ef">int</span> listlen <span style="color:#f92672">=</span> LISTMAX; 
+	printf(<span style="color:#e6db74">&#34; 학번 이름 나이를 입력하시오</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> LISTMAX; i<span style="color:#f92672">++</span>) { 
+		<span style="color:#66d9ef">struct</span> student input; 
+		<span style="color:#66d9ef">int</span> check <span style="color:#f92672">=</span> scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>input.number); 
+		<span style="color:#66d9ef">if</span> (check <span style="color:#f92672">==</span> EOF) { 
+			listlen <span style="color:#f92672">=</span> i; 
+			<span style="color:#66d9ef">break</span>; 
+		}
+		scanf(<span style="color:#e6db74">&#34;%s %d&#34;</span>, input.name, <span style="color:#f92672">&amp;</span>input.age); 
+		list[i] <span style="color:#f92672">=</span> input; 
+	} 
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> &lt; 출력 결과 &gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	printf(<span style="color:#e6db74">&#34; 학번 이 름 나이</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	printf(<span style="color:#e6db74">&#34;---------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> listlen; i<span style="color:#f92672">++</span>) 
+	printf(<span style="color:#e6db74">&#34; %4d %6s %2d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, list[i].number, list[i].name, list[i].age); 
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+} 
+</code></pre></div><h4 id="실습-9_19">실습 9_19</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt; </span><span style="color:#75715e">
+</span><span style="color:#75715e">#define DATALEN 5 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> info { 
+	<span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">20</span>]; 
+	<span style="color:#66d9ef">int</span> age; 
+	<span style="color:#66d9ef">char</span> address[<span style="color:#ae81ff">50</span>]; 
+}; 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span>(<span style="color:#66d9ef">struct</span> info <span style="color:#f92672">*</span>list, <span style="color:#66d9ef">int</span> len); 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sorting</span>(<span style="color:#66d9ef">struct</span> info <span style="color:#f92672">*</span>list, <span style="color:#66d9ef">int</span> len); 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() { 
+	<span style="color:#66d9ef">struct</span> info data[DATALEN] <span style="color:#f92672">=</span> { 
+		{<span style="color:#e6db74">&#34;홍길동&#34;</span>, <span style="color:#ae81ff">18</span>, <span style="color:#e6db74">&#34;서울시 강북구&#34;</span>}, 
+		{<span style="color:#e6db74">&#34;김일동&#34;</span>, <span style="color:#ae81ff">28</span>, <span style="color:#e6db74">&#34;대전광역시 동구&#34;</span>}, 
+		{<span style="color:#e6db74">&#34;이찬수&#34;</span>, <span style="color:#ae81ff">21</span>, <span style="color:#e6db74">&#34;충북 청주시&#34;</span>}, 
+		{<span style="color:#e6db74">&#34;한경수&#34;</span>, <span style="color:#ae81ff">33</span>, <span style="color:#e6db74">&#34;서울시 강남구&#34;</span>}, 
+		{<span style="color:#e6db74">&#34;박주형&#34;</span>, <span style="color:#ae81ff">32</span>, <span style="color:#e6db74">&#34;광주광역시 중구&#34;</span>} 
+	}; 
+	printf(<span style="color:#e6db74">&#34; &lt; 초기 데이터 목록 &gt; </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	show(data, DATALEN); 
+	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	printf(<span style="color:#e6db74">&#34; &lt; 정렬 후 데이터 목록 &gt; </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	sorting(data, DATALEN); 
+	show(data, DATALEN); 
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span>(<span style="color:#66d9ef">struct</span> info <span style="color:#f92672">*</span>list, <span style="color:#66d9ef">int</span> len) { 
+	<span style="color:#66d9ef">struct</span> info <span style="color:#f92672">*</span>i; 
+	printf(<span style="color:#e6db74">&#34;이 름 나이 주 소</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	printf(<span style="color:#e6db74">&#34;---------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); 
+	<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> list; i <span style="color:#f92672">&lt;</span> list<span style="color:#f92672">+</span>len; i<span style="color:#f92672">++</span>) 
+	printf(<span style="color:#e6db74">&#34;%6s %2d %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i<span style="color:#f92672">-&gt;</span>name, i<span style="color:#f92672">-&gt;</span>age, i<span style="color:#f92672">-&gt;</span>address); 
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sorting</span>(<span style="color:#66d9ef">struct</span> info <span style="color:#f92672">*</span>list, <span style="color:#66d9ef">int</span> len) {
+	<span style="color:#66d9ef">struct</span> info <span style="color:#f92672">*</span>i, <span style="color:#f92672">*</span>j, tmp; 
+	<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> list; i <span style="color:#f92672">&lt;</span> list<span style="color:#f92672">+</span>len; i<span style="color:#f92672">++</span>) { 
+		<span style="color:#66d9ef">for</span> (j <span style="color:#f92672">=</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> list<span style="color:#f92672">+</span>len; j<span style="color:#f92672">++</span>) { 
+			<span style="color:#66d9ef">if</span> (strcmp(i<span style="color:#f92672">-&gt;</span>name, j<span style="color:#f92672">-&gt;</span>name) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) { 
+				tmp <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>i; 
+				<span style="color:#f92672">*</span>i <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>j; 
+				<span style="color:#f92672">*</span>j <span style="color:#f92672">=</span> tmp; 
+			} 
+		} 
+	} 
+}
+</code></pre></div>
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/10._file_input_output/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">10</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/08._pointer/">
+                  <span class="button__text">8. 포인터</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "develoging" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>

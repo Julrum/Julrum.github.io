@@ -41,6 +41,7 @@
 
 
 <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Develog" />
+<link rel="alternate" type="application/json" href="/index.json" title="Develog" />
 
 
 
@@ -123,6 +124,113 @@
   
 
   <div class="posts">
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/06._array/"><ol start="6">
+<li>배열</li>
+</ol></a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-25
+          </span>
+
+          
+            
+
+
+  
+    <span class="post-moddate">
+      (Modified: 2020-03-26)
+    </span>
+  
+
+
+          
+        
+        
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/c/">c</a>&nbsp;
+          
+            #<a href="/tags/language/">language</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            같은 형식의 여러 데이터를 연속된 메모리 공간에 저장하여 사용하는 자료들의 집합
+종류 : 1차원 배열, 2차원 배열 등  01 1차원 배열 첨자가 하나인 직선형의 배열
+형식 데이터형 배열명[첨자];
+구조    배열명 첨자 배열     a 0 a[0]    1 a[1]    2 a[2]    3 a[3]    4 a[4]    5 a[5]    6 a[6]    7 a[7]    8 a[8]    배열 선언 예  int a[5]; int b[] = [10.
+          
+        
+      </div>
+      
+        <div><a class="read-more button" href="/posts/06._array/">Read more →</a></div>
+      
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/05._control_statement_2/">5-2. 제어문(반복문)</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-25
+          </span>
+
+          
+            
+
+
+  
+    <span class="post-moddate">
+      (Modified: 2020-03-26)
+    </span>
+  
+
+
+          
+        
+        
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/c/">c</a>&nbsp;
+          
+            #<a href="/tags/language/">language</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            02 반복문 프로그램 수행 중 특정 문장을 반복 수행하고자 할 때 사용하는 명령문</p>
+<ol>
+<li>for 문 변수가 초기값을 가지고 증감식에 의해 증감하면서 조건식이 만족하는 동안 반복하는 명령
+문법 for(초기값; 조건식; 증감식) { 반복할 명령문; } 실습 5_15_a) #include &lt;stdio.h&gt;int main() { int i; for(i = 1; i&lt;=10; i++) printf(&quot;%5d&quot;, i); return 0; } 실습 5_15_b) #include &lt;stdio.h&gt;int main() { int a; for(a = 1; a &lt;= 10; a += 2) printf(&quot;%5d&quot;, a); return 0; } 실습 5_15_c) #include &lt;stdio.</li>
+</ol>
+          
+        
+      </div>
+      
+        <div><a class="read-more button" href="/posts/05._control_statement_2/">Read more →</a></div>
+      
+    </div>
     
     <div class="post on-list">
       <h1 class="post-title"><a href="/posts/05._control_statement_1/">5-1. 제어문(반복문)</a></h1>
@@ -281,112 +389,6 @@ printf(&quot;서식 문자열&quot;, 인수1[, 인수2, &hellip;]);
       
     </div>
     
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/posts/02._data_types_and_variables/"><ol start="2">
-<li>자료형과 변수</li>
-</ol></a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-03-24
-          </span>
-
-          
-            
-
-
-  
-    <span class="post-moddate">
-      (Modified: 2020-03-26)
-    </span>
-  
-
-
-          
-        
-        
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="/tags/c/">c</a>&nbsp;
-          
-            #<a href="/tags/language/">language</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            <ol>
-<li>자료형의 크기 및 표현 범위    정수형 문자형 부동 소수점 형     short 변수명; char 변수명; float 변수명;   int 변수명;  double 변수명;   long 변수명;  long double 변수명;    unsigned short 변수명;      unsigned int 변수명;      unsigned long 변수명;         자료형 크기 수의 표현 범위     short 4 byte -32768 ~ 32767 (-2^15^ ~ 2^15^-1)   int 4 byte -2^31^ ~ 2^31^-1   long 4 byte -2^31^ ~ 2^31^-1   unsigned short 2 byte 0 ~ 65535   unsigned int 4 byte 0 ~ 2^32^-1   unsigned long 4 byte 0 ~ 2^32^-1   char 1 byte 0 ~ 255   float 4 byte 약 10^-38^ ~ 10^38^   double 8 byte 약 10^-308^ ~ 10^308^   long double 8 byte 약 10^-308^ ~ 10^308^    실습 2_01 #include &lt;stdio.</li>
-</ol>
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/posts/02._data_types_and_variables/">Read more →</a></div>
-      
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/posts/01._basic_of_c/"><ol>
-<li>C 언어의 기초</li>
-</ol></a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-03-23
-          </span>
-
-          
-            
-
-
-  
-    <span class="post-moddate">
-      (Modified: 2020-03-26)
-    </span>
-  
-
-
-          
-        
-        
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="/tags/c/">c</a>&nbsp;
-          
-            #<a href="/tags/language/">language</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            <ol>
-<li>C 언어의 특징  서로 다른 기종간의 호환성이 뛰어나다. C 언어는 여러 개의 함수로 구성되어 있어 구조적 프로그래밍이 가능하다. 다양한 연산자를 제공한다. 메모리 주소를 제어할 수 있는 기능을 가지고 있어 하드웨어를 제어하는 프로그램을 쉽게 작성할 수 있다.  2) C 언어의 기본 구조 #include &lt;stdio.h&gt;int main() { 변수 선언; 명령들&hellip;&hellip;; return 0; } (1) main() 함수 C언어로 작성된 프로그램은 main() 함수로 시작하고 끝나기 때문에 반드시 main() 함수를 가지고 있어야 하며, 반드시 { 로 시작해서 } 로 끝난다.</li>
-</ol>
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/posts/01._basic_of_c/">Read more →</a></div>
-      
-    </div>
-    
     <div class="pagination">
   <div class="pagination__buttons">
     
@@ -397,6 +399,13 @@ printf(&quot;서식 문자열&quot;, 인수1[, 인수2, &hellip;]);
         </a>
       </span>
     
+    
+      <span class="button next">
+        <a href="/page/3/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
     
   </div>
 </div>
