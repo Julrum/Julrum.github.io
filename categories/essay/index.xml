@@ -5,19 +5,56 @@
     <link>/categories/essay/</link>
     <description>Recent content in essay on Develog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
-    <lastBuildDate>Mon, 30 Mar 2020 07:52:30 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 08:14:34 +0000</lastBuildDate>
     
 	<atom:link href="/categories/essay/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>OverTheWire_Level_1</title>
-      <link>/posts/overthewire_level_1/</link>
+      <title>OverTheWire.org Bandit Level 3 -&gt; Level 4</title>
+      <link>/posts/overthewire_level_04/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
+      
+      <guid>/posts/overthewire_level_04/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit4.html
+Bandit Level 3 → Level 4 Level Goal The password for the next level is stored in a hidden file in the inhere directory.
+Commands you may need to solve this level ls, cd, cat, file, du, find
+Level 3에서 Level 4로 가기 위해서는 &amp;lsquo;inhere&#39;이라는 디렉토리 안에 숨겨진 파일을 찾아야 한다.
+ssh에 접속한 후 홈 디렉토리에서 ls 명령어를 이용하여 inhere 디렉토리와 inhere 디렉토리 안에 있는 숨김파일을 확인해 보겠다.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 2 -&gt; Level 3</title>
+      <link>/posts/overthewire_level_03/</link>
+      <pubDate>Mon, 30 Mar 2020 08:11:46 +0000</pubDate>
+      
+      <guid>/posts/overthewire_level_03/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit3.html
+Bandit Level 2 → Level 3 Level Goal The password for the next level is stored in a file called spaces in this filename located in the home directory
+Commands you may need to solve this level ls, cd, cat, file, du, find
+Helpful Reading Material  Google Search for “spaces in filename”  Level 2에서 Level 3으로 가기 위해서는 홈 디렉토리에 있는 &amp;lsquo;spaces in this filename&#39;이라는 이름을 가진 파일을 열어야 한다.</description>
+    </item>
+    
+    <item>
+      <title> OverTheWire.org Bandit Level 1 -&gt; Level 2</title>
+      <link>/posts/overthewire_level_02/</link>
+      <pubDate>Mon, 30 Mar 2020 08:09:37 +0000</pubDate>
+      
+      <guid>/posts/overthewire_level_02/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit2.html
+Bandit Level 1 → Level 2 Level Goal The password for the next level is stored in a file called - located in the home directory
+Commands you may need to solve this level ls, cd, cat, file, du, find
+Helpful Reading Material  Google Search for “dashed filename” Advanced Bash-scripting Guide - Chapter 3 - Special Characters  Level 1에서 Level 2로 가기 위해서는 홈 디렉토리에 존재하는 &amp;lsquo;-&amp;rsquo; 의 이름을 가지는 파일을 열어 비밀번호를 찾는 것이다.</description>
+    </item>
+    
+    <item>
+      <title> OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
+      <link>/posts/overthewire_level_01/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
-      <guid>/posts/overthewire_level_1/</guid>
+      <guid>/posts/overthewire_level_01/</guid>
       <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
 http://overthewire.org/wargames/bandit/bandit0.html
 Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.

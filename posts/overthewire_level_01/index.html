@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title> OverTheWire.org Bandit Level 0 -&gt; Level 1 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
+http://overthewire.org/wargames/bandit/bandit0.html
+Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
+Commands you may need to solve this level ssh"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/overthewire_level_01/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=" OverTheWire.org Bandit Level 0 -&gt; Level 1"/>
+<meta name="twitter:description" content="OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
+http://overthewire.org/wargames/bandit/bandit0.html
+Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
+Commands you may need to solve this level ssh"/>
+
+
+
+<meta property="og:title" content=" OverTheWire.org Bandit Level 0 -&gt; Level 1" />
+<meta property="og:description" content="OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
+http://overthewire.org/wargames/bandit/bandit0.html
+Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
+Commands you may need to solve this level ssh" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/overthewire_level_01/" />
+<meta property="article:published_time" content="2020-03-30T07:52:30+00:00" />
+<meta property="article:modified_time" content="2020-03-30T07:52:30+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tag</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tag</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/overthewire_level_01/">OverTheWire.org Bandit Level 0 -&gt; Level 1</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-03-30
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/overthewire/">overthewire</a>&nbsp;
+        
+          #<a href="/tags/bandit/">bandit</a>&nbsp;
+        
+          #<a href="/tags/command/">command</a>&nbsp;
+        
+          #<a href="/tags/ssh/">ssh</a>&nbsp;
+        
+          #<a href="/tags/cat/">cat</a>&nbsp;
+        
+          #<a href="/tags/ls/">ls</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,</p>
+<p><a href="http://overthewire.org/wargames/bandit/bandit0.html">http://overthewire.org/wargames/bandit/bandit0.html</a></p>
+<h1 id="bandit-level-0">Bandit Level 0</h1>
+<h2 id="level-goal">Level Goal</h2>
+<p>The goal of this level is for you to log into the game using SSH. The host to which you need to connect is <strong>bandit.labs.overthewire.org</strong>, on port 2220. The username is <strong>bandit0</strong> and the password is <strong>bandit0</strong>. Once logged in, go to the <a href="http://overthewire.org/wargames/bandit/bandit1.html">Level 1</a> page to find out how to beat Level 1.</p>
+<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
+<p><code>ssh</code></p>
+<h2 id="helpful-reading-material">Helpful Reading Material</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Secure_Shell">Secure Shell (SSH) on Wikipedia</a></li>
+<li><a href="http://www.wikihow.com/Use-SSH">How to use SSH on wikiHow</a></li>
+</ul>
+<p>Level 0의 목표는 bandit.labs.overthewire.org에 접속하는 것이다. Putty를 이용하여 접속하는 방법이 있을 수 있으나 나는 우분투 내장 터미널을 이용할 것이다.</p>
+<p>먼저 SSH를 설치해보도록 하자</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install openssh-server
+</code></pre></div><p>설치가 되었으면 이제 위에서 제시한 주소로 접속해야한다.</p>
+<p>접속할 떄의 명령어는 다음과 같다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh 아이디@주소 -p포트
+</code></pre></div><p>우리는 bandit0 이라는 아이디로 bandit.labs.overthewire.org를 접속할 것이며 포트는 2220이다. 그러므로 우리가 입력해야할 명령어는 다음과 같다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh bandit0@bandit.labs.overthewire.org -p2220
+</code></pre></div><p><a href="https://1.bp.blogspot.com/-wtkplKZriao/WWH6T_8-lTI/AAAAAAAAKoo/RYtZfGIyagEYFzX7LQAbrb7xNJwKn96nQCLcBGAs/s1600/bandit0%25EC%25A0%2591%25EC%2586%258D.png"><img src="https://1.bp.blogspot.com/-wtkplKZriao/WWH6T_8-lTI/AAAAAAAAKoo/RYtZfGIyagEYFzX7LQAbrb7xNJwKn96nQCLcBGAs/s640/bandit0%25EC%25A0%2591%25EC%2586%258D.png" alt=""></a></p>
+<p>다음과 같이 창이 뜨면 비밀번호는 위에 나와있는 bandit0을 입력한다.</p>
+<p><a href="https://3.bp.blogspot.com/-S3e2gcu8dm4/WWH7TFd_oLI/AAAAAAAAKo0/PGzPV3gtx9MOq5vwZG5HvhmmpNssmqBzgCLcBGAs/s1600/bandit0_01.png"><img src="https://3.bp.blogspot.com/-S3e2gcu8dm4/WWH7TFd_oLI/AAAAAAAAKo0/PGzPV3gtx9MOq5vwZG5HvhmmpNssmqBzgCLcBGAs/s640/bandit0_01.png" alt=""></a></p>
+<p>이제 Level 0에서 Level 1로 어떻게 가는지 확인해 보자</p>
+<p><a href="http://overthewire.org/wargames/bandit/bandit1.html">http://overthewire.org/wargames/bandit/bandit1.html</a></p>
+<h1 id="bandit-level-0--level-1">Bandit Level 0 → Level 1</h1>
+<h2 id="level-goal-1">Level Goal</h2>
+<p>The password for the next level is stored in a file called <strong>readme</strong> located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.</p>
+<h2 id="commands-you-may-need-to-solve-this-level-1">Commands you may need to solve this level</h2>
+<p><code>ls</code>, <code>cd</code>, <code>cat</code>, <code>file</code>, <code>du</code>, <code>find</code></p>
+<p>홈 디렉토리에 있는 &lsquo;readme'라는 파일을 열면 Level 1로 갈 수 있는 비밀번호가 있따고 한다.</p>
+<p>현재 홈 디렉토리에 어떤 파일들이 있나 확인해 보겠다.</p>
+<p>명령어로 <code>ls</code>를 치면 현재 있는 파일들이 나열되고 <code>ls -a</code>를 치면 숨겨져 있던 모든 파일을 출력할 수 있다.</p>
+<p><a href="https://2.bp.blogspot.com/-X0yl4LOu99U/WWH7S1Tp4VI/AAAAAAAAKos/awtlshWF8CM6smSCVPPza0oYiLICuF9qgCLcBGAs/s1600/bandit0_02.png"><img src="https://2.bp.blogspot.com/-X0yl4LOu99U/WWH7S1Tp4VI/AAAAAAAAKos/awtlshWF8CM6smSCVPPza0oYiLICuF9qgCLcBGAs/s640/bandit0_02.png" alt=""></a></p>
+<p>readme 파일이 보이므로 이 파일을 보겠다. 파일 내용을 볼 때에는 <code>cat</code>이라는 명령어를 사용한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat readme
+</code></pre></div><p><a href="https://3.bp.blogspot.com/-fsNiIAMKPXw/WWH7TCCB3jI/AAAAAAAAKow/9anYYYSfVQs0caSnrsC2U9EhKmjA0NIAQCLcBGAs/s1600/bandit0_03.png"><img src="https://3.bp.blogspot.com/-fsNiIAMKPXw/WWH7TCCB3jI/AAAAAAAAKow/9anYYYSfVQs0caSnrsC2U9EhKmjA0NIAQCLcBGAs/s640/bandit0_03.png" alt=""></a></p>
+<p>위와 같이 뜬 boJ9jbbUNNfktd78OOpsqOltutMc3MY1 가 다음 bandit1의 비밀번호가 된다.</p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/overthewire_level_02/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text"> OverTheWire.org Bandit Level 1 -&gt; Level 2</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/10._file_input_output/">
+                  <span class="button__text">10. 파일입출력</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "develoging" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>
