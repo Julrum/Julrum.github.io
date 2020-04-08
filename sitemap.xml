@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -6,168 +6,203 @@
     <loc>/tags/bandit/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/c/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/command/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/categories/essay/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/overthewire/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/overthewire_level_04/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/cat/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/overthewire_level_03/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/overthewire_level_02/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/overthewire_level_01/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/ls/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/posts/overthewire_level_1/</loc>
+    <lastmod>2020-03-30T08:07:13+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/ssh/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/10._file_input_output/</loc>
     <lastmod>2020-03-27T14:52:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/language/</loc>
     <lastmod>2020-03-27T14:52:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/09._structure/</loc>
     <lastmod>2020-03-27T14:52:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/08._pointer/</loc>
     <lastmod>2020-03-26T14:51:24+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/07._function_2/</loc>
     <lastmod>2020-03-26T14:49:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/07._function_1/</loc>
     <lastmod>2020-03-26T14:49:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/06._array/</loc>
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/05._control_statement_2/</loc>
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/05._control_statement_1/</loc>
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/04._operators_and_formulas/</loc>
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/03._standard_input_output/</loc>
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/02._data_types_and_variables/</loc>
     <lastmod>2020-03-27T14:50:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/01._basic_of_c/</loc>
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -179,12 +214,14 @@
     <loc>/archive/</loc>
     <lastmod>2020-03-24T13:51:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/</loc>
     <lastmod>2020-03-24T13:51:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>
