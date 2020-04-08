@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>/tags/bandit/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/bandit/"
+                />
   </url>
   
   <url>
@@ -14,6 +17,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/c/"
+                />
   </url>
   
   <url>
@@ -21,6 +29,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/categories/"
+                />
   </url>
   
   <url>
@@ -28,6 +41,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/command/"
+                />
   </url>
   
   <url>
@@ -35,6 +53,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/categories/essay/"
+                />
   </url>
   
   <url>
@@ -42,6 +65,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/overthewire/"
+                />
   </url>
   
   <url>
@@ -49,6 +77,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/overthewire_level_04/"
+                />
   </url>
   
   <url>
@@ -56,6 +89,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/"
+                />
   </url>
   
   <url>
@@ -63,6 +101,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/"
+                />
   </url>
   
   <url>
@@ -70,6 +113,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/cat/"
+                />
   </url>
   
   <url>
@@ -77,6 +125,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/overthewire_level_03/"
+                />
   </url>
   
   <url>
@@ -84,6 +137,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/overthewire_level_02/"
+                />
   </url>
   
   <url>
@@ -91,6 +149,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/overthewire_level_01/"
+                />
   </url>
   
   <url>
@@ -98,6 +161,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/ls/"
+                />
   </url>
   
   <url>
@@ -105,6 +173,11 @@
     <lastmod>2020-03-30T08:07:13+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/overthewire_level_1/"
+                />
   </url>
   
   <url>
@@ -112,6 +185,11 @@
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/ssh/"
+                />
   </url>
   
   <url>
@@ -119,6 +197,11 @@
     <lastmod>2020-03-27T14:52:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/10._file_input_output/"
+                />
   </url>
   
   <url>
@@ -126,6 +209,11 @@
     <lastmod>2020-03-27T14:52:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/tags/language/"
+                />
   </url>
   
   <url>
@@ -133,6 +221,11 @@
     <lastmod>2020-03-27T14:52:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/09._structure/"
+                />
   </url>
   
   <url>
@@ -140,6 +233,11 @@
     <lastmod>2020-03-26T14:51:24+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/08._pointer/"
+                />
   </url>
   
   <url>
@@ -147,6 +245,11 @@
     <lastmod>2020-03-26T14:49:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/07._function_2/"
+                />
   </url>
   
   <url>
@@ -154,6 +257,11 @@
     <lastmod>2020-03-26T14:49:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/07._function_1/"
+                />
   </url>
   
   <url>
@@ -161,6 +269,11 @@
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/06._array/"
+                />
   </url>
   
   <url>
@@ -168,6 +281,11 @@
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/05._control_statement_2/"
+                />
   </url>
   
   <url>
@@ -175,6 +293,11 @@
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/05._control_statement_1/"
+                />
   </url>
   
   <url>
@@ -182,6 +305,11 @@
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/04._operators_and_formulas/"
+                />
   </url>
   
   <url>
@@ -189,6 +317,11 @@
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/03._standard_input_output/"
+                />
   </url>
   
   <url>
@@ -196,6 +329,11 @@
     <lastmod>2020-03-27T14:50:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/02._data_types_and_variables/"
+                />
   </url>
   
   <url>
@@ -203,11 +341,21 @@
     <lastmod>2020-03-26T14:14:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/posts/01._basic_of_c/"
+                />
   </url>
   
   <url>
     <loc>/about/</loc>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/about/"
+                />
   </url>
   
   <url>
@@ -215,6 +363,11 @@
     <lastmod>2020-03-24T13:51:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/archive/"
+                />
   </url>
   
   <url>
@@ -222,6 +375,11 @@
     <lastmod>2020-03-24T13:51:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="/"
+                />
   </url>
   
 </urlset>
