@@ -2,85 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Develog</title>
-    <link>/tags/</link>
+    <link>https://julrum.github.io/tags/</link>
     <description>Recent content in Tags on Develog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
     <lastBuildDate>Mon, 30 Mar 2020 08:14:34 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://julrum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>bandit</title>
-      <link>/tags/bandit/</link>
+      <link>https://julrum.github.io/tags/bandit/</link>
       <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
       
-      <guid>/tags/bandit/</guid>
+      <guid>https://julrum.github.io/tags/bandit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c</title>
-      <link>/tags/c/</link>
+      <link>https://julrum.github.io/tags/c/</link>
       <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
       
-      <guid>/tags/c/</guid>
+      <guid>https://julrum.github.io/tags/c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>command</title>
-      <link>/tags/command/</link>
+      <link>https://julrum.github.io/tags/command/</link>
       <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
       
-      <guid>/tags/command/</guid>
+      <guid>https://julrum.github.io/tags/command/</guid>
       <description></description>
     </item>
     
     <item>
       <title>overthewire</title>
-      <link>/tags/overthewire/</link>
+      <link>https://julrum.github.io/tags/overthewire/</link>
       <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
       
-      <guid>/tags/overthewire/</guid>
+      <guid>https://julrum.github.io/tags/overthewire/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cat</title>
-      <link>/tags/cat/</link>
+      <link>https://julrum.github.io/tags/cat/</link>
       <pubDate>Mon, 30 Mar 2020 08:11:46 +0000</pubDate>
       
-      <guid>/tags/cat/</guid>
+      <guid>https://julrum.github.io/tags/cat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ls</title>
-      <link>/tags/ls/</link>
+      <link>https://julrum.github.io/tags/ls/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
-      <guid>/tags/ls/</guid>
+      <guid>https://julrum.github.io/tags/ls/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ssh</title>
-      <link>/tags/ssh/</link>
+      <link>https://julrum.github.io/tags/ssh/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
-      <guid>/tags/ssh/</guid>
+      <guid>https://julrum.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>language</title>
-      <link>/tags/language/</link>
+      <link>https://julrum.github.io/tags/language/</link>
       <pubDate>Thu, 26 Mar 2020 14:49:30 +0000</pubDate>
       
-      <guid>/tags/language/</guid>
+      <guid>https://julrum.github.io/tags/language/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Develog</title>
-    <link>/</link>
+    <link>https://julrum.github.io/</link>
     <description>Recent content on Develog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://julrum.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OverTheWire.org Bandit Level 3 -&gt; Level 4</title>
-      <link>/posts/overthewire_level_04/</link>
+      <link>https://julrum.github.io/posts/overthewire_level_04/</link>
       <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
       
-      <guid>/posts/overthewire_level_04/</guid>
+      <guid>https://julrum.github.io/posts/overthewire_level_04/</guid>
       <description>http://overthewire.org/wargames/bandit/bandit4.html
 Bandit Level 3 → Level 4 Level Goal The password for the next level is stored in a hidden file in the inhere directory.
 Commands you may need to solve this level ls, cd, cat, file, du, find
@@ -26,10 +26,10 @@ ssh에 접속한 후 홈 디렉토리에서 ls 명령어를 이용하여 inhere 
     
     <item>
       <title>OverTheWire.org Bandit Level 2 -&gt; Level 3</title>
-      <link>/posts/overthewire_level_03/</link>
+      <link>https://julrum.github.io/posts/overthewire_level_03/</link>
       <pubDate>Mon, 30 Mar 2020 08:11:46 +0000</pubDate>
       
-      <guid>/posts/overthewire_level_03/</guid>
+      <guid>https://julrum.github.io/posts/overthewire_level_03/</guid>
       <description>http://overthewire.org/wargames/bandit/bandit3.html
 Bandit Level 2 → Level 3 Level Goal The password for the next level is stored in a file called spaces in this filename located in the home directory
 Commands you may need to solve this level ls, cd, cat, file, du, find
@@ -38,10 +38,10 @@ Helpful Reading Material  Google Search for “spaces in filename”  Level 2에
     
     <item>
       <title> OverTheWire.org Bandit Level 1 -&gt; Level 2</title>
-      <link>/posts/overthewire_level_02/</link>
+      <link>https://julrum.github.io/posts/overthewire_level_02/</link>
       <pubDate>Mon, 30 Mar 2020 08:09:37 +0000</pubDate>
       
-      <guid>/posts/overthewire_level_02/</guid>
+      <guid>https://julrum.github.io/posts/overthewire_level_02/</guid>
       <description>http://overthewire.org/wargames/bandit/bandit2.html
 Bandit Level 1 → Level 2 Level Goal The password for the next level is stored in a file called - located in the home directory
 Commands you may need to solve this level ls, cd, cat, file, du, find
@@ -50,10 +50,10 @@ Helpful Reading Material  Google Search for “dashed filename” Advanced Bash-
     
     <item>
       <title> OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
-      <link>/posts/overthewire_level_01/</link>
+      <link>https://julrum.github.io/posts/overthewire_level_01/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
-      <guid>/posts/overthewire_level_01/</guid>
+      <guid>https://julrum.github.io/posts/overthewire_level_01/</guid>
       <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
 http://overthewire.org/wargames/bandit/bandit0.html
 Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
@@ -62,10 +62,10 @@ Commands you may need to solve this level ssh</description>
     
     <item>
       <title>OverTheWire_Level_1</title>
-      <link>/posts/overthewire_level_1/</link>
+      <link>https://julrum.github.io/posts/overthewire_level_1/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
-      <guid>/posts/overthewire_level_1/</guid>
+      <guid>https://julrum.github.io/posts/overthewire_level_1/</guid>
       <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
 http://overthewire.org/wargames/bandit/bandit0.html
 Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
@@ -74,39 +74,39 @@ Commands you may need to solve this level ssh</description>
     
     <item>
       <title>10. 파일입출력</title>
-      <link>/posts/10._file_input_output/</link>
+      <link>https://julrum.github.io/posts/10._file_input_output/</link>
       <pubDate>Thu, 26 Mar 2020 14:49:30 +0000</pubDate>
       
-      <guid>/posts/10._file_input_output/</guid>
+      <guid>https://julrum.github.io/posts/10._file_input_output/</guid>
       <description>01 파일처리 파일 처리 개념 간단한 프로그램에서는 데이터를 입력받거나 출력할 경우에 표준 입출력 장치인 키보드와 모니터를 이용하여 처리한다. 이러한 데이터 처리는 그 작업이 컴퓨터의 주기억장치에서 이루어지기 때문에 프로그램의 실행을 종료할 경우에 입력한 데이터나 출력결과가 모두 지워져 버린다. 이와 같이 프로그램 종료 후에도 파일 입출력에 사용되는 데이터가 지워지는 것을 방지하기 위해 C에서 제공하는 파일처리 함수를 이용하여 입력 데이터를 디스크로부터 읽어 오거나 출력 데이터를 디스크로 저장하는 것을 파일처리라 한다. 파일처리는 많은 양의 입력 데이터와 출력 데이터를 보존해야 할 경우에 편리하게 사용된다.</description>
     </item>
     
     <item>
       <title>9. 구조체</title>
-      <link>/posts/09._structure/</link>
+      <link>https://julrum.github.io/posts/09._structure/</link>
       <pubDate>Thu, 26 Mar 2020 14:48:48 +0000</pubDate>
       
-      <guid>/posts/09._structure/</guid>
+      <guid>https://julrum.github.io/posts/09._structure/</guid>
       <description>구조체란? 책 대여점에서 책 재고관리를 하기 위한 프로그램을 작성한다고 생각해보자, 각각의 책에 대하여 분류번호, 책 제목, 저자, 구입가격, 출판일자, 대여 횟수 등 수많은 정보가 필요하게 된다. 그러나 각각의 데이터들은 데이터형이 같지 않아 서로 다른 데이터형으로 정의하고 따로따로 배열로 저장할 수 밖에 없다. 하지만 하나의 배열을 사용하여 배열의 각 원소가 하나의 책에 대한 모든 정보를 갖게 되면 재고관리가 쉬어질 것이다.
 구조체는 서로 다른 데이터형의 자료들을 묶음으로 처리하고자 할 때 사용하는 자료 형태이며, 구조체에서 사용되는 각각의 구성원을 구조체 구성원이라 한다.</description>
     </item>
     
     <item>
       <title>8. 포인터</title>
-      <link>/posts/08._pointer/</link>
+      <link>https://julrum.github.io/posts/08._pointer/</link>
       <pubDate>Thu, 26 Mar 2020 14:47:53 +0000</pubDate>
       
-      <guid>/posts/08._pointer/</guid>
+      <guid>https://julrum.github.io/posts/08._pointer/</guid>
       <description>01 포인터 및 포인터 변수 포인터(pointer)란? 포인터란 데이터가 기억되어 있는 기억 장소의 전지를 나타내는 주소 값을 의미한다. 우리가 변수를 선언하면 컴퓨터는 변수의 데이터형에 맞는 메모리 크기를 잡게 된다. 이때 할당된 메모리의 위치는 주소값을 갖게 되는 데 이 주소값을 포인터라 한다.
 포인터 사용의 특징  C 언어이 가장 큰 특징의 하나로 메모리의 데이터를 쉽게 접근하여 이용할 수 있다. 잘못 사용 시 난해한 프로그램이 된다. 배열을 포인터를 이용하여 효율적으로 사용할 수 있다.  포인터 변수 주소를 값으로 갖는 변수를 의미한다.</description>
     </item>
     
     <item>
       <title>7-2. 함수</title>
-      <link>/posts/07._function_2/</link>
+      <link>https://julrum.github.io/posts/07._function_2/</link>
       <pubDate>Thu, 26 Mar 2020 14:33:59 +0000</pubDate>
       
-      <guid>/posts/07._function_2/</guid>
+      <guid>https://julrum.github.io/posts/07._function_2/</guid>
       <description>04 재귀적 함수 재귀적 (recursive) 함수는 함수 실행 중간에 자기 자신 (실행되고 있는 함수) 을 또 호출하는 함수를 말한다.
 재귀적 함수는 어떠한 조건이 만족될 때까지 반복하여 자신을 호출하게 되므로, 재귀적 호출을 중단하게 하는 조건이 반드시 있어야 한다.
 함수의 호출시 프로그램 상태 (state) 를 보존하고, 자료의 일부를 피 호출함수에 전달하고, 피 호출함수의 종료와 더불어 호출 함수로 되돌아오는 과정을 반복하기 때문에 제귀적 함수를 처리하기 위하여 스택을 이용한다.
@@ -115,19 +115,19 @@ Commands you may need to solve this level ssh</description>
     
     <item>
       <title>7-1. 함수</title>
-      <link>/posts/07._function_1/</link>
+      <link>https://julrum.github.io/posts/07._function_1/</link>
       <pubDate>Thu, 26 Mar 2020 13:53:05 +0000</pubDate>
       
-      <guid>/posts/07._function_1/</guid>
+      <guid>https://julrum.github.io/posts/07._function_1/</guid>
       <description>C언어는 여러 개의 함수들로 이루어진 형태임 함수라는 것은 프로그램 내에서 특정한 기능을 수행하도록 작성된 독립적인 모듈을 말함 main() 함수는 항상 포함하여야 하며, 필요에 따라 서브 함수를 사용 프로그램 중 일정한 루틴을 많이 사용할 경우 별도의 처리루틴 작성 프로그램을 기능별로 함수로 작성하여 처리 함수를 이용함으로써 프로그램을 이해하고 수정하기 쉬운 구조적 프로그래밍 가능 함수의 종류에는 매크로 함수, 내장함수, 사용자 정의 함수 등이 있음 프로그램을 이해하고 수정하기 쉽고 구조적 프로그래밍이 가능하게 함  01 매크로 함수 매크로 함수는 프로그램 내에서 1개 이상의 문장으로 이루어진 프로그램의 한블록이 프로그램 곳곳에 반복적으로 쓰일 때, 이러한 프로그램 작성상의 불편을 없애기 위해 반복적으로 사용되는 부분을 약자로 따로 정의하여 사용하는 것을 말한다.</description>
     </item>
     
     <item>
       <title>6. 배열</title>
-      <link>/posts/06._array/</link>
+      <link>https://julrum.github.io/posts/06._array/</link>
       <pubDate>Wed, 25 Mar 2020 14:44:34 +0000</pubDate>
       
-      <guid>/posts/06._array/</guid>
+      <guid>https://julrum.github.io/posts/06._array/</guid>
       <description>같은 형식의 여러 데이터를 연속된 메모리 공간에 저장하여 사용하는 자료들의 집합
  종류 : 1차원 배열, 2차원 배열 등  01 1차원 배열 첨자가 하나인 직선형의 배열
 형식 데이터형 배열명[첨자];
@@ -136,10 +136,10 @@ Commands you may need to solve this level ssh</description>
     
     <item>
       <title>5-2. 제어문(반복문)</title>
-      <link>/posts/05._control_statement_2/</link>
+      <link>https://julrum.github.io/posts/05._control_statement_2/</link>
       <pubDate>Wed, 25 Mar 2020 13:59:19 +0000</pubDate>
       
-      <guid>/posts/05._control_statement_2/</guid>
+      <guid>https://julrum.github.io/posts/05._control_statement_2/</guid>
       <description>02 반복문 프로그램 수행 중 특정 문장을 반복 수행하고자 할 때 사용하는 명령문
 1) for 문 변수가 초기값을 가지고 증감식에 의해 증감하면서 조건식이 만족하는 동안 반복하는 명령
 문법 for(초기값; 조건식; 증감식) { 반복할 명령문; } 실습 5_15_a) #include &amp;lt;stdio.h&amp;gt;int main() { int i; for(i = 1; i&amp;lt;=10; i++) printf(&amp;#34;%5d&amp;#34;, i); return 0; } 실습 5_15_b) #include &amp;lt;stdio.h&amp;gt;int main() { int a; for(a = 1; a &amp;lt;= 10; a += 2) printf(&amp;#34;%5d&amp;#34;, a); return 0; } 실습 5_15_c) #include &amp;lt;stdio.</description>
@@ -147,10 +147,10 @@ Commands you may need to solve this level ssh</description>
     
     <item>
       <title>5-1. 제어문(반복문)</title>
-      <link>/posts/05._control_statement_1/</link>
+      <link>https://julrum.github.io/posts/05._control_statement_1/</link>
       <pubDate>Wed, 25 Mar 2020 13:20:09 +0000</pubDate>
       
-      <guid>/posts/05._control_statement_1/</guid>
+      <guid>https://julrum.github.io/posts/05._control_statement_1/</guid>
       <description>순차적인 프로그램 실행 순서를 변경하거나반복 수행하고자 할 때 사용하는 명령문
 종류  분기문 : if 문, switch~case문 반복문 : for 문, while 문 보조제어문 : continue 문, break 문  제어문에 따른 실행 문장이 한 문장이면 블록을 생략해도 좋다.
 01 분기문 1) if 문 조건이 참이면 명령문1을 실행함
@@ -159,19 +159,19 @@ Commands you may need to solve this level ssh</description>
     
     <item>
       <title>4. 연산자와 수식</title>
-      <link>/posts/04._operators_and_formulas/</link>
+      <link>https://julrum.github.io/posts/04._operators_and_formulas/</link>
       <pubDate>Wed, 25 Mar 2020 11:41:00 +0000</pubDate>
       
-      <guid>/posts/04._operators_and_formulas/</guid>
+      <guid>https://julrum.github.io/posts/04._operators_and_formulas/</guid>
       <description>01 산술연산자    연산자 기능 사용     + 좌우의 값을 더한다. a=b+c   - 왼쪽의 값에서 오른쪽의 값을 뺀다. a=b-c   * 좌우의 값을 곱한다. a=b*c   / 왼쪽의 값을 오른쪽의 값으로 나눈다. a=b/c   % 왼쪽의 값을 오른쪽의 값으로 나눈 나머지를 구한다. a=b%c    실습 4_01 #include &amp;lt;stdio.h&amp;gt;int main() { int a, b, add, sub, mul, div, mod; printf(&amp;#34;두 수 입력 : &amp;#34;); scanf(&amp;#34;%d %d&amp;#34;, &amp;amp;a, &amp;amp;b); add = a + b; sub = a - b; mul = a * b; div = a / b; mod = a % b; printf(&amp;#34;덧셈 = %d 뺄셈 = %d 곱셈 = %d 나눗셈 %d = %d 나머지 = %d&amp;#34;, add, sub, mul, div, mod); return 0; } 실습 4_02 #include &amp;lt;stdio.</description>
     </item>
     
     <item>
       <title>3. 표준 입출력 함수</title>
-      <link>/posts/03._standard_input_output/</link>
+      <link>https://julrum.github.io/posts/03._standard_input_output/</link>
       <pubDate>Wed, 25 Mar 2020 08:07:51 +0000</pubDate>
       
-      <guid>/posts/03._standard_input_output/</guid>
+      <guid>https://julrum.github.io/posts/03._standard_input_output/</guid>
       <description>01 printf( ) 함수 데이터를 서식에 맞추어 화면상에 출력하게 하는 함수
 형식 printf(&amp;quot;문자열&amp;quot;);
 printf(&amp;quot;서식 문자열&amp;quot;, 인수1[, 인수2, ...]);
@@ -180,28 +180,28 @@ printf(&amp;quot;서식 문자열&amp;quot;, 인수1[, 인수2, ...]);
     
     <item>
       <title>2. 자료형과 변수</title>
-      <link>/posts/02._data_types_and_variables/</link>
+      <link>https://julrum.github.io/posts/02._data_types_and_variables/</link>
       <pubDate>Tue, 24 Mar 2020 14:42:15 +0000</pubDate>
       
-      <guid>/posts/02._data_types_and_variables/</guid>
+      <guid>https://julrum.github.io/posts/02._data_types_and_variables/</guid>
       <description>1) 자료형의 크기 및 표현 범위    정수형 문자형 부동 소수점 형     short 변수명; char 변수명; float 변수명;   int 변수명;  double 변수명;   long 변수명;  long double 변수명;    unsigned short 변수명;      unsigned int 변수명;      unsigned long 변수명;         자료형 크기 수의 표현 범위     short 4 byte -32768 ~ 32767 (-2^15 ~ 2^15 -1)   int 4 byte -2^31 ~ 2^31 -1   long 4 byte -2^31 ~ 2^31 -1   unsigned short 2 byte 0 ~ 65535   unsigned int 4 byte 0 ~ 2^32 -1   unsigned long 4 byte 0 ~ 2^32 -1   char 1 byte 0 ~ 255   float 4 byte 약 10^-38 ~ 10^38   double 8 byte 약 10^-308 ~ 10^308   long double 8 byte 약 10^-308 ~ 10^308    실습 2_01 #include &amp;lt;stdio.</description>
     </item>
     
     <item>
       <title>1. C 언어의 기초</title>
-      <link>/posts/01._basic_of_c/</link>
+      <link>https://julrum.github.io/posts/01._basic_of_c/</link>
       <pubDate>Mon, 23 Mar 2020 14:39:29 +0000</pubDate>
       
-      <guid>/posts/01._basic_of_c/</guid>
+      <guid>https://julrum.github.io/posts/01._basic_of_c/</guid>
       <description>1) C 언어의 특징  서로 다른 기종간의 호환성이 뛰어나다. C 언어는 여러 개의 함수로 구성되어 있어 구조적 프로그래밍이 가능하다. 다양한 연산자를 제공한다. 메모리 주소를 제어할 수 있는 기능을 가지고 있어 하드웨어를 제어하는 프로그램을 쉽게 작성할 수 있다.  2) C 언어의 기본 구조 #include &amp;lt;stdio.h&amp;gt;int main() { 변수 선언; 명령들......; return 0; } (1) main() 함수 C언어로 작성된 프로그램은 main() 함수로 시작하고 끝나기 때문에 반드시 main() 함수를 가지고 있어야 하며, 반드시 { 로 시작해서 } 로 끝난다.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/about/</link>
+      <link>https://julrum.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://julrum.github.io/about/</guid>
       <description>About Me I&amp;rsquo;m Junwon Park(박준원), a junior software engineer located in Republic of Korea.
 I use julrum as my primary username in various sites.
 I often program using C/C++(C++17), Python and React. I am currently a college student. I&amp;rsquo;m writing what I learned on this blog.
@@ -210,10 +210,10 @@ Social Links  GitHub Linkedin  </description>
     
     <item>
       <title>Archive</title>
-      <link>/archive/</link>
+      <link>https://julrum.github.io/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/archive/</guid>
+      <guid>https://julrum.github.io/archive/</guid>
       <description></description>
     </item>
     

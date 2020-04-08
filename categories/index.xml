@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Develog</title>
-    <link>/categories/</link>
+    <link>https://julrum.github.io/categories/</link>
     <description>Recent content in Categories on Develog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
     <lastBuildDate>Mon, 30 Mar 2020 08:14:34 +0000</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://julrum.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>essay</title>
-      <link>/categories/essay/</link>
+      <link>https://julrum.github.io/categories/essay/</link>
       <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
       
-      <guid>/categories/essay/</guid>
+      <guid>https://julrum.github.io/categories/essay/</guid>
       <description></description>
     </item>
     

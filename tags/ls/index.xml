@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ls on Develog</title>
-    <link>/tags/ls/</link>
+    <link>https://julrum.github.io/tags/ls/</link>
     <description>Recent content in ls on Develog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
     <lastBuildDate>Mon, 30 Mar 2020 07:52:30 +0000</lastBuildDate>
     
-	<atom:link href="/tags/ls/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://julrum.github.io/tags/ls/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title> OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
-      <link>/posts/overthewire_level_01/</link>
+      <link>https://julrum.github.io/posts/overthewire_level_01/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
-      <guid>/posts/overthewire_level_01/</guid>
+      <guid>https://julrum.github.io/posts/overthewire_level_01/</guid>
       <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
 http://overthewire.org/wargames/bandit/bandit0.html
 Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
@@ -26,10 +26,10 @@ Commands you may need to solve this level ssh</description>
     
     <item>
       <title>OverTheWire_Level_1</title>
-      <link>/posts/overthewire_level_1/</link>
+      <link>https://julrum.github.io/posts/overthewire_level_1/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
-      <guid>/posts/overthewire_level_1/</guid>
+      <guid>https://julrum.github.io/posts/overthewire_level_1/</guid>
       <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
 http://overthewire.org/wargames/bandit/bandit0.html
 Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
