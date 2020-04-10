@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Base64 on Develog</title>
+    <link>https://julrum.github.io/tags/base64/</link>
+    <description>Recent content in Base64 on Develog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
+    <lastBuildDate>Mon, 30 Mar 2020 08:14:57 +0000</lastBuildDate>
+    
+	<atom:link href="https://julrum.github.io/tags/base64/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 10 -&gt; Level 11</title>
+      <link>https://julrum.github.io/posts/overthewire_level_11/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:57 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_11/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit11.html
+Bandit Level 10 → Level 11 Level Goal The password for the next level is stored in the file data.txt, which contains base64 encoded data
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Helpful Reading Material  Base64 on Wikipedia  Level 10에서 Level 11로 가려면 data.txt에 있는 비밀번호를 봐야한다. 그런데 base64로 인코드된 데이터를 포함하고 있다고 한다.
+base64 데이터를 64종류의 인쇄가능한 숫자만을 이용하여 인코딩하는 방식으로, 그 외의 문자를 처리할 수 없는 통신 환경에서 멀티바이트 문자나 이진 데이터를 처리하는 것을 목적으로 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

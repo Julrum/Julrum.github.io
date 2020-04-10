@@ -7,30 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
-    <lastBuildDate>Mon, 30 Mar 2020 07:52:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 13:42:42 +0000</lastBuildDate>
     
 	<atom:link href="https://julrum.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title> OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
+      <title>OverTheWire.org Bandit Level 14 -&gt; Level 15</title>
+      <link>https://julrum.github.io/posts/overthewire_level_15/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:42 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_15/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit15.html
+Bandit Level 14 → Level 15 Level Goal The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap
+Helpful Reading Material  How the Internet works in 5 minutes (YouTube) (Not completely accurate, but good enough for beginners) IP Addresses IP Address on Wikipedia Localhost on Wikipedia Ports Port (computer networking) on Wikipedia  Level 14에서 Level 15로 가기 위한 이번 단계의 목표를 보자.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 13 -&gt; Level 14</title>
+      <link>https://julrum.github.io/posts/overthewire_level_14/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:40 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_14/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit14.html
+Bandit Level 13 → Level 14 Level Goal The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
       <link>https://julrum.github.io/posts/overthewire_level_01/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
       <guid>https://julrum.github.io/posts/overthewire_level_01/</guid>
-      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
-http://overthewire.org/wargames/bandit/bandit0.html
-Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
-Commands you may need to solve this level ssh</description>
-    </item>
-    
-    <item>
-      <title>OverTheWire_Level_1</title>
-      <link>https://julrum.github.io/posts/overthewire_level_1/</link>
-      <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
-      
-      <guid>https://julrum.github.io/posts/overthewire_level_1/</guid>
-      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
+      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다.
 http://overthewire.org/wargames/bandit/bandit0.html
 Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
 Commands you may need to solve this level ssh</description>

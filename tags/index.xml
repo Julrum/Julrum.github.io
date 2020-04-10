@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
-    <lastBuildDate>Mon, 30 Mar 2020 08:14:34 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 13:42:45 +0000</lastBuildDate>
     
 	<atom:link href="https://julrum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>bandit</title>
       <link>https://julrum.github.io/tags/bandit/</link>
-      <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
+      <pubDate>Fri, 10 Apr 2020 13:42:45 +0000</pubDate>
       
       <guid>https://julrum.github.io/tags/bandit/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>c</title>
       <link>https://julrum.github.io/tags/c/</link>
-      <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
+      <pubDate>Fri, 10 Apr 2020 13:42:45 +0000</pubDate>
       
       <guid>https://julrum.github.io/tags/c/</guid>
       <description></description>
@@ -33,25 +33,232 @@
     <item>
       <title>command</title>
       <link>https://julrum.github.io/tags/command/</link>
-      <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
+      <pubDate>Fri, 10 Apr 2020 13:42:45 +0000</pubDate>
       
       <guid>https://julrum.github.io/tags/command/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>openssl</title>
+      <link>https://julrum.github.io/tags/openssl/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:45 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/openssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>overthewire</title>
       <link>https://julrum.github.io/tags/overthewire/</link>
-      <pubDate>Mon, 30 Mar 2020 08:14:34 +0000</pubDate>
+      <pubDate>Fri, 10 Apr 2020 13:42:45 +0000</pubDate>
       
       <guid>https://julrum.github.io/tags/overthewire/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>s_client</title>
+      <link>https://julrum.github.io/tags/s_client/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:45 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/s_client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nc</title>
+      <link>https://julrum.github.io/tags/nc/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:42 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/nc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://julrum.github.io/tags/ssh/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:42 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>telnet</title>
+      <link>https://julrum.github.io/tags/telnet/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:42 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/telnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sshkey</title>
+      <link>https://julrum.github.io/tags/sshkey/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:40 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/sshkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bzip2</title>
+      <link>https://julrum.github.io/tags/bzip2/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/bzip2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cp</title>
+      <link>https://julrum.github.io/tags/cp/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/cp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>file</title>
+      <link>https://julrum.github.io/tags/file/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/file/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gzip</title>
+      <link>https://julrum.github.io/tags/gzip/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/gzip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mkdir</title>
+      <link>https://julrum.github.io/tags/mkdir/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/mkdir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mv</title>
+      <link>https://julrum.github.io/tags/mv/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/mv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tar</title>
+      <link>https://julrum.github.io/tags/tar/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/tar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xxd</title>
+      <link>https://julrum.github.io/tags/xxd/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/xxd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rot13</title>
+      <link>https://julrum.github.io/tags/rot13/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:33 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/rot13/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tr</title>
+      <link>https://julrum.github.io/tags/tr/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:33 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/tr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Base64</title>
+      <link>https://julrum.github.io/tags/base64/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:57 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/base64/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grep</title>
+      <link>https://julrum.github.io/tags/grep/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:50 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/grep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strings&#34;</title>
+      <link>https://julrum.github.io/tags/strings/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:50 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/strings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sort</title>
+      <link>https://julrum.github.io/tags/sort/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:48 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/sort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uniq</title>
+      <link>https://julrum.github.io/tags/uniq/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:48 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/uniq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>find</title>
+      <link>https://julrum.github.io/tags/find/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:43 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/find/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redirection</title>
+      <link>https://julrum.github.io/tags/redirection/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:43 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/redirection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>cat</title>
       <link>https://julrum.github.io/tags/cat/</link>
-      <pubDate>Mon, 30 Mar 2020 08:11:46 +0000</pubDate>
+      <pubDate>Mon, 30 Mar 2020 08:14:39 +0000</pubDate>
       
       <guid>https://julrum.github.io/tags/cat/</guid>
       <description></description>
@@ -67,20 +274,20 @@
     </item>
     
     <item>
-      <title>ssh</title>
-      <link>https://julrum.github.io/tags/ssh/</link>
-      <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
-      
-      <guid>https://julrum.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>language</title>
       <link>https://julrum.github.io/tags/language/</link>
       <pubDate>Thu, 26 Mar 2020 14:49:30 +0000</pubDate>
       
       <guid>https://julrum.github.io/tags/language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dev/null</title>
+      <link>https://julrum.github.io/tags/dev/null/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/tags/dev/null/</guid>
       <description></description>
     </item>
     

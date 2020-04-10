@@ -4,69 +4,314 @@
   
   <url>
     <loc>https://julrum.github.io/tags/bandit/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://julrum.github.io/tags/c/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://julrum.github.io/categories/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://julrum.github.io/tags/command/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://julrum.github.io/categories/essay/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/openssl/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://julrum.github.io/tags/overthewire/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://julrum.github.io/posts/overthewire_level_04/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <loc>https://julrum.github.io/posts/overthewire_level_16/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://julrum.github.io/posts/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/s_client/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://julrum.github.io/tags/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/nc/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_15/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/ssh/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/telnet/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_14/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/sshkey/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/bzip2/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/cp/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/file/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/gzip/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/mkdir/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/mv/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_13/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/tar/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/xxd/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_12/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/rot13/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/tr/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/base64/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_11/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/grep/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_10/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/strings/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_09/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/sort/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/uniq/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_08/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/find/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_07/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/redirection/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://julrum.github.io/tags/cat/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_06/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_05/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/posts/overthewire_level_04/</loc>
     <lastmod>2020-04-08T14:05:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -87,29 +332,15 @@
   </url>
   
   <url>
-    <loc>https://julrum.github.io/posts/overthewire_level_01/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://julrum.github.io/tags/ls/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://julrum.github.io/posts/overthewire_level_1/</loc>
-    <lastmod>2020-03-30T08:07:13+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://julrum.github.io/tags/ssh/</loc>
-    <lastmod>2020-04-08T14:05:20+00:00</lastmod>
+    <loc>https://julrum.github.io/posts/overthewire_level_01/</loc>
+    <lastmod>2020-04-10T14:25:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -213,6 +444,12 @@
   <url>
     <loc>https://julrum.github.io/archive/</loc>
     <lastmod>2020-03-24T13:51:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://julrum.github.io/tags/dev/null/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

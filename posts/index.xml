@@ -7,10 +7,157 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
-    <lastBuildDate>Mon, 30 Mar 2020 08:14:34 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 13:42:45 +0000</lastBuildDate>
     
 	<atom:link href="https://julrum.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 15 -&gt; Level 16</title>
+      <link>https://julrum.github.io/posts/overthewire_level_16/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:45 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_16/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit16.html
+Bandit Level 15 → Level 16 Level Goal The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
+Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof and read the “CONNECTED COMMANDS” section in the manpage. Next to ‘R’ and ‘Q’, the ‘B’ command also works in this version of that command…
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 14 -&gt; Level 15</title>
+      <link>https://julrum.github.io/posts/overthewire_level_15/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:42 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_15/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit15.html
+Bandit Level 14 → Level 15 Level Goal The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap
+Helpful Reading Material  How the Internet works in 5 minutes (YouTube) (Not completely accurate, but good enough for beginners) IP Addresses IP Address on Wikipedia Localhost on Wikipedia Ports Port (computer networking) on Wikipedia  Level 14에서 Level 15로 가기 위한 이번 단계의 목표를 보자.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 13 -&gt; Level 14</title>
+      <link>https://julrum.github.io/posts/overthewire_level_14/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:40 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_14/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit14.html
+Bandit Level 13 → Level 14 Level Goal The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 12 -&gt; Level 13</title>
+      <link>https://julrum.github.io/posts/overthewire_level_13/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_13/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit13.html
+Bandit Level 12 → Level 13 Level Goal The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 11 -&gt; Level 12</title>
+      <link>https://julrum.github.io/posts/overthewire_level_12/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:33 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_12/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit12.html
+Bandit Level 11 → Level 12 Level Goal The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Helpful Reading Material  Rot13 on Wikipedia  Level 11에서 Level 12로 가기 위해 data.txt 파일 안에 있는 비밀번호를 찾아야 한다.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 10 -&gt; Level 11</title>
+      <link>https://julrum.github.io/posts/overthewire_level_11/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:57 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_11/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit11.html
+Bandit Level 10 → Level 11 Level Goal The password for the next level is stored in the file data.txt, which contains base64 encoded data
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Helpful Reading Material  Base64 on Wikipedia  Level 10에서 Level 11로 가려면 data.txt에 있는 비밀번호를 봐야한다. 그런데 base64로 인코드된 데이터를 포함하고 있다고 한다.
+base64 데이터를 64종류의 인쇄가능한 숫자만을 이용하여 인코딩하는 방식으로, 그 외의 문자를 처리할 수 없는 통신 환경에서 멀티바이트 문자나 이진 데이터를 처리하는 것을 목적으로 한다.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 9 -&gt; Level 10</title>
+      <link>https://julrum.github.io/posts/overthewire_level_10/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:50 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_10/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit10.html
+Bandit Level 9 → Level 10 Level Goal The password for the next level is stored in the file data.txt in one of the few human-readable strings, beginning with several ‘=’ characters.
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Level 9에서 Level 10으로 가려면 data.txt 파일을 열어 비밀번호를 확인해야한다.
+여러개의 &amp;lsquo;=&amp;rsquo; 문자로 시작하며 사람이 읽을 수 있는 문자열로 저장되어있다고 한다.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 8 -&gt; Level 9</title>
+      <link>https://julrum.github.io/posts/overthewire_level_09/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:48 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_09/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit9.html
+Bandit Level 8 → Level 9 Level Goal The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Helpful Reading Material  The unix commandline: pipes and redirects  Level 8에서 Level 9로 가기 위해서 data.txt 파일을 확인해봐야한다. 비밀번호는 단 한 문장만 존재한다고 한다.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 7 -&gt; Level 8</title>
+      <link>https://julrum.github.io/posts/overthewire_level_08/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:46 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_08/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit8.html
+Bandit Level 7 → Level 8 Level Goal The password for the next level is stored in the file data.txt next to the word millionth
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Level 7에서 Level 8로 가기 위해서는 data.txt 파일안에 있는 비밀번호를 읽어야한다. data.txt 안에 비밀번호는 &amp;lsquo;millionth&amp;rsquo; 단어 옆에 위치해 있다고 한다.
+먼저 ssh에 접속한다.
+
+파일을 한 번 열어보자</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 6 -&gt; Level 7</title>
+      <link>https://julrum.github.io/posts/overthewire_level_07/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:43 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_07/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit7.html
+Bandit Level 6 → Level 7 Level Goal The password for the next level is stored somewhere on the server and has all of the following properties:
+ owned by user bandit7 owned by group bandit6 33 bytes in size  Commands you may need to solve this level ls, cd, cat, file, du, find, grep
+Level 6에서 Level 7로 가기 위해서는 서버 어딘가에 존재하는 파일을 찾아야 한다.
+이 파일은 user가 bandit7로 되어 있고 group은 bandit6으로 되어있으며 크기는 33 바이트라고 한다.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 5 -&gt; Level 6</title>
+      <link>https://julrum.github.io/posts/overthewire_level_06/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:39 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_06/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit6.html
+Bandit Level 5 → Level 6 Level Goal The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+ human-readable 1033 bytes in size not executable  Commands you may need to solve this level ls, cd, cat, file, du, find
+Level 5에서 Level 6으로 가기위해서 &amp;lsquo;inhere&amp;rsquo; 디렉토리 안에 있는 어떤 파일을 열어야 한다고 한다. 이 파일은 사람이 읽을 수 있으며 1033bytes의 크기를 가지고 있으며 실행 불가능하다고 한다.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 4 -&gt; Level 5</title>
+      <link>https://julrum.github.io/posts/overthewire_level_05/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_05/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit5.html
+Bandit Level 4 → Level 5 Level Goal The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+Commands you may need to solve this level ls, cd, cat, file, du, find
+Level 4에서 Level 5로 가기 위해서는 &amp;lsquo;inhere&amp;rsquo; 디렉토리 안에 사람이 읽을 수 있는 포맷으로 파일이 존재한다고 한다. 그리고 터미널이 지저분해지면 reset이라는 명령어를 이용하라는 팁도 주었다.</description>
+    </item>
     
     <item>
       <title>OverTheWire.org Bandit Level 3 -&gt; Level 4</title>
@@ -50,24 +197,12 @@ Helpful Reading Material  Google Search for “dashed filename” Advanced Bash-
     </item>
     
     <item>
-      <title> OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
+      <title>OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
       <link>https://julrum.github.io/posts/overthewire_level_01/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
       <guid>https://julrum.github.io/posts/overthewire_level_01/</guid>
-      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
-http://overthewire.org/wargames/bandit/bandit0.html
-Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
-Commands you may need to solve this level ssh</description>
-    </item>
-    
-    <item>
-      <title>OverTheWire_Level_1</title>
-      <link>https://julrum.github.io/posts/overthewire_level_1/</link>
-      <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
-      
-      <guid>https://julrum.github.io/posts/overthewire_level_1/</guid>
-      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
+      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다.
 http://overthewire.org/wargames/bandit/bandit0.html
 Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
 Commands you may need to solve this level ssh</description>

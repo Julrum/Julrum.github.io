@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>strings&#34; on Develog</title>
+    <link>https://julrum.github.io/tags/strings/</link>
+    <description>Recent content in strings&#34; on Develog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
+    <lastBuildDate>Mon, 30 Mar 2020 08:14:50 +0000</lastBuildDate>
+    
+	<atom:link href="https://julrum.github.io/tags/strings/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 9 -&gt; Level 10</title>
+      <link>https://julrum.github.io/posts/overthewire_level_10/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:50 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_10/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit10.html
+Bandit Level 9 → Level 10 Level Goal The password for the next level is stored in the file data.txt in one of the few human-readable strings, beginning with several ‘=’ characters.
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Level 9에서 Level 10으로 가려면 data.txt 파일을 열어 비밀번호를 확인해야한다.
+여러개의 &amp;lsquo;=&amp;rsquo; 문자로 시작하며 사람이 읽을 수 있는 문자열로 저장되어있다고 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

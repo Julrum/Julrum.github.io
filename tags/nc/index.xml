@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nc on Develog</title>
+    <link>https://julrum.github.io/tags/nc/</link>
+    <description>Recent content in nc on Develog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
+    <lastBuildDate>Fri, 10 Apr 2020 13:42:42 +0000</lastBuildDate>
+    
+	<atom:link href="https://julrum.github.io/tags/nc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 14 -&gt; Level 15</title>
+      <link>https://julrum.github.io/posts/overthewire_level_15/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:42 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_15/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit15.html
+Bandit Level 14 → Level 15 Level Goal The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap
+Helpful Reading Material  How the Internet works in 5 minutes (YouTube) (Not completely accurate, but good enough for beginners) IP Addresses IP Address on Wikipedia Localhost on Wikipedia Ports Port (computer networking) on Wikipedia  Level 14에서 Level 15로 가기 위한 이번 단계의 목표를 보자.</description>
+    </item>
+    
+  </channel>
+</rss>

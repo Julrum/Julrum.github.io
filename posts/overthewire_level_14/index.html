@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>OverTheWire.org Bandit Level 13 -&gt; Level 14 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="http://overthewire.org/wargames/bandit/bandit14.html
+Bandit Level 13 → Level 14 Level Goal The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://julrum.github.io/posts/overthewire_level_14/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://julrum.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://julrum.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://julrum.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://julrum.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="OverTheWire.org Bandit Level 13 -&gt; Level 14"/>
+<meta name="twitter:description" content="http://overthewire.org/wargames/bandit/bandit14.html
+Bandit Level 13 → Level 14 Level Goal The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap"/>
+
+
+
+<meta property="og:title" content="OverTheWire.org Bandit Level 13 -&gt; Level 14" />
+<meta property="og:description" content="http://overthewire.org/wargames/bandit/bandit14.html
+Bandit Level 13 → Level 14 Level Goal The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://julrum.github.io/posts/overthewire_level_14/" />
+<meta property="article:published_time" content="2020-04-10T13:42:40+00:00" />
+<meta property="article:modified_time" content="2020-04-10T14:25:23+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tag</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tag</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="https://julrum.github.io/posts/overthewire_level_14/">OverTheWire.org Bandit Level 13 -&gt; Level 14</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-04-10
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://julrum.github.io/tags/overthewire/">overthewire</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/bandit/">bandit</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/command/">command</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/ssh/">ssh</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/sshkey/">sshkey</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p><a href="http://overthewire.org/wargames/bandit/bandit14.html">http://overthewire.org/wargames/bandit/bandit14.html</a></p>
+<h1 id="bandit-level-13--level-14">Bandit Level 13 → Level 14</h1>
+<h2 id="level-goal">Level Goal</h2>
+<p>The password for the next level is stored in <strong>/etc/bandit_pass/bandit14 and can only be read by user bandit14</strong>. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. <strong>Note:</strong> <strong>localhost</strong> is a hostname that refers to the machine you are working on</p>
+<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
+<p><code>ssh</code>, <code>telnet</code>, <code>nc</code>, <code>openssl</code>, <code>s_client</code>, <code>nmap</code></p>
+<h2 id="helpful-reading-material">Helpful Reading Material</h2>
+<ul>
+<li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys">SSH/OpenSSH/Keys</a></li>
+</ul>
+<p>Level 13에서 Level 14로 가기 위한 이번 레벨의 목표를 확인해 보자.</p>
+<p>다음 레벨의 암호는 /etc/bandit_pass/bandit14에 저장되며 bandit14 사용자 만 읽을 수 있습니다. 이 수준에서는 다음 암호를 얻지 못하지만 다음 수준으로 로그인하는데 사용할 수 있는 개인 SSH 키를 얻습니다. 참고 : localhost는 작업중인 시스템을 나타내는 호스트 이름입니다.</p>
+<p>비밀번호를 알아내고 싶으나 사용자가 bandit14로 정해져 있습니다. ssh로 필요한권한을 획득한 다음에 비밀번호를 알아내면 됩니다. 먼저 어떤 파일이 있는지 <code>ls</code> 명령어로 확인해 봅니다.</p>
+<p><a href="https://1.bp.blogspot.com/-3skO7NVw4_w/WWl2xUPupbI/AAAAAAAAKu8/2eTxjk_LUUgDKUlRe6XTBDGzRyyE_9PSwCLcBGAs/s1600/bandit13_00.png"><img src="https://1.bp.blogspot.com/-3skO7NVw4_w/WWl2xUPupbI/AAAAAAAAKu8/2eTxjk_LUUgDKUlRe6XTBDGzRyyE_9PSwCLcBGAs/s640/bandit13_00.png" alt=""></a></p>
+<p>sshkey.private 라는 이름의 개인키를 찾을 수 있습니다. 이 개인키를 이용아여 bandit14에 접속을 할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -i ./sshkey.private bandit14@localhost
+</code></pre></div><blockquote>
+<p>localhost : 컴퓨터 네트워크에서 사용하는 루프백 호스트명으로 자신의 컴퓨터를 의미한다.</p>
+</blockquote>
+<blockquote>
+<p><code>-i</code> :RSA 인증을 위한 비밀 키를 읽어 올 파일을 선택한다.</p>
+</blockquote>
+<p><a href="https://3.bp.blogspot.com/-YYYrA2G9l5k/WWl2xXzI3kI/AAAAAAAAKu4/ATHifDhigPIRa5ZW18axMYQzc_638-NuwCEwYBhgL/s1600/bandit13_01.png"><img src="https://3.bp.blogspot.com/-YYYrA2G9l5k/WWl2xXzI3kI/AAAAAAAAKu4/ATHifDhigPIRa5ZW18axMYQzc_638-NuwCEwYBhgL/s640/bandit13_01.png" alt=""></a></p>
+<p><code>Are you sure you want to continue connection (yes/no)?</code> 라는 문구가 뜨면 yes 를 입력하여 계속 진행한다.</p>
+<p>진행이 완료되면 비로소 bandit14의 권한을 획득하게 되었음을 알 수 있다. 권한을 받은 상태에서 <code>cat</code> 명령어를 사용하여 비밀번호를 보자</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/bandit<span style="color:#ae81ff">\_</span>pass/bandit14
+</code></pre></div><p><a href="https://3.bp.blogspot.com/-2KQ5vRoG5Fk/WWl2xZA1orI/AAAAAAAAKvA/RNPVmuyQfXYE-KhZE7X2lAjh5R7hUagZwCEwYBhgL/s1600/bandit13_02.png"><img src="https://3.bp.blogspot.com/-2KQ5vRoG5Fk/WWl2xZA1orI/AAAAAAAAKvA/RNPVmuyQfXYE-KhZE7X2lAjh5R7hUagZwCEwYBhgL/s640/bandit13_02.png" alt=""></a></p>
+<p>비밀번호는 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e 이다.</p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://julrum.github.io/posts/overthewire_level_15/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">OverTheWire.org Bandit Level 14 -&gt; Level 15</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://julrum.github.io/posts/overthewire_level_13/">
+                  <span class="button__text">OverTheWire.org Bandit Level 12 -&gt; Level 13</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "develoging" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="https://julrum.github.io/assets/main.js"></script>
+<script src="https://julrum.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redirection on Develog</title>
+    <link>https://julrum.github.io/tags/redirection/</link>
+    <description>Recent content in redirection on Develog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
+    <lastBuildDate>Mon, 30 Mar 2020 08:14:43 +0000</lastBuildDate>
+    
+	<atom:link href="https://julrum.github.io/tags/redirection/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 6 -&gt; Level 7</title>
+      <link>https://julrum.github.io/posts/overthewire_level_07/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:43 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_07/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit7.html
+Bandit Level 6 → Level 7 Level Goal The password for the next level is stored somewhere on the server and has all of the following properties:
+ owned by user bandit7 owned by group bandit6 33 bytes in size  Commands you may need to solve this level ls, cd, cat, file, du, find, grep
+Level 6에서 Level 7로 가기 위해서는 서버 어딘가에 존재하는 파일을 찾아야 한다.
+이 파일은 user가 bandit7로 되어 있고 group은 bandit6으로 되어있으며 크기는 33 바이트라고 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

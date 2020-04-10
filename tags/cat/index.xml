@@ -7,10 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
-    <lastBuildDate>Mon, 30 Mar 2020 08:11:46 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 08:14:39 +0000</lastBuildDate>
     
 	<atom:link href="https://julrum.github.io/tags/cat/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 5 -&gt; Level 6</title>
+      <link>https://julrum.github.io/posts/overthewire_level_06/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:39 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_06/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit6.html
+Bandit Level 5 → Level 6 Level Goal The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+ human-readable 1033 bytes in size not executable  Commands you may need to solve this level ls, cd, cat, file, du, find
+Level 5에서 Level 6으로 가기위해서 &amp;lsquo;inhere&amp;rsquo; 디렉토리 안에 있는 어떤 파일을 열어야 한다고 한다. 이 파일은 사람이 읽을 수 있으며 1033bytes의 크기를 가지고 있으며 실행 불가능하다고 한다.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 4 -&gt; Level 5</title>
+      <link>https://julrum.github.io/posts/overthewire_level_05/</link>
+      <pubDate>Mon, 30 Mar 2020 08:14:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_05/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit5.html
+Bandit Level 4 → Level 5 Level Goal The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+Commands you may need to solve this level ls, cd, cat, file, du, find
+Level 4에서 Level 5로 가기 위해서는 &amp;lsquo;inhere&amp;rsquo; 디렉토리 안에 사람이 읽을 수 있는 포맷으로 파일이 존재한다고 한다. 그리고 터미널이 지저분해지면 reset이라는 명령어를 이용하라는 팁도 주었다.</description>
+    </item>
     
     <item>
       <title>OverTheWire.org Bandit Level 2 -&gt; Level 3</title>
@@ -37,24 +61,12 @@ Helpful Reading Material  Google Search for “dashed filename” Advanced Bash-
     </item>
     
     <item>
-      <title> OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
+      <title>OverTheWire.org Bandit Level 0 -&gt; Level 1</title>
       <link>https://julrum.github.io/posts/overthewire_level_01/</link>
       <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
       
       <guid>https://julrum.github.io/posts/overthewire_level_01/</guid>
-      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
-http://overthewire.org/wargames/bandit/bandit0.html
-Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
-Commands you may need to solve this level ssh</description>
-    </item>
-    
-    <item>
-      <title>OverTheWire_Level_1</title>
-      <link>https://julrum.github.io/posts/overthewire_level_1/</link>
-      <pubDate>Mon, 30 Mar 2020 07:52:30 +0000</pubDate>
-      
-      <guid>https://julrum.github.io/posts/overthewire_level_1/</guid>
-      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다,
+      <description>OverTheWire Bandit을 풀어보면서 리눅스의 기초적인 명령어를 익혀보려 한다.
 http://overthewire.org/wargames/bandit/bandit0.html
 Bandit Level 0 Level Goal The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
 Commands you may need to solve this level ssh</description>

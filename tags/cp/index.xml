@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cp on Develog</title>
+    <link>https://julrum.github.io/tags/cp/</link>
+    <description>Recent content in cp on Develog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
+    <lastBuildDate>Fri, 10 Apr 2020 13:42:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://julrum.github.io/tags/cp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 12 -&gt; Level 13</title>
+      <link>https://julrum.github.io/posts/overthewire_level_13/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:37 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_13/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit13.html
+Bandit Level 12 → Level 13 Level Goal The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!</description>
+    </item>
+    
+  </channel>
+</rss>

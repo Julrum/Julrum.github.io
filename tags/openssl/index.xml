@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openssl on Develog</title>
+    <link>https://julrum.github.io/tags/openssl/</link>
+    <description>Recent content in openssl on Develog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>&amp;copy;2020. Julrum all rights reserved.</copyright>
+    <lastBuildDate>Fri, 10 Apr 2020 13:42:45 +0000</lastBuildDate>
+    
+	<atom:link href="https://julrum.github.io/tags/openssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OverTheWire.org Bandit Level 15 -&gt; Level 16</title>
+      <link>https://julrum.github.io/posts/overthewire_level_16/</link>
+      <pubDate>Fri, 10 Apr 2020 13:42:45 +0000</pubDate>
+      
+      <guid>https://julrum.github.io/posts/overthewire_level_16/</guid>
+      <description>http://overthewire.org/wargames/bandit/bandit16.html
+Bandit Level 15 → Level 16 Level Goal The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
+Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof and read the “CONNECTED COMMANDS” section in the manpage. Next to ‘R’ and ‘Q’, the ‘B’ command also works in this version of that command…
+Commands you may need to solve this level ssh, telnet, nc, openssl, s_client, nmap</description>
+    </item>
+    
+  </channel>
+</rss>

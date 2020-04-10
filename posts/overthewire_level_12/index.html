@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>OverTheWire.org Bandit Level 11 -&gt; Level 12 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="http://overthewire.org/wargames/bandit/bandit12.html
+Bandit Level 11 → Level 12 Level Goal The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Helpful Reading Material  Rot13 on Wikipedia  Level 11에서 Level 12로 가기 위해 data.txt 파일 안에 있는 비밀번호를 찾아야 한다."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://julrum.github.io/posts/overthewire_level_12/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://julrum.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://julrum.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://julrum.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://julrum.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="OverTheWire.org Bandit Level 11 -&gt; Level 12"/>
+<meta name="twitter:description" content="http://overthewire.org/wargames/bandit/bandit12.html
+Bandit Level 11 → Level 12 Level Goal The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Helpful Reading Material  Rot13 on Wikipedia  Level 11에서 Level 12로 가기 위해 data.txt 파일 안에 있는 비밀번호를 찾아야 한다."/>
+
+
+
+<meta property="og:title" content="OverTheWire.org Bandit Level 11 -&gt; Level 12" />
+<meta property="og:description" content="http://overthewire.org/wargames/bandit/bandit12.html
+Bandit Level 11 → Level 12 Level Goal The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+Commands you may need to solve this level grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+Helpful Reading Material  Rot13 on Wikipedia  Level 11에서 Level 12로 가기 위해 data.txt 파일 안에 있는 비밀번호를 찾아야 한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://julrum.github.io/posts/overthewire_level_12/" />
+<meta property="article:published_time" content="2020-04-10T13:42:33+00:00" />
+<meta property="article:modified_time" content="2020-04-10T14:25:23+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tag</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tag</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="https://julrum.github.io/posts/overthewire_level_12/">OverTheWire.org Bandit Level 11 -&gt; Level 12</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-04-10
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://julrum.github.io/tags/overthewire/">overthewire</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/bandit/">bandit</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/command/">command</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/rot13/">Rot13</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/tr/">tr</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p><a href="http://overthewire.org/wargames/bandit/bandit12.html">http://overthewire.org/wargames/bandit/bandit12.html</a></p>
+<h1 id="bandit-level-11--level-12">Bandit Level 11 → Level 12</h1>
+<h2 id="level-goal">Level Goal</h2>
+<p>The password for the next level is stored in the file <strong>data.txt</strong>, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions</p>
+<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
+<p><code>grep</code>, <code>sort</code>, <code>uniq</code>, <code>strings</code>, <code>base64</code>, <code>tr</code>, <code>tar</code>, <code>gzip</code>, <code>bzip2</code>, <code>xxd</code></p>
+<h2 id="helpful-reading-material">Helpful Reading Material</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Rot13">Rot13 on Wikipedia</a></li>
+</ul>
+<p>Level 11에서 Level 12로 가기 위해 data.txt 파일 안에 있는 비밀번호를 찾아야 한다. data.txt 안에 소문자 (a-z)와 대문자 (A-Z)문자는 13 위치만큼 회전되어 있다고 한다.</p>
+<p>ssh에 접속한 다음에 명령어 <code>ls</code>로 어떤 파일이 존재하는지 확인해 본다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+</code></pre></div><p><a href="https://1.bp.blogspot.com/-bLyoi7iI344/WWXax0khkcI/AAAAAAAAKtM/QGarZJt-7_Mhal00novc8QYe9h-PBgNSgCEwYBhgL/s1600/bandit11_00.png"><img src="https://1.bp.blogspot.com/-bLyoi7iI344/WWXax0khkcI/AAAAAAAAKtM/QGarZJt-7_Mhal00novc8QYe9h-PBgNSgCEwYBhgL/s640/bandit11_00.png" alt=""></a></p>
+<p>data.txt가 홈 디렉토리에 존재하는 것을 확인할 수 있다.</p>
+<p>명령어 <code>cat</code>을 이용하여 파일 안을 살펴보자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat data.txt
+</code></pre></div><p><a href="https://4.bp.blogspot.com/-fz8hfykn19I/WWXax3n3uZI/AAAAAAAAKtQ/tgrpTfyxDLcJ9XUAX8R9P3dTYqd6XWnVACEwYBhgL/s1600/bandit11_01.png"><img src="https://4.bp.blogspot.com/-fz8hfykn19I/WWXax3n3uZI/AAAAAAAAKtQ/tgrpTfyxDLcJ9XUAX8R9P3dTYqd6XWnVACEwYBhgL/s640/bandit11_01.png" alt=""></a></p>
+<p>ROT13으로 암호화 되어있는 문장을 발견할 수 있다.</p>
+<h3 id="rot13이란">ROT13이란?</h3>
+<p>ROT13은 1980년대 초반의 net.jokes 뉴스그룹에서 유래하였다. 원래 목적은 보기에 따라서 모욕적일 수 있는 내용이나, 유머에서 가장 중요한 마지막 줄들을 실수로 미리 보는 일이 없도록 하려는 것이었다. 처음에는 모욕적인 농담을 다른 뉴스그룹에 올려서 분류하려 하기도 했으나, 관리자들은 그런 뉴스그룹을 만드는 것이 마치 어떤 모욕적인 내용이라도 해당 그룹에 올리면 문제가 없다는 식으로 보일 수 있다는 이유로 이를 반대했다. ROT13은 그 단순함 때문에 이런 용도에 알맞았다.</p>
+<p>ROT13은 영어 알파벳을 다른 영어 알파벳으로 치환만 하기 때문에, 알파벳 이외의 일반적이지 않은 문자를 처리하지 못하는 뉴스리더에서도 문제를 발생시키지 않았따. ROT13은 영어에서 가능한 25가지의 카이사르 암호(ROT-1부터 ROT-25까지) 중에서 암호화와 복호화가 같은 유일한 방법이었기 때문에 선택되었다. (만약 영어 알파벳이 26자가 아니라, 폴란드어같이 더 많거나 하와이어같이 더 적었다면 다른 방법이 선택되었을 것이다.)</p>
+<p>손으로 메시지를 암호화하고 복호화할 수도 있지만, 자동으로 암호화나 복호화를 해 주는 것이 더 편리하다. 예를 들어 ROT13이 만들어진 지 얼마 안 있어 뉴스리더 소프트웨어들은 자동으로 복호화하는 기능을 지원하였으며, 유닉스 계열 시스템들은 tr(transliterate의 약자)이라는 표준 유틸리티를 지원하기 때문에 다음과 같은 방법으로 ROT13 암호화 및 복호화를 할 수 있다.</p>
+<p>ex)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;Or fher gb qevax lbhe Binyqvar&#34;</span> | tr <span style="color:#e6db74">&#39;A-Za-z&#39;</span> <span style="color:#e6db74">&#39;N-ZA-Mn-za-m&#39;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ Be sure to drink your Ovaltine
+</code></pre></div><p>위에 나온 방법으로 이 문제도 해결하면 된다.</p>
+<p><a href="https://4.bp.blogspot.com/-DL7c_9ten-4/WWXaxzivKjI/AAAAAAAAKtU/JdI2B4t6mUYu2TiE0_D1iYRmvndbYzSFACEwYBhgL/s1600/bandit11_02.png"><img src="https://4.bp.blogspot.com/-DL7c_9ten-4/WWXaxzivKjI/AAAAAAAAKtU/JdI2B4t6mUYu2TiE0_D1iYRmvndbYzSFACEwYBhgL/s640/bandit11_02.png" alt=""></a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat data.txt | tr <span style="color:#e6db74">&#39;A-Za-z&#39;</span> <span style="color:#e6db74">&#39;N-ZA-Mn-za-m&#39;</span>
+</code></pre></div><p>비밀번호는 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu 이다.</p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://julrum.github.io/posts/overthewire_level_13/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">OverTheWire.org Bandit Level 12 -&gt; Level 13</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://julrum.github.io/posts/overthewire_level_11/">
+                  <span class="button__text">OverTheWire.org Bandit Level 10 -&gt; Level 11</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "develoging" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="https://julrum.github.io/assets/main.js"></script>
+<script src="https://julrum.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>

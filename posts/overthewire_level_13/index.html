@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>OverTheWire.org Bandit Level 12 -&gt; Level 13 :: Develog — Things learned while studying</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="http://overthewire.org/wargames/bandit/bandit13.html
+Bandit Level 12 → Level 13 Level Goal The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://julrum.github.io/posts/overthewire_level_13/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://julrum.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://julrum.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://julrum.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://julrum.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="OverTheWire.org Bandit Level 12 -&gt; Level 13"/>
+<meta name="twitter:description" content="http://overthewire.org/wargames/bandit/bandit13.html
+Bandit Level 12 → Level 13 Level Goal The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!"/>
+
+
+
+<meta property="og:title" content="OverTheWire.org Bandit Level 12 -&gt; Level 13" />
+<meta property="og:description" content="http://overthewire.org/wargames/bandit/bandit13.html
+Bandit Level 12 → Level 13 Level Goal The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://julrum.github.io/posts/overthewire_level_13/" />
+<meta property="article:published_time" content="2020-04-10T13:42:37+00:00" />
+<meta property="article:modified_time" content="2020-04-10T14:25:23+00:00" /><meta property="og:site_name" content="Develog" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Develog</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tag</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tag</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="https://julrum.github.io/posts/overthewire_level_13/">OverTheWire.org Bandit Level 12 -&gt; Level 13</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-04-10
+        </span>
+
+        
+          
+            
+
+
+
+          
+        
+      
+
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://julrum.github.io/tags/overthewire/">overthewire</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/bandit/">bandit</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/command/">command</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/mkdir/">mkdir</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/cp/">cp</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/mv/">mv</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/xxd/">xxd</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/file/">file</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/gzip/">gzip</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/bzip2/">bzip2</a>&nbsp;
+        
+          #<a href="https://julrum.github.io/tags/tar/">tar</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p><a href="http://overthewire.org/wargames/bandit/bandit13.html">http://overthewire.org/wargames/bandit/bandit13.html</a></p>
+<h1 id="bandit-level-12--level-13">Bandit Level 12 → Level 13</h1>
+<h2 id="level-goal">Level Goal</h2>
+<p>The password for the next level is stored in the file <strong>data.txt</strong>, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)</p>
+<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
+<p><code>grep</code>, <code>sort</code>, <code>uniq</code>, <code>strings</code>, <code>base64</code>, <code>tr</code>, <code>tar</code>, <code>gzip</code>, <code>bzip2</code>, <code>xxd</code>, <code>mkdir</code>, <code>cp</code>, <code>mv</code></p>
+<h2 id="helpful-reading-material">Helpful Reading Material</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Hex_dump">Hex dump on Wikipedia</a></li>
+</ul>
+<p>Level 12에서 Level 13으로 가기위해 이 레벨의 목표를 읽어보자.</p>
+<p>다음 레벨의 암호는 반복적으로 압축 된 파일의 16 진수 덤프 인 data.txt 파일에 저장됩니다. 이 수준에서는 /tmp 아래에 mkdir을 사용하여 작업 할 수 있는 디렉토리를 만드는 것이 유용할 수 있습니다.</p>
+<p>ex)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir /tmp/myname123
+</code></pre></div><p>그런 다음 <code>cp</code>를 이용하여 데이터 파일을 복사하고 <code>mv</code>를 사용하여 이름을 비꿉니다.</p>
+<h3 id="hex-dump란">Hex dump란?</h3>
+<p>hex dump는 램 또는 파일이나 저장장치에 있는 컴퓨터 데이터의 십육진법적인 보임새이다. 데이터의 hex dump를 보는 것은 주로 디버깅이나 리버스 엔지니어링의 한 부분이다.</p>
+<p>hex dump에서, 각 바이트는 2 숫자와 16진법 수로 표현된다. Hex dumps 는 주로 8 또는 16바이트의 행으로 조직되며, 가끔은 흰 공간으로 분리된다. 몇몇 hex dump들은 시작에서나 마지막 라인의 체크섬 바이트에서 16진법의 메모리주소를 갖는다.</p>
+<p>비록 이름은 16 기반 출력을 암시하지만, 몇몇 덤핑 소프트웨어는 8기반이나 10기반 출력도 갖는다. 이 프로그램 기증을 갖는 흔한 이름으로, hexdump, od, xxd 그리고 단순히 dump 또는 심지어 D도 있다.</p>
+<p>위의 내용을 참고하여 문제를 풀어보자.</p>
+<p>먼저 ssh에 접속하자.</p>
+<p><a href="https://2.bp.blogspot.com/-2lcsNv5v4T0/WWh0_cCgCeI/AAAAAAAAKtw/SHmp1pnUSR4MkaW6lxMaVeFnClVLyZTiACLcBGAs/s1600/bandit12_00.png"><img src="https://2.bp.blogspot.com/-2lcsNv5v4T0/WWh0_cCgCeI/AAAAAAAAKtw/SHmp1pnUSR4MkaW6lxMaVeFnClVLyZTiACLcBGAs/s640/bandit12_00.png" alt=""></a></p>
+<p>접속한 후 <code>ls</code> 명령어로 파일을 확인해 보자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ls -l
+</code></pre></div><p><a href="https://3.bp.blogspot.com/-QCImdmD1Ly4/WWh0_ftROcI/AAAAAAAAKt0/UaNJ7VwMLp8MNISkb2m_NIikKXm5F4dPQCEwYBhgL/s1600/bandit12_01.png"><img src="https://3.bp.blogspot.com/-QCImdmD1Ly4/WWh0_ftROcI/AAAAAAAAKt0/UaNJ7VwMLp8MNISkb2m_NIikKXm5F4dPQCEwYBhgL/s640/bandit12_01.png" alt=""></a></p>
+<p>data.txt 가 존재함을 알 수 있다.</p>
+<p><code>xxd</code> 명령어를 사용하여 내용을 바이너리 데이터로 바꿔보자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xxd -r data.txt
+</code></pre></div><p><a href="https://2.bp.blogspot.com/-zuk-w5Qn66E/WWh0_a-X3RI/AAAAAAAAKt4/CrOeGWAeE5QbISFwLcNO7-yiM5iiuT59gCEwYBhgL/s1600/bandit12_02.png"><img src="https://2.bp.blogspot.com/-zuk-w5Qn66E/WWh0_a-X3RI/AAAAAAAAKt4/CrOeGWAeE5QbISFwLcNO7-yiM5iiuT59gCEwYBhgL/s640/bandit12_02.png" alt=""></a></p>
+<p>내용이 꺠져서 나오는 것을 알 수 있다.</p>
+<p>작업하기 쉽게 <code>xxd</code> 명령을 사용하여 바이너리로 바꾼 파일을 log라는 이름의 파일로 저장하자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xxd -r data.txt&gt;log
+</code></pre></div><p><code>file</code> 명령어를 사용하여 어떤 형식의 파일인지 확인해 봅시다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file log
+</code></pre></div><p><a href="https://4.bp.blogspot.com/-PkQxuSpkJnU/WWh1AMliwpI/AAAAAAAAKuE/TZ592F3s6Zs8nOVFTYgAWT0a2rrAcUcvQCEwYBhgL/s1600/bandit12_03.png"><img src="https://4.bp.blogspot.com/-PkQxuSpkJnU/WWh1AMliwpI/AAAAAAAAKuE/TZ592F3s6Zs8nOVFTYgAWT0a2rrAcUcvQCEwYBhgL/s640/bandit12_03.png" alt=""></a></p>
+<p>위와 같이 <code>gzip</code> 형식으로 압축된 파일임을 알 수 있다.</p>
+<p><code>mv</code> 명령어를 사용하여 <code>gzip</code>의 확장자를 가진 파일로 바꾼뒤 압축을 풀어보자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv log log.gz
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gzip -d log.gz
+</code></pre></div><p><a href="https://2.bp.blogspot.com/-_D_4EgJsHvA/WWh1ADfqFSI/AAAAAAAAKt8/QN8rEY-P3SACrJfiXGSr5DmtD7OuiBO_wCEwYBhgL/s1600/bandit12_04.png"><img src="https://2.bp.blogspot.com/-_D_4EgJsHvA/WWh1ADfqFSI/AAAAAAAAKt8/QN8rEY-P3SACrJfiXGSr5DmtD7OuiBO_wCEwYBhgL/s640/bandit12_04.png" alt=""></a></p>
+<p>압축을 푼 뒤에 <code>cat</code> 명령어로 열어봤으나 여전히 깨진 상태로 출력된다.</p>
+<p>다시 <code>file</code> 명령어로 사용해 보니 이번엔 <code>bzip2</code>로 압축되어있음을 확인할 수 있었다.</p>
+<p>다시 압축을 풀어보자</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv log log.bz2
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$bzip2 -d log.bz2
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file log
+</code></pre></div><p><code>file</code> 명령어로 다시 열어보니 이번에는 <code>gzip</code> 형식으로 압축이 되어있다고 한다.</p>
+<p><a href="https://4.bp.blogspot.com/-3DsEFDUDI7c/WWh1AQUjwSI/AAAAAAAAKuA/exqPiT6dyEcvddqpCKUYuU-a9G5xbvyVQCEwYBhgL/s1600/bandit12_05.png"><img src="https://4.bp.blogspot.com/-3DsEFDUDI7c/WWh1AQUjwSI/AAAAAAAAKuA/exqPiT6dyEcvddqpCKUYuU-a9G5xbvyVQCEwYBhgL/s640/bandit12_05.png" alt=""></a></p>
+<p>다시 압축을 풀어보자</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv log log.gz
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gzip -d log.gz
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file log
+</code></pre></div><p>이번에는 <code>tar</code> 형식으로 압축이 되어있다고 한다.</p>
+<p><a href="https://2.bp.blogspot.com/-1MBIePKNYv4/WWh1A59G9dI/AAAAAAAAKuI/kwIMRjNcgK8m_9WkqFVZlYVUODGP9VViACEwYBhgL/s1600/bandit12_06.png"><img src="https://2.bp.blogspot.com/-1MBIePKNYv4/WWh1A59G9dI/AAAAAAAAKuI/kwIMRjNcgK8m_9WkqFVZlYVUODGP9VViACEwYBhgL/s640/bandit12_06.png" alt=""></a></p>
+<p>다시 압축을 풀어보자</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv log log.tar
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tar -xvf log.tar
+</code></pre></div><p>압축을 풀어보니 data5.bin이라는 파일이 나왔다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file data5.bin
+</code></pre></div><p>파일을 확인해 보니 이 파일 마저도 tar형식으로 압축이 되어있다고 나온다.</p>
+<p><a href="https://3.bp.blogspot.com/-4l8wWtVJ9no/WWh1BJ92QfI/AAAAAAAAKuM/GKNNy4FOuw8qN80dlwjXaoTcevoO9cqIQCEwYBhgL/s1600/bandit12_07.png"><img src="https://3.bp.blogspot.com/-4l8wWtVJ9no/WWh1BJ92QfI/AAAAAAAAKuM/GKNNy4FOuw8qN80dlwjXaoTcevoO9cqIQCEwYBhgL/s640/bandit12_07.png" alt=""></a></p>
+<p>압축푸는 과정을 계속 반복해보자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv data5.bin log.tar
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tar -xvf log.tar
+</code></pre></div><p>이번에는 data6.bin 파일이 나왔다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file data6.bin
+</code></pre></div><p>이번에는 다시 bzip2형식으로 압축되어있다고 한다.</p>
+<p><a href="https://4.bp.blogspot.com/-kDUWZQFQAKU/WWh1BNCgKxI/AAAAAAAAKuQ/tDojC9WJuTshl5RxTL_G2yiJELOJEgf6ACEwYBhgL/s1600/bandit12_08.png"><img src="https://4.bp.blogspot.com/-kDUWZQFQAKU/WWh1BNCgKxI/AAAAAAAAKuQ/tDojC9WJuTshl5RxTL_G2yiJELOJEgf6ACEwYBhgL/s640/bandit12_08.png" alt=""></a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv data6.bin log.bz2
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bzip2 -d log.bz2
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file log
+</code></pre></div><p>이번엔 다시 tar 형식으로 압축되어있다고 한다.</p>
+<p><a href="https://4.bp.blogspot.com/-I5nkdLp3mKk/WWh1BrM0MtI/AAAAAAAAKuY/YBLwn1yWKIs3fnShlTJiCZbeAVBqMw-LQCEwYBhgL/s1600/bandit12_09.png"><img src="https://4.bp.blogspot.com/-I5nkdLp3mKk/WWh1BrM0MtI/AAAAAAAAKuY/YBLwn1yWKIs3fnShlTJiCZbeAVBqMw-LQCEwYBhgL/s640/bandit12_09.png" alt=""></a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv log log.tar
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tar -xvf log.tar
+</code></pre></div><p>압축을 푸니 data8.bin 파일이 나왔다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file data8.bin
+</code></pre></div><p>이 파일은 gzip 형식으로 압축되어 있다고 한다.</p>
+<p><a href="https://3.bp.blogspot.com/-uvVocE_L-VA/WWh1BqGn17I/AAAAAAAAKuU/jZXL_GZiQlQ2n5Ao_ayNAcBvfk9K0PYDgCEwYBhgL/s1600/bandit12_10.png"><img src="https://3.bp.blogspot.com/-uvVocE_L-VA/WWh1BqGn17I/AAAAAAAAKuU/jZXL_GZiQlQ2n5Ao_ayNAcBvfk9K0PYDgCEwYBhgL/s640/bandit12_10.png" alt=""></a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv data8.bin log.gz
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gzip -d log.gz
+</code></pre></div><p><a href="https://2.bp.blogspot.com/-W9w7P58QbSs/WWh1B-JByvI/AAAAAAAAKuc/HO5F0uHRE-gk4aimcN-1ogikx5Gvau7VACEwYBhgL/s1600/bandit12_11.png"><img src="https://2.bp.blogspot.com/-W9w7P58QbSs/WWh1B-JByvI/AAAAAAAAKuc/HO5F0uHRE-gk4aimcN-1ogikx5Gvau7VACEwYBhgL/s640/bandit12_11.png" alt=""></a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file log
+</code></pre></div><p>드디어 ASCII 로 이루어진 텍스트 파일이 나왔다.</p>
+<p><a href="https://2.bp.blogspot.com/-C0-9l12zQlA/WWh1CbftByI/AAAAAAAAKug/FaWAuEiezEElsTzzqtWFfm9jXBO91Z4rwCEwYBhgL/s1600/bandit12_12.png"><img src="https://2.bp.blogspot.com/-C0-9l12zQlA/WWh1CbftByI/AAAAAAAAKug/FaWAuEiezEElsTzzqtWFfm9jXBO91Z4rwCEwYBhgL/s640/bandit12_12.png" alt=""></a></p>
+<p>비밀번호는 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL이다.</p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://julrum.github.io/posts/overthewire_level_14/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">OverTheWire.org Bandit Level 13 -&gt; Level 14</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://julrum.github.io/posts/overthewire_level_12/">
+                  <span class="button__text">OverTheWire.org Bandit Level 11 -&gt; Level 12</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "develoging" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">&copy;2020. Julrum all rights reserved.</div>
+    
+  </div>
+</footer>
+
+<script src="https://julrum.github.io/assets/main.js"></script>
+<script src="https://julrum.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-154623819-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>
